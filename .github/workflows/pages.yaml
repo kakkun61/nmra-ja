@@ -1,0 +1,36 @@
+name: pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: work
+      - uses: actions/checkout@v2
+        with:
+          path: pages
+          ref: pages
+      - uses: actions/setup-node@v2
+      - run: |
+          git config user.name "Kazuki Okamoto"
+          git config user.email kazuki.okamoto@kakkun61.com
+        working-directory: pages
+      - run: npm install honkit
+        working-directory: work
+      - run: npx honkit build
+        working-directory: work/hon
+      - run: rm -r *
+        working-directory: pages
+      - run: cp -R work/hon/_book/* pages
+      - run: |
+          git add .
+          git commit -m $GITHUB_SHA
+          git push
+        working-directory: pages
