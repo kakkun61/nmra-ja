@@ -1,0 +1,23 @@
+{
+    "name": "nmra-ja",
+    "version": "0.0.0",
+    "description": "",
+    "main": "",
+    "scripts": {
+        "build": "cd hon && honkit build",
+        "serve": "cd hon && honkit serve"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kakkun61/nmra-ja.git"
+    },
+    "author": "Kazuki Okamoto (岡本和樹)",
+    "license": "SEE LICENSE IN LICENSE",
+    "bugs": {
+        "url": "https://github.com/kakkun61/nmra-ja/issues"
+    },
+    "homepage": "https://kakkun61.github.io/nmra-ja/",
+    "devDependencies": {
+        "honkit": "^3.6.20"
+    }
+}

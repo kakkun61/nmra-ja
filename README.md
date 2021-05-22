@@ -9,6 +9,6 @@
 この文書は [HonKit](https://github.com/honkit/honkit) を使用してビルドする。
 
 ```sh
-> cd hon
-> honkit build
+> npm install --only=dev
+> npm run build
 ```
