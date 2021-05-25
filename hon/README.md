@@ -2,6 +2,10 @@
 
 本書は全米鉄道模型協会（National Railway Model Association; NMRA）の「[標準と推奨慣例](https://www.nmra.org/index-nmra-standards-and-recommended-practices)」を翻訳したものです。
 
+## コミュニティ
+
+[鉄道模型 DCC 日本語コミュニティ Discord](https://discord.com/invite/vKwhwVRrwF)
+
 ## 5種類の標準
 
 NMRA の標準は下記の5種類に分類されます。
