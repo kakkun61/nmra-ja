@@ -18,6 +18,7 @@
     },
     "homepage": "https://kakkun61.github.io/nmra-ja/",
     "devDependencies": {
+        "gitbook-plugin-add-js-css": "^0.0.1",
         "honkit": "^3.6.20"
     }
 }

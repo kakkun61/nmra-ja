@@ -1,4 +1,12 @@
 {
     "title": "NMRA 標準と推奨慣例",
-    "language": "ja"
+    "language": "ja",
+    "plugins": ["add-js-css"],
+    "pluginsConfig": {
+        "add-js-css": {
+            "css": [
+                "style.css"
+            ]
+        }
+    }
 }
