@@ -6,6 +6,8 @@
 
 [鉄道模型 DCC 日本語コミュニティ Discord](https://discord.com/invite/vKwhwVRrwF)
 
+[鉄道模型 DCC 日本語コミュニティ Scrapbox](https://scrapbox.io/dcc-ja/)
+
 ## 5種類の標準
 
 NMRA の標準は下記の5種類に分類されます。
