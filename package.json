@@ -1,24 +1,47 @@
 {
-    "name": "nmra-ja",
-    "version": "0.0.0",
-    "description": "",
-    "main": "",
-    "scripts": {
-        "build": "cd hon && honkit build",
-        "serve": "cd hon && honkit serve"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kakkun61/nmra-ja.git"
-    },
-    "author": "Kazuki Okamoto (岡本和樹)",
-    "license": "SEE LICENSE IN LICENSE",
-    "bugs": {
-        "url": "https://github.com/kakkun61/nmra-ja/issues"
-    },
-    "homepage": "https://kakkun61.github.io/nmra-ja/",
-    "devDependencies": {
-        "gitbook-plugin-add-js-css": "^0.0.1",
-        "honkit": "^3.6.20"
-    }
+  "name": "nmra-ja",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "cd hon && honkit build",
+    "serve": "cd hon && honkit serve",
+    "lint": "textlint hon/**/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakkun61/nmra-ja.git"
+  },
+  "author": "Kazuki Okamoto (岡本和樹)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/kakkun61/nmra-ja/issues"
+  },
+  "homepage": "https://kakkun61.github.io/nmra-ja/",
+  "devDependencies": {
+    "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^2.0.1",
+    "@textlint-ja/textlint-rule-no-synonyms": "^1.1.0",
+    "gitbook-plugin-add-js-css": "^0.0.1",
+    "glob": "^7.1.3",
+    "honkit": "^3.6.20",
+    "prh": "^5.4.4",
+    "sudachi-synonyms-dictionary": "^7.0.0",
+    "textlint": "^12.0.0",
+    "textlint-rule-ja-hiragana-fukushi": "^1.3.0",
+    "textlint-rule-ja-hiragana-hojodoushi": "^1.0.4",
+    "textlint-rule-ja-hiragana-keishikimeishi": "^1.1.0",
+    "textlint-rule-ja-no-abusage": "^3.0.0",
+    "textlint-rule-ja-no-redundant-expression": "^4.0.0",
+    "textlint-rule-ja-no-weak-phrase": "^2.0.0",
+    "textlint-rule-ja-unnatural-alphabet": "^2.0.1",
+    "textlint-rule-no-double-negative-ja": "^2.0.0",
+    "textlint-rule-no-doubled-conjunction": "^2.0.1",
+    "textlint-rule-no-doubled-conjunctive-particle-ga": "^2.0.1",
+    "textlint-rule-no-dropping-the-ra": "^3.0.0",
+    "textlint-rule-no-hankaku-kana": "^1.0.2",
+    "textlint-rule-no-mix-dearu-desumasu": "^5.0.0",
+    "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "^1.0.1",
+    "textlint-rule-prefer-tari-tari": "^1.0.3",
+    "textlint-rule-prh": "^5.3.0"
+  }
 }
