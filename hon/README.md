@@ -30,3 +30,6 @@ NMRA の標準は下記の5種類に分類されます。
 >
 > https://www.nmra.org/index-nmra-standards-and-recommended-practices
 
+## 貢献してくださる方へ
+
+[貢献](CONTRIBUTING.md)をお読みください。
