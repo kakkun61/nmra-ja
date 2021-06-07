@@ -2,12 +2,19 @@
   "title": "NMRA 標準と推奨慣例",
   "language": "ja",
   "plugins": [
-    "add-js-css"
+    "add-js-css",
+    "head-append"
   ],
   "pluginsConfig": {
     "add-js-css": {
       "css": [
         "style.css"
+      ]
+    },
+    "head-append": {
+      "code": [
+        "<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">",
+        "<link href=\"https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap\" rel=\"stylesheet\">"
       ]
     }
   }
