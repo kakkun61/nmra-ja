@@ -1,0 +1,9 @@
+sup, sub {
+  font-size: 0.8em !important;
+}
+.book.font-family-0 {
+  font-family: 'Noto Serif JP', serif !important;
+}
+.book.font-family-1 {
+  font-family: sans-serif !important;
+}

@@ -1,9 +1,10 @@
 {
-  "title": "NMRA 標準と推奨慣例",
-  "language": "ja",
+  "title": "NMRA Standards and Recommended Practices",
+  "language": "en",
   "plugins": [
     "add-js-css",
-    "head-append"
+    "head-append",
+    "katex2"
   ],
   "pluginsConfig": {
     "add-js-css": {
