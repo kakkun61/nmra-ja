@@ -1,6 +1,9 @@
 sup, sub {
   font-size: 0.8em !important;
 }
+figcaption {
+  text-align: center !important;
+}
 .book.font-family-0 {
   font-family: 'Noto Serif JP', serif !important;
 }
