@@ -1,4 +1,11 @@
 {
+  "title": "NMRA Standards and Recommended Practices",
+  "language": "en",
+  "plugins": [
+    "add-js-css",
+    "head-append",
+    "katex2"
+  ],
   "pluginsConfig": {
     "add-js-css": {
       "css": [

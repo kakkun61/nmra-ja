@@ -4,8 +4,11 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "cd hon && honkit build",
-    "serve": "cd hon && honkit serve",
+    "build": "npm run build:ja",
+    "build:en": "cd hon/en && honkit build",
+    "serve:en": "cd hon/en && honkit serve",
+    "build:ja": "cd hon/ja && honkit build",
+    "serve:ja": "cd hon/ja && honkit serve --port 4001",
     "lint": "textlint hon/**/*.md"
   },
   "repository": {
