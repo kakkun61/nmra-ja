@@ -8,7 +8,7 @@
     "build:en": "cd hon/en && honkit build",
     "serve:en": "cd hon/en && honkit serve",
     "build:ja": "cd hon/ja && honkit build",
-    "serve:ja": "cd hon/ja && honkit serve --port 4001",
+    "serve:ja": "cd hon/ja && honkit serve",
     "lint": "textlint hon/**/*.md"
   },
   "repository": {
