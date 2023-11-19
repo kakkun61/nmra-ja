@@ -3,6 +3,7 @@
   "language": "en",
   "plugins": [
     "add-js-css",
+    "auto-scroll-table",
     "head-append",
     "katex2"
   ],
