@@ -16,3 +16,6 @@ figcaption {
 .book.font-family-1 {
   font-family: sans-serif !important;
 }
+table.caption {
+  margin-bottom: 0;
+}
