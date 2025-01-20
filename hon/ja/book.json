@@ -5,7 +5,7 @@
     "add-js-css",
     "auto-scroll-table",
     "head-append",
-    "katex2"
+    "katex"
   ],
   "pluginsConfig": {
     "add-js-css": {
