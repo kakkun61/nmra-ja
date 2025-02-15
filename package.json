@@ -21,9 +21,7 @@
   "devDependencies": {
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^2",
     "@textlint-ja/textlint-rule-no-synonyms": "^1",
-    "gitbook-plugin-add-js-css": "^0",
     "gitbook-plugin-auto-scroll-table": "^0",
-    "gitbook-plugin-head-append": "^1",
     "gitbook-plugin-katex": "^1",
     "glob": "^11",
     "honkit": "^6",
