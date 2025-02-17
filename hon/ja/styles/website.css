@@ -16,12 +16,25 @@ figcaption {
 
 .book.font-family-0 {
   font-family: 'Noto Serif JP', serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .book.font-family-1 {
-  font-family: sans-serif !important;
+  font-family: 'Noto Sans JP' sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 table.caption {
   margin-bottom: 0;
+}
+
+.markdown-section pre > code {
+  font-family: 'M PLUS 1 Code', monospace !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
