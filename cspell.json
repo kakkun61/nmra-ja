@@ -3,8 +3,17 @@
   "version": "0.2",
   "language": "en",
   "words": [
+    "dearu",
+    "desumasu",
     "Fleischmann",
+    "fukushi",
+    "gitbook",
+    "hankaku",
+    "hojodoushi",
+    "honkit",
+    "katex",
     "Kazuki",
+    "keishikimeishi",
     "mathrm",
     "NMRA",
     "NVRAM",
@@ -12,28 +21,25 @@
     "Railcommand",
     "subaddress",
     "subinstruction",
-    "SUSI",
-    "TRIX",
-    "μsec",
-    // package names
-    "dearu",
-    "desumasu",
-    "fukushi",
-    "gitbook",
-    "hankaku",
-    "hojodoushi",
-    "honkit",
-    "katex",
-    "keishikimeishi",
     "sudachi",
+    "SUSI",
+    "Tabularized",
     "tari",
     "textlint",
+    "TRIX",
     "zenkaku",
+    "μsec"
   ],
   "patterns": [
-    { "name": "LaTeX preamble", "pattern": "\\\\mathrm\\{\\w+\\}" },
+    {
+      "name": "LaTeX preamble",
+      "pattern": "\\\\mathrm\\{\\w+\\}"
+    },
     // 中途半端にマッチして、正規の単語が分割されてエラーになるので、正規表現ではなく出現した文字列を列挙する
-    { "name": "Format Definition", "pattern": "CCCD|SDDDD|DLLLLLLL|CCVV|CDDD|DCSSSS|CSSSS" }
+    {
+      "name": "Format Definition",
+      "pattern": "CCCD|SDDDD|DLLLLLLL|CCVV|CDDD|DCSSSS|CSSSS"
+    }
   ],
   "ignoreRegExpList": [
     "LaTeX preamble",

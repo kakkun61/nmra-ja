@@ -4,6 +4,8 @@ This book is a reformatted one of the “Standards and Recommended Practices” 
 
 Source repository <https://github.com/kakkun61/nmra-ja/>
 
+- S-9.1 Electrical Standards *Done*
+
 ## To contributors
 
 Please read [Contributing](CONTRIBUTING.md).
