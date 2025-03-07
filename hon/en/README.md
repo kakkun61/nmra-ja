@@ -1,4 +1,4 @@
-# NMRA Standards and Recommended Practices
+# NMRA Standards and Recommended Practices {#nmra-standards-and-recommended-practices}
 
 This book is a reformatted one of the “Standards and Recommended Practices” of National Railway Model Association (NMRA).
 
@@ -6,7 +6,7 @@ Source repository <https://github.com/kakkun61/nmra-ja/>
 
 - S-9.1 Electrical Standards *Done*
 
-## To contributors
+## To contributors {#to-contributors}
 
 Please read [Contributing](CONTRIBUTING.md).
 
@@ -14,7 +14,7 @@ Please read [Contributing](CONTRIBUTING.md).
 
 [Original](https://www.nmra.org/index-nmra-standards-and-recommended-practices)
 
-## The NMRA uses five types of Technical Documents to present information.
+## The NMRA uses five types of Technical Documents to present information. {#the-nmra-uses-five-types-of-technical-documents-to-present-information}
 
 **The NMRA, in its standards and recommended practices, addresses only the specific standards and recommended practices for model railroads. These standards and recommended practices do not address any legal requirements. It is the responsibility of the manufacturer to determine if their product conforms to all applicable governmental laws and regulations.**
 
