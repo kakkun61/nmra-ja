@@ -2,6 +2,7 @@
   "title": "NMRA Standards and Recommended Practices",
   "plugins": [
     "auto-scroll-table",
-    "katex"
+    "katex",
+    "anchor-link"
   ]
 }

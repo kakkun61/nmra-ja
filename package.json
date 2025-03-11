@@ -25,6 +25,7 @@
     "gitbook-plugin-katex": "^1",
     "glob": "^11",
     "honkit": "^6",
+    "honkit-plugin-anchor-link": "kakkun61/honkit-plugin-anchor-link",
     "prh": "^5",
     "sudachi-synonyms-dictionary": "^14",
     "textlint": "^14",
