@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1980, Graziella
+# This file is distributed under the same license as the Lumache package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lumache 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 1980-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../content/index.rst:2
+msgid "Welcome to Lumache's documentation!"
+msgstr ""
+
+#: ../../content/index.rst:4
+msgid "**Lumache** (/lu'make/) is a Python library for cooks and food lovers that creates recipes mixing random ingredients. It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_ and offers a *simple* and *intuitive* API."
+msgstr ""
+
+#: ../../content/index.rst:9
+msgid "Check out the :doc:`usage` section for further information, including how to :ref:`installation` the project."
+msgstr ""
+
+#: ../../content/index.rst:14
+msgid "This project is under active development."
+msgstr ""
+
+#: ../../content/index.rst:17
+msgid "Contents"
+msgstr ""

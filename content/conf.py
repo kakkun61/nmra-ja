@@ -9,6 +9,10 @@ author = 'Graziella'
 release = '0.1'
 version = '0.1.0'
 
+language = 'en'
+locale_dirs = ['locale/']
+gettext_compact = False
+
 # -- General configuration
 
 extensions = [
