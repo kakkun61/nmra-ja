@@ -13,12 +13,15 @@ debug:
 	@echo pot_file_paths: $(pot_file_paths)
 	@echo po_file_ja_paths: $(po_file_ja_paths)
 
-.PHONY: doc.en
-doc.en:
+.PHONY: build
+build: build.en build.ja
+
+.PHONY: build.en
+build.en:
 	sphinx-build --builder html content .build/en
 
-.PHONY: doc.ja
-doc.ja:
+.PHONY: build.ja
+build.ja:
 	sphinx-build --builder html content .build/ja --define language=ja
 
 .PHONY: internationalize.pot
