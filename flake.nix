@@ -18,6 +18,7 @@
             nodePackages.cspell
             python313Packages.sphinx
             python313Packages.sphinx_rtd_theme
+            haskellPackages.wai-app-static
           ];
         };
         formatter = pkgs.nixpkgs;

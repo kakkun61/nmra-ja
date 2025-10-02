@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'nmra-ja'
+copyright = '2021, the National Model Railroad Association, Inc. and Kazuki Okamoto (岡本和樹)'
+author = 'the National Model Railroad Association, Inc. and Kazuki Okamoto (岡本和樹)'
 
 release = '0.1'
 version = '0.1.0'

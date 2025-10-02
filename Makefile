@@ -7,12 +7,6 @@ po_file_ja_paths := $(patsubst %,$(po_file_ja_pat),$(file_ids))
 mo_file_ja_pat := content/locale/ja/LC_MESSAGES/%.mo
 mo_file_ja_paths := $(patsubst %,$(mo_file_ja_pat),$(file_ids))
 
-debug:
-	@echo rst_file_paths: $(rst_file_paths)
-	@echo file_ids: $(file_ids)
-	@echo pot_file_paths: $(pot_file_paths)
-	@echo po_file_ja_paths: $(po_file_ja_paths)
-
 .PHONY: build
 build: build.en build.ja
 
@@ -24,18 +18,25 @@ build.en:
 build.ja:
 	sphinx-build --builder html content .build/ja --define language=ja
 
-.PHONY: internationalize.pot
-internationalize.pot: $(pot_file_paths)
+.PHONY: serve
+serve:
+	warp -d .build
+
+.PHONY: internationalize.template
+internationalize.template: $(pot_file_paths)
 
 $(pot_file_paths)&: $(rst_file_paths)
 	sphinx-build --builder gettext content .build/gettext
+
+.PHONY: internationalize.instance
+internationalize.instance: $(po_file_ja_paths)
 
 po_file_ja_pat: $(pot_file_pat)
 	@mkdir -p $(@D)
 	if [ -f $@ ]; then msgmerge --update $@ $<; else cp $< $@; fi
 
-.PHONY: internationalize.mo
-internationalize.mo: $(mo_file_ja_paths)
+.PHONY: internationalize.instance-binary
+internationalize.instance-binary: $(mo_file_ja_paths)
 
 $(mo_file_ja_pat): $(po_file_ja_pat)
 	@mkdir -p $(@D)
