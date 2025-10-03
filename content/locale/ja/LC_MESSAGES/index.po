@@ -12,26 +12,120 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../content/index.rst:2
-msgid "Welcome to Lumache's documentation!"
-msgstr "よ～こそ～"
-
 #: ../../content/index.rst:4
-msgid "**Lumache** (/lu'make/) is a Python library for cooks and food lovers that creates recipes mixing random ingredients. It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_ and offers a *simple* and *intuitive* API."
-msgstr ""
+msgid "NMRA Standards and Recommended Practices"
+msgstr "NMRA 標準と推奨慣例"
 
-#: ../../content/index.rst:9
-msgid "Check out the :doc:`usage` section for further information, including how to :ref:`installation` the project."
-msgstr ""
+#: ../../content/index.rst:6
+msgid ""
+"This book is a reformatted one of the \"Standards and Recommended "
+"Practices\" of National Railway Model Association (NMRA)."
+msgstr "本書は全米鉄道模型協会（National Railway Model Association; NMRA）の「標準と推奨慣例を翻訳したものです。"
 
-#: ../../content/index.rst:14
-msgid "This project is under active development."
-msgstr ""
+#: ../../content/index.rst:8
+msgid "Source repository https://github.com/kakkun61/nmra-ja/"
+msgstr "ソースリポジトリー https://github.com/kakkun61/nmra-ja/"
+
+#: ../../content/index.rst:10
+msgid "S-9.1 Electrical Standards *Done*"
+msgstr "S-9.1 Electrical Standards *完了*"
+
+#: ../../content/index.rst:15
+msgid "To contributors"
+msgstr "貢献してくださる方へ"
 
 #: ../../content/index.rst:17
-msgid "Contents"
+msgid "Please read :doc:`CONTRIBUTING`."
+msgstr ":doc:`CONTRIBUTING`\\ をお読みください。"
+
+#: ../../content/index.rst:21
+msgid ""
+"`Original <https://www.nmra.org/index-nmra-standards-and-recommended-"
+"practices>`_"
+msgstr "`原文 <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_"
+
+#: ../../content/index.rst:26
+msgid "The NMRA uses five types of Technical Documents to present information."
+msgstr "NMRA は現行の情報に対して5種類の技術文書を使用します。"
+
+#: ../../content/index.rst:28
+msgid ""
+"**The NMRA, in its standards and recommended practices, addresses only the "
+"specific standards and recommended practices for model railroads. These "
+"standards and recommended practices do not address any legal requirements. "
+"It is the responsibility of the manufacturer to determine if their product "
+"conforms to all applicable governmental laws and regulations.**"
+msgstr ""
+
+#: ../../content/index.rst:30
+msgid "Standard (S)"
+msgstr "標準（Standard; S）"
+
+#: ../../content/index.rst:31
+msgid ""
+"NMRA Standards are to establish the broadest correlated set of limiting "
+"dimensions, electrical parameters and communications parameters within which "
+"interchange may be assured. Standards are reviewed by the membership and "
+"approved by the Board of Directors."
+msgstr ""
+
+#: ../../content/index.rst:33
+msgid "Recommended Practice (RP)"
+msgstr "推奨慣例（Recommended Practice; RP）"
+
+#: ../../content/index.rst:34
+msgid ""
+"NMRA Recommended Practices do not rise to the level of being a Standard, "
+"however, they provide details of various topics that have been found to be "
+"the best for interchangeability or operation of products. Recommended "
+"Practices are not used in determining the qualification of a product when "
+"compliance certification is being judged. Comments are generally made if the "
+"product is found outside the recommended practice. Recommended Practices are "
+"reviewed by the membership and approved by the Board of Directors."
+msgstr ""
+
+#: ../../content/index.rst:36
+msgid "Technical Note (TN)"
+msgstr "技術的注釈（Technical Note; TN）"
+
+#: ../../content/index.rst:37
+msgid ""
+"NMRA Technical Notes supplement the Standards to provide additional guidance "
+"on a given subject. Technical Notes are reviewed by the appropriate "
+"technical working group and approved by the Manager, Standards & Conformance."
+msgstr ""
+
+#: ../../content/index.rst:39
+msgid "Technical Information (TI)"
+msgstr "技術的情報（Technical Information; TI）"
+
+#: ../../content/index.rst:40
+msgid ""
+"NMRA Technical Information are documents that are used to provide "
+"information associated with a Standard or Recommended Practice. Technical "
+"Information is reviewed by the appropriate technical working group and "
+"approved by the Manager, Standards & Conformance."
+msgstr ""
+
+#: ../../content/index.rst:42
+msgid "Technical References (TR)"
+msgstr "技術的参考文献（Technical References; TR）"
+
+#: ../../content/index.rst:43
+msgid ""
+"NMRA Technical References are, for the most part, internal documents that "
+"provide a history of action taken in the Standards and Conformance "
+"Department. Occasionally a Technical Reference is made public for reference "
+"and use by individuals involved with the Standards and Conformance "
+"Department. Technical References are reviewed by the appropriate technical "
+"working group and approved by the Manager, Standards & Conformance."
+msgstr ""
+
+#: ../../content/index.rst:45
+msgid "TODO"
 msgstr ""

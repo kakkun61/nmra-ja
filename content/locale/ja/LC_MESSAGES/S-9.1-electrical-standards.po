@@ -1,0 +1,695 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, the National Model Railroad Association, Inc. and Kazuki Okamoto (岡本和樹)
+# This file is distributed under the same license as the nmra-ja package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nmra-ja 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 1980-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../content/S-9.1-electrical-standards.rst:4
+msgid "S-9.1 Electrical Standards"
+msgstr "S-9.1 デジタルコマンドコントロールの電気的標準"
+
+#: ../../content/S-9.1-electrical-standards.rst:6
+msgid "`Original <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/s-9.1_electrical_standards_2020.pdf>`_ (`Wayback Machine <https://web.archive.org/web/20230521153929/https://www.nmra.org/sites/default/files/standards/sandrp/pdf/s-9.1_electrical_standards_2020.pdf>`_)"
+msgstr "`原文 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/s-9.1_electrical_standards_2020.pdf>`_ (`Wayback Machine <https://web.archive.org/web/20230521153929/https://www.nmra.org/sites/default/files/standards/sandrp/pdf/s-9.1_electrical_standards_2020.pdf>`_)"
+
+#: ../../content/S-9.1-electrical-standards.rst:8
+msgid "Original Version: 3/07/2020"
+msgstr "原文版：3/07/2020"
+
+#: ../../content/S-9.1-electrical-standards.rst:12
+msgid "Communication from a Digital Command Station to a Digital Decoder is accomplished by transmitting a series of bits that convey instructions. A bit is a signal which represents one of two conditions, which we will call ``1`` and ``0``. This portion of the standard covers the electrical characteristics of the digital command control signal that encodes these bits. Please refer to tables 1-32 for definition and numerical values of parameters used throughout this document."
+msgstr "デジタルコマンドステーションからデジタルデコーダーへの通信は命令を伝達する一連のビットを転送することによって成り立っています。ビットは2つの状況のうちの1つをあらわす信号であり、それを ``1`` と ``0`` とします。この章では、これらのビットを符号化する DCC 信号の電気的特性について記述します。Please refer to tables 1-32 for definition and numerical values of parameters used throughout this document."
+
+#: ../../content/S-9.1-electrical-standards.rst:17
+msgid "A: Technique for Encoding Bits"
+msgstr "A：ビットを符号化する方式"
+
+#: ../../content/S-9.1-electrical-standards.rst:19
+msgid "The NMRA baseline digital command control signal consists of a stream of transitions between two equal voltage levels that have opposite polarity [#f1]_. Alternate transitions separate one bit from the next. The remaining transitions divide each bit into a first part and a last part. Digital Command Stations shall encode bits within this digital command control stream of transitions by varying the duration of the parts of the bits, or frequency of the transitions."
+msgstr "NMRA DCC 信号の基本は反対の極性をもつ連続した2つの電圧レベルの遷移です [#f1]_。交互に起こる遷移がビットを次のビットと分割します。残りの遷移がそれぞれの部分を前半と後半に分割します。デジタルコマンドステーションは、ビットの期間つまり遷移の周波数を変化させることによって DCC のこの連続した遷移にビットを符号化します。"
+
+#: ../../content/S-9.1-electrical-standards.rst:21
+msgid "In a ``1`` bit, the first and last part of a bit shall have the same nominal duration, and that duration shall be :math:`t_1` [#f2]_, giving the bit a nominal total duration of :math:`2 \\times t_1`. Digital Command Station components shall transmit ``1`` bits with the first and last parts each having a duration within the :math:`t_1` range. The duration difference between the first and last parts of a ``1`` bit shall not exceed :math:`t_\\mathrm{1d}`. A Digital Decoder must accept bits whose first and last parts have a duration within the :math:`t_\\mathrm{r1}` range as a valid bit with the value of ``1``. Digital Decoders must accept ``1`` bits where the duration difference between the positive and negative components does not exceed :math:`t_\\mathrm{r1d}`."
+msgstr "``1`` ビットでは、ビットの前半と後半で名目上同じ期間となり、それを :math:`t_1` [#f2]_ とします。よってビット全体の期間は :math:`2 \\times t_1` です。デジタルコマンドステーションは、前半と後半のそれぞれが :math:`t_1` の期間をもつように ``1`` ビットを送信しなければいけません。 ``1`` ビットの前半と後半の期間の差は :math:`t_\\mathrm{1d}` を超えてはいけません。デジタルデコーダーは、前半と後半の期間の期間が :math:`t_\\mathrm{r1}` の範囲内なら ``1`` の値をもつ妥当なビットとして受け付けなければいけません。デジタルデコーダーは、正と負の部分の期間の差が :math:`t_\\mathrm{r1d}` を超えない場合、 ``1`` ビットとして受け付けなければいけません。"
+
+#: ../../content/S-9.1-electrical-standards.rst:23
+msgid "In a ``0`` bit, the duration of the first and last parts of each transition shall nominally be greater than or equal to :math:`t_0`. To keep the DC component of the total signal at zero as with the ``1`` bits, the first and last part of the ``0`` bit are normally of equal duration. Digital Command Station components shall transmit ``0`` bits with each part of the bit having a duration within the :math:`t_0` range with the total bit duration of the ``0`` bit not exceeding :math:`t_\\mathrm{0total}`. A Digital Decoder must accept bits, whose first or last parts have a duration within the :math:`t_\\mathrm{r0}` range as a valid bit with the value of ``0``. Figure 1 provides an example of bits encoded using this technique."
+msgstr "``0`` ビットでは、それぞれの遷移の前半と後半の期間は名目上 :math:`t_0` と等しいかそれより大きくないといけません。 ``1`` ビットと同じように信号全体における直流値を0にするため ``0`` ビットの前半と後半も一般的には等しい期間です。デジタルコマンドステーションは、ビットのそれぞれの部分が :math:`t_0` 以内の期間をもつように、また ``0`` ビットの全期間が :math:`t_\\mathrm{0total}` を超えないように `0` ビットを送信しなければなりません。デジタルデコーダーは、前半か後半が :math:`t_\\mathrm{r0}` 以内の期間をもつビットを `0` の値をもつ妥当なビットとして受け付けなければいけません。Figure 1 provides an example of bits encoded using this technique."
+
+#: ../../content/S-9.1-electrical-standards.rst:25
+msgid "bit encoding"
+msgstr "ビット符号化"
+
+#: ../../content/S-9.1-electrical-standards.rst:28
+msgid "Figure 1: Bit Encoding"
+msgstr "画像 1：ビット符号化"
+
+#: ../../content/S-9.1-electrical-standards.rst:30
+msgid "This is a differential signal with no ground. At the point where the signal line crosses the horizontal reference line, both rails will be at the same voltage."
+msgstr "これは接地のない差分信号です。信号線が水平基準線と交叉するという点において、両方の線路は等しい電圧となります。"
+
+#: ../../content/S-9.1-electrical-standards.rst:35
+msgid "One Bit Timing"
+msgstr "1ビット計時"
+
+#: ../../content/S-9.1-electrical-standards.rst:39
+msgid "For power **station** output under load:"
+msgstr "負荷時の\\ **パワーステーション**\\ の出力は下記です。"
+
+#: ../../content/S-9.1-electrical-standards.rst:44
+#: ../../content/S-9.1-electrical-standards.rst:60
+msgid "Relationship for One Bits"
+msgstr "1ビットの関係"
+
+#: ../../content/S-9.1-electrical-standards.rst:45
+#: ../../content/S-9.1-electrical-standards.rst:61
+msgid "Result"
+msgstr "結果"
+
+#: ../../content/S-9.1-electrical-standards.rst:46
+msgid ":math:`t_\\mathrm{A} \\lt t_\\mathrm{1min}\\ \\mathrm{or}\\ t_\\mathrm{A} \\gt t_\\mathrm{1max}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:47
+#: ../../content/S-9.1-electrical-standards.rst:53
+msgid "Bad"
+msgstr "不可"
+
+#: ../../content/S-9.1-electrical-standards.rst:48
+#: ../../content/S-9.1-electrical-standards.rst:64
+msgid ":math:`t_\\mathrm{A} = t_\\mathrm{B}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:49
+#: ../../content/S-9.1-electrical-standards.rst:51
+#: ../../content/S-9.1-electrical-standards.rst:63
+#: ../../content/S-9.1-electrical-standards.rst:65
+#: ../../content/S-9.1-electrical-standards.rst:67
+msgid "OK"
+msgstr "可"
+
+#: ../../content/S-9.1-electrical-standards.rst:50
+msgid ":math:`t_\\mathrm{A} - t_\\mathrm{B}| \\le t_\\mathrm{1dmax}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:52
+msgid ":math:`t_\\mathrm{A} - t_\\mathrm{B}| \\gt t_\\mathrm{1dmax}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:55
+msgid "**Decoders** must accept:"
+msgstr "**デコーダー**\\ は下記を受け付けなければいけません。"
+
+#: ../../content/S-9.1-electrical-standards.rst:62
+msgid ":math:`t_\\mathrm{A} \\ge t_\\mathrm{r1min}\\ \\mathrm{and}\\ t_\\mathrm{A} \\le t_\\mathrm{r1max}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:66
+msgid ":math:`t_\\mathrm{A} - t_\\mathrm{B}| \\le t_\\mathrm{r1dmax}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:69
+msgid "Table 1: DCC Bit Timing"
+msgstr "表1：DCC ビット計時"
+
+#: ../../content/S-9.1-electrical-standards.rst:73
+#: ../../content/S-9.1-electrical-standards.rst:144
+#: ../../content/S-9.1-electrical-standards.rst:221
+msgid "Parameter"
+msgstr "変数"
+
+#: ../../content/S-9.1-electrical-standards.rst:74
+#: ../../content/S-9.1-electrical-standards.rst:145
+#: ../../content/S-9.1-electrical-standards.rst:222
+msgid "Definition"
+msgstr "定義"
+
+#: ../../content/S-9.1-electrical-standards.rst:75
+#: ../../content/S-9.1-electrical-standards.rst:146
+#: ../../content/S-9.1-electrical-standards.rst:223
+msgid "Min. Value"
+msgstr "最小値"
+
+#: ../../content/S-9.1-electrical-standards.rst:76
+#: ../../content/S-9.1-electrical-standards.rst:147
+#: ../../content/S-9.1-electrical-standards.rst:224
+msgid "Normal Value"
+msgstr "通常値"
+
+#: ../../content/S-9.1-electrical-standards.rst:77
+#: ../../content/S-9.1-electrical-standards.rst:148
+#: ../../content/S-9.1-electrical-standards.rst:225
+msgid "Max. Value"
+msgstr "最大値"
+
+#: ../../content/S-9.1-electrical-standards.rst:78
+#: ../../content/S-9.1-electrical-standards.rst:149
+#: ../../content/S-9.1-electrical-standards.rst:226
+msgid "Unit"
+msgstr "単位"
+
+#: ../../content/S-9.1-electrical-standards.rst:79
+#: ../../content/S-9.1-electrical-standards.rst:150
+#: ../../content/S-9.1-electrical-standards.rst:227
+msgid "Comments"
+msgstr "備考"
+
+#: ../../content/S-9.1-electrical-standards.rst:80
+msgid ":math:`t_1`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:81
+msgid "``1`` half bit duration"
+msgstr "`1` の半ビット期間"
+
+#: ../../content/S-9.1-electrical-standards.rst:82
+msgid "55"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:83
+#: ../../content/S-9.1-electrical-standards.rst:90
+msgid "58"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:84
+msgid "61"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:85
+#: ../../content/S-9.1-electrical-standards.rst:92
+#: ../../content/S-9.1-electrical-standards.rst:99
+#: ../../content/S-9.1-electrical-standards.rst:106
+#: ../../content/S-9.1-electrical-standards.rst:113
+#: ../../content/S-9.1-electrical-standards.rst:120
+#: ../../content/S-9.1-electrical-standards.rst:127
+msgid "μsec"
+msgstr "μ秒"
+
+#: ../../content/S-9.1-electrical-standards.rst:86
+msgid "Duration of a transmitted ``1`` half bit"
+msgstr "`1` の半ビットの転送継続時間"
+
+#: ../../content/S-9.1-electrical-standards.rst:87
+msgid ":math:`t_\\mathrm{r1}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:88
+msgid "``1`` half bit received duration"
+msgstr "`1` の半ビット受信期間"
+
+#: ../../content/S-9.1-electrical-standards.rst:89
+msgid "52"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:91
+msgid "64"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:93
+msgid "Allowed duration for a received ``1`` half bit"
+msgstr "受信した `1` の半ビットの許容期間"
+
+#: ../../content/S-9.1-electrical-standards.rst:94
+msgid ":math:`t_0`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:95
+msgid "``0`` half bit duration"
+msgstr "`0` の半ビット期間"
+
+#: ../../content/S-9.1-electrical-standards.rst:96
+#: ../../content/S-9.1-electrical-standards.rst:188
+msgid "95"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:97
+#: ../../content/S-9.1-electrical-standards.rst:111
+#: ../../content/S-9.1-electrical-standards.rst:195
+msgid "100"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:98
+msgid "9900"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:100
+msgid "Duration of a transmitted ``0`` half bit"
+msgstr "`0` の半ビットの転送継続時間"
+
+#: ../../content/S-9.1-electrical-standards.rst:101
+msgid ":math:`t_\\mathrm{0total}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:102
+msgid "stretched ``0`` bit duration"
+msgstr "`0` ビットの伸張期間"
+
+#: ../../content/S-9.1-electrical-standards.rst:103
+#: ../../content/S-9.1-electrical-standards.rst:104
+#: ../../content/S-9.1-electrical-standards.rst:117
+#: ../../content/S-9.1-electrical-standards.rst:118
+#: ../../content/S-9.1-electrical-standards.rst:124
+#: ../../content/S-9.1-electrical-standards.rst:125
+#: ../../content/S-9.1-electrical-standards.rst:153
+#: ../../content/S-9.1-electrical-standards.rst:155
+#: ../../content/S-9.1-electrical-standards.rst:160
+#: ../../content/S-9.1-electrical-standards.rst:162
+#: ../../content/S-9.1-electrical-standards.rst:168
+#: ../../content/S-9.1-electrical-standards.rst:169
+#: ../../content/S-9.1-electrical-standards.rst:174
+#: ../../content/S-9.1-electrical-standards.rst:175
+#: ../../content/S-9.1-electrical-standards.rst:182
+#: ../../content/S-9.1-electrical-standards.rst:183
+#: ../../content/S-9.1-electrical-standards.rst:189
+#: ../../content/S-9.1-electrical-standards.rst:190
+#: ../../content/S-9.1-electrical-standards.rst:196
+#: ../../content/S-9.1-electrical-standards.rst:197
+#: ../../content/S-9.1-electrical-standards.rst:203
+#: ../../content/S-9.1-electrical-standards.rst:204
+msgid "—"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:105
+msgid "12000"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:107
+msgid "Maximum total duration of stretched ``0`` bit"
+msgstr "引き伸ばされた `0` ビットの最大総和継続時間"
+
+#: ../../content/S-9.1-electrical-standards.rst:108
+msgid ":math:`t_\\mathrm{r0}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:109
+msgid "``0`` half bit received duration"
+msgstr "`0` の半ビットの受信期間"
+
+#: ../../content/S-9.1-electrical-standards.rst:110
+msgid "90"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:112
+msgid "10000"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:114
+msgid "Allowed duration for a received ``0`` half bit"
+msgstr "受信した `0` の半ビットの許容期間"
+
+#: ../../content/S-9.1-electrical-standards.rst:115
+msgid ":math:`t_\\mathrm{1d}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:116
+msgid "``1`` half bit duration delta"
+msgstr "`1` の半ビット期間の差分"
+
+#: ../../content/S-9.1-electrical-standards.rst:119
+msgid "3"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:121
+msgid "Maximum difference in duration between transmitted ``1`` bit half bits"
+msgstr "転送した `1` の半ビットの期間の最大の差"
+
+#: ../../content/S-9.1-electrical-standards.rst:122
+msgid ":math:`t_\\mathrm{r1d}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:123
+msgid "received ``1`` half bit duration delta"
+msgstr "受信した `1` の半ビット期間の差分"
+
+#: ../../content/S-9.1-electrical-standards.rst:126
+msgid "6"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:128
+msgid "Maximum difference in duration between received ``1`` bit half bits"
+msgstr "受信した `1` の半ビットの期間の最大の差"
+
+#: ../../content/S-9.1-electrical-standards.rst:133
+msgid "B: Command Control Signal Shape"
+msgstr "B：コマンドコントロール信号の形"
+
+#: ../../content/S-9.1-electrical-standards.rst:135
+msgid "The NMRA digital signal applied to the track by any Digital Command Control system, as measured at the power station output, shall have the following characteristics, as measured under conditions ranging from no load to the maximum continuous load permitted by the power source. Transitions that cross the region between :math:`V_\\mathrm{trL}` and :math:`V_\\mathrm{trH}` [#f3]_ shall occur at the rate of :math:`V_\\mathrm{trA}` or faster. This signal may contain non-monotonic distortion at the zero-crossing transitions, provided that this distortion shall have an amplitude of no greater than :math:`\\pm V_\\mathrm{dist}` [#f4]_."
+msgstr "デジタルコマンドコントロールシステムによって線路に適用された NMRA 信号は、パワーステーションの出力を無負荷から電力源の許容する最大連続負荷までの条件下で計測すると、下記の特性をもつ必要があります。Transitions that cross the region between :math:`V_\\mathrm{trL}` and :math:`V_\\mathrm{trH}` [#f3]_ shall occur at the rate of VtrA or faster. This signal may contain non-monotonic distortion at the zero-crossing transitions, provided that this distortion shall have an amplitude of no greater than :math:`\\pm V_\\mathrm{dist}` [#f4]_."
+
+#: ../../content/S-9.1-electrical-standards.rst:137
+msgid "Digital Decoders shall be designed to correctly decode signals with transitions whose slope is :math:`V_\\mathrm{trRA}` or faster across the voltage range from :math:`V_\\mathrm{trL}` to :math:`V_\\mathrm{trH}`. A Digital Decoder shall correctly decode properly addressed baseline packets at a probability of :math:`P_\\mathrm{decode}` or higher, as defined in S-9.2, in the presence of noise (and/or other types of signals) at frequencies above :math:`F_\\mathrm{noise}` with a total peak-to-peak amplitude of less than (:math:`1 / V_\\mathrm{snr}`) of the peak-to-peak amplitude of the NMRA digital signal [#f5]_."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:139
+msgid "The exact shape of the NMRA digital signal shall be designed to minimize electromagnetic radiation such that a large layout operated using this standard can meet applicable United States Federal Communications Commission electromagnetic interference requirements [#f6]_."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:141
+msgid "Table 2: DCC Signal parameters Shape/ Amplitude"
+msgstr "表2：DCC 信号変数 形・電圧"
+
+#: ../../content/S-9.1-electrical-standards.rst:151
+msgid ":math:`V_\\mathrm{trL}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:152
+msgid "Transition region :math:`V_\\mathrm{min}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:154
+msgid "-4"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:156
+#: ../../content/S-9.1-electrical-standards.rst:163
+#: ../../content/S-9.1-electrical-standards.rst:177
+#: ../../content/S-9.1-electrical-standards.rst:234
+#: ../../content/S-9.1-electrical-standards.rst:242
+#: ../../content/S-9.1-electrical-standards.rst:250
+#: ../../content/S-9.1-electrical-standards.rst:258
+#: ../../content/S-9.1-electrical-standards.rst:266
+#: ../../content/S-9.1-electrical-standards.rst:274
+msgid "Volt"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:157
+msgid "Low limit of bit transition region"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:158
+msgid ":math:`V_\\mathrm{trH}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:159
+msgid "Transition region :math:`V_\\mathrm{max}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:161
+msgid "4"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:164
+msgid "High limit of bit transition region"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:165
+msgid ":math:`V_\\mathrm{trA}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:166
+msgid "Transition rate"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:167
+msgid "2.4"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:170
+#: ../../content/S-9.1-electrical-standards.rst:184
+msgid "Volt/μsec"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:171
+msgid "Transmitted bit voltage transition rate"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:172
+msgid ":math:`V_\\mathrm{dist}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:173
+msgid "Distortion amplitude"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:176
+#: ../../content/S-9.1-electrical-standards.rst:181
+msgid "2"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:178
+msgid "Distortion voltage during bit transition"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:179
+msgid ":math:`V_\\mathrm{trRA}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:180
+msgid "Receive transition rate"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:185
+msgid "Received bit voltage transition rate"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:186
+msgid ":math:`P_\\mathrm{decode}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:187
+msgid "Decode probability"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:191
+msgid "Percent"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:192
+msgid "Percentage of packets decoded correctly"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:193
+msgid ":math:`F_\\mathrm{noise}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:194
+msgid "Noise frequency"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:198
+msgid "kHz"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:199
+msgid "Frequency of noise or other signal"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:200
+msgid ":math:`V_\\mathrm{snr}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:201
+msgid "Peak signal to noise amplitude ratio"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:202
+msgid "4:1"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:205
+msgid "No units (this is a ratio)"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:206
+msgid "Peak DCC signal to peak :math:`F_\\mathrm{noise}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:211
+msgid "C: Power Transmission and Voltage Limits for Transmitting Power through the Rails"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:213
+msgid "The baseline method for providing the power to operate locomotives and accessories, which shall be supported by all Digital Command Stations and Digital Decoders, is by full-wave rectification of the bipolar NMRA digital signal within the Digital Decoder [#f7]_. In order to maintain power to the Digital Decoders, gaps in bit transmission are only allowed at specified times (see S-9.2, Section C). The peak value of NMRA digital signal, as produced by the power station and measured at the track, shall be confined to the range of :math:`V_\\mathrm{DCCp}` for the applicable scale, as specified in Table 3 [#f8]_. In no case should the peak amplitude of the command control signal exceed :math:`V_\\mathrm{DCCpmax}` for the applicable scale."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:215
+msgid "Digital Decoders shall be designed to continuously operate in and withstand, without permanent damage to the decoder; a peak maximum voltage within the range of :math:`V_\\mathrm{DCCr}` as specified in table 3 for the applicable scale, measured at the track."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:217
+msgid "Table 3: Power transmission and amplitude limit parameters"
+msgstr "表3：電力伝送・電圧制限変数"
+
+#: ../../content/S-9.1-electrical-standards.rst:220
+msgid "Scale"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:228
+#: ../../content/S-9.1-electrical-standards.rst:252
+msgid "N and smaller scales"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:229
+#: ../../content/S-9.1-electrical-standards.rst:237
+#: ../../content/S-9.1-electrical-standards.rst:245
+msgid ":math:`V_\\mathrm{DCCp}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:230
+#: ../../content/S-9.1-electrical-standards.rst:238
+#: ../../content/S-9.1-electrical-standards.rst:246
+msgid "Voltage limits for track for power station"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:231
+#: ../../content/S-9.1-electrical-standards.rst:239
+#: ../../content/S-9.1-electrical-standards.rst:247
+msgid "8.5"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:232
+#: ../../content/S-9.1-electrical-standards.rst:256
+msgid "12"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:233
+#: ../../content/S-9.1-electrical-standards.rst:241
+#: ../../content/S-9.1-electrical-standards.rst:249
+msgid "22"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:235
+#: ../../content/S-9.1-electrical-standards.rst:243
+#: ../../content/S-9.1-electrical-standards.rst:251
+msgid "Voltage produced powering the track"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:236
+#: ../../content/S-9.1-electrical-standards.rst:260
+msgid "HO/S/O scales"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:240
+#: ../../content/S-9.1-electrical-standards.rst:264
+msgid "15"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:244
+#: ../../content/S-9.1-electrical-standards.rst:268
+msgid "Large scales"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:248
+#: ../../content/S-9.1-electrical-standards.rst:272
+msgid "18"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:253
+#: ../../content/S-9.1-electrical-standards.rst:261
+#: ../../content/S-9.1-electrical-standards.rst:269
+msgid ":math:`V_\\mathrm{DCCr}`"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:254
+#: ../../content/S-9.1-electrical-standards.rst:262
+#: ../../content/S-9.1-electrical-standards.rst:270
+msgid "Voltage limits for track for decoder"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:255
+#: ../../content/S-9.1-electrical-standards.rst:263
+#: ../../content/S-9.1-electrical-standards.rst:271
+msgid "7"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:257
+msgid "24"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:259
+#: ../../content/S-9.1-electrical-standards.rst:267
+#: ../../content/S-9.1-electrical-standards.rst:275
+msgid "Peak voltage decoder should operate in and withstand"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:265
+#: ../../content/S-9.1-electrical-standards.rst:273
+msgid "27"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:277
+msgid "Digital Decoders shall be designed to interpret a valid packet addressed to it whilst supplied a minimum voltage :math:`V_\\mathrm{DCCr}` as specified in Table 3 and to acknowledge the receipt of a command in that packet by some action. E.G. turning on a low power output to illuminate an LED. The Digital Decoder is not required to turn the motor at this voltage. This is an indication of the Digital Decoder’s ability to read valid instructions addressed to it at the specified minimum voltage at the track."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:281
+#: ../../content/S-9.1-electrical-standards.rst:285
+msgid "Revisions"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:284
+msgid "Data"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:286
+msgid "January 2019"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:287
+msgid "Tabularized data, removing it from the text and replacing with a variable to make future revisions less prone to missing changes in the text. Cleaned up grammar and language."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:288
+msgid "February 2019"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:289
+msgid "Table 3 increased large-scale power station maximum voltage large to 24v from 22v."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:290
+msgid "July-August 2019"
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:291
+msgid "Text related to Table 3 to clarify the decoder must operate continuously in the maximum voltage specified without sustaining permanent damage. The decoder must read and acknowledge a valid instruction addressed to it at the minimum voltage specified."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:294
+msgid "Footnotes"
+msgstr "脚注"
+
+#: ../../content/S-9.1-electrical-standards.rst:295
+msgid "Note that since a locomotive or piece of rolling stock can be placed upon a given section of track facing in either direction, it is impossible to define, from the point of view of a *Digital Decoder*, whether the first or last part of a bit will have the “positive” voltage polarity."
+msgstr "機関車やいくつかの客車・貨車はそれぞれの方向に向いて線路に置かれるため、**デジタルデコーダー**\\ からはビットの前半と後半のどちらが正の電圧になるか定義することは不可能です。"
+
+#: ../../content/S-9.1-electrical-standards.rst:297
+msgid "All timing measurements are done between zero-volt crossings."
+msgstr "全ての計測は0ボルトと交叉する区間を計測します。"
+
+#: ../../content/S-9.1-electrical-standards.rst:299
+msgid "0 volts is the mid point of the differential voltage."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:301
+msgid "This standard specifically permits super-imposing non-NMRA signals upon the rails for other purposes, provided that the NMRA Digital Decoder can reject these signals."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:303
+msgid "This measurement is made with the Digital Decoder electrically connected to a track or accessory bus."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:305
+msgid "All components of an NMRA compliant digital system shall meet all applicable FCC and/or CE requirements."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:307
+msgid "Alternate means for supplying power are acceptable, provided that Digital Command Station power units are capable of producing the baseline track signal, and Digital Decoders are capable of operation from the baseline track signal as described by this standard."
+msgstr ""
+
+#: ../../content/S-9.1-electrical-standards.rst:309
+msgid "Care should be taken to ensure that any motors exposed directly to the digital signal for extended periods have a stall rating that exceeds the amplitude of the signal, or sufficiently high impedance at 4-9 kHz to reduce the current to normal operating level. This appears to only be a concern for high-precision core-less can motors, which present a low impedance load, or for layouts using an NMRA digital signal with an amplitude in excess of ± 18 volts."
+msgstr ""

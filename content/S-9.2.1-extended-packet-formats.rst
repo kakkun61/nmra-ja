@@ -84,7 +84,9 @@ The first data byte of an Extended Packet Format packet contains the primary add
 B: Broadcast Command for Multi-Function Digital Decoders
 --------------------------------------------------------
 
-The format for this packet is::
+The format for this packet is
+
+::
 
    preamble 0 00000000 0 instruction-bytes 0 EEEEEEEE 1
 
@@ -95,7 +97,9 @@ Instructions addressed to "broadcast address" ``00000000`` must be executed by a
 C: Instruction Packets for Multi Function Digital Decoders
 ----------------------------------------------------------
 
-The format for this packet is::
+The format for this packet is
+
+::
 
    preamble 0 [ AAAAAAAA ] 0 instruction-bytes 0 EEEEEEEE 1
 
@@ -105,7 +109,9 @@ The first address byte contains 8 bits of address information. If the most signi
 
 Instruction-bytes are data bytes used to send commands to Multi Function Digital Decoders. Although it is unlikely that all Digital Decoders will implement all instructions, it is important that if they support packets with more than a single instruction, they can sufficiently parse the packet to be able to recognize if a byte is a new instruction or the second byte of a previous instruction.
 
-Each instruction (indicated by instruction-bytes) is defined to be::
+Each instruction (indicated by instruction-bytes) is defined to be
+
+::
 
    instruction-bytes = CCCDDDDD,
                        CCCDDDDD 0 DDDDDDDD, or
@@ -151,7 +157,9 @@ Decoder Control (``0000``)
 
 The decoder control instructions are intended to set up or modify decoder configurations.
 
-The format for this packet is::
+The format for this packet is
+
+::
 
    instruction-bytes = 0000CCCF or
                        0000CCCF DDDDDDDD
@@ -214,7 +222,9 @@ Set Decoder Flags
 
 Set Decoder Flags is an expanded decoder control function that allows for the command station to turn on or off flags within a specific decoder or within a group of decoders.
 
-The format for this packet is::
+The format for this packet is
+
+::
 
    instruction-bytes = 0000011D CCCC0SSS
 
@@ -271,7 +281,9 @@ Functions controlled by instruction ``100`` and ``101`` will continue to respond
 
 By default all forms of Bi-directional communication are not activated in response to commands sent to the consist address until specifically activated by a Decoder Control instruction. Operations mode acknowledgement and Data Transmission applies to the appropriate commands at the respective decoder addresses.
 
-The format of this instruction is::
+The format of this instruction is
+
+::
 
    instruction-bytes = 0001CCCC 0 0AAAAAAA
 
@@ -302,7 +314,9 @@ Advanced Operations Instruction (``001``)
 
 These instructions control advanced decoder functions. Only a single advanced operations instruction may be contained in a packet.
 
-The format of this instruction is::
+The format of this instruction is
+
+::
 
    001CCCCC 0 DDDDDDDD
 
@@ -337,7 +351,9 @@ Instruction ``11110`` is used to restrict the maximum speed of a decoder. Bit 7 
 Analog Function Group
 ^^^^^^^^^^^^^^^^^^^^^
 
-The format of this instruction is::
+The format of this instruction is
+
+::
 
    001CCCCC 0 VVVVVVVV 0 DDDDDDDD
 
@@ -354,7 +370,9 @@ The remaining 29 instructions are reserved for future use.
 Speed and Direction Instructions (``010`` and ``011``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These two instructions have these formats::
+These two instructions have these formats
+
+::
 
    010DDDDD Reverse Operation
    011DDDDD Forward Operation
@@ -366,7 +384,9 @@ A speed and direction instruction is used send information to motors connected t
 Function Group One Instruction (``100``) [#f4]_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The format of this instruction is::
+The format of this instruction is
+
+::
 
    100DDDDD
 
@@ -379,7 +399,9 @@ When operations mode acknowledgment is enabled, receipt of a function group 1 pa
 Function Group Two Instruction(``101``) [#f5]_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The format of this instruction is::
+The format of this instruction is
+
+::
 
    101SDDDD
 
@@ -394,11 +416,15 @@ Feature Expansion Instruction (``110``)
 
 The instructions in this group provide for support of additional features within decoder (See TN-3-05).
 
-The format of two byte instructions in this group is::
+The format of two byte instructions in this group is
+
+::
 
    110CCCCC 0 DDDDDDDD
 
-The format of three byte instructions in this group is::
+The format of three byte instructions in this group is
+
+::
 
    110CCCCC 0 DDDDDDDD 0 DDDDDDDD
 
@@ -473,7 +499,9 @@ If a configuration variable access acknowledgment is required, and the decoder h
 Configuration Variable Access Instruction - Short Form
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The format of this instruction is::
+The format of this instruction is
+
+::
 
    1111CCCC 0 DDDDDDDD
 
@@ -502,7 +530,9 @@ Only a single packet is necessary to change a configuration variable using this 
 Configuration Variable Access Instruction - Long Form
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The long form allows the direct manipulation of all CVs [#f7]_. This instruction is valid both when the Digital Decoder has its long address active and short address active. Digital Decoders shall not act on this instruction if sent to its consist address. The format of the instructions using Direct CV addressing is::
+The long form allows the direct manipulation of all CVs [#f7]_. This instruction is valid both when the Digital Decoder has its long address active and short address active. Digital Decoders shall not act on this instruction if sent to its consist address. The format of the instructions using Direct CV addressing is
+
+::
 
    1110CCVV 0 VVVVVVVV 0 DDDDDDDD
 
@@ -543,7 +573,9 @@ The contents of the Configuration Variable as indicated by the 10-bit address ar
 Bit Manipulation
 """"""""""""""""
 
-The bit manipulation instructions use a special format for the data byte (``DDDDDDDD``)::
+The bit manipulation instructions use a special format for the data byte (``DDDDDDDD``)
+
+::
 
    111CDBBB
 
@@ -573,7 +605,9 @@ Accessory Digital Decoders are intended for control of a number of simple functi
 Basic Accessory Decoder Packet Format
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The format for packets intended for Accessory Digital Decoders is::
+The format for packets intended for Accessory Digital Decoders is
+
+::
 
    preamble 0 10AAAAAA 0 1AAACDDD 0 EEEEEEEE 1
 
@@ -606,7 +640,9 @@ Broadcast Command for Accessory Decoders
 Broadcast Command for Basic Accessory Decoders
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The format for the broadcast instruction is::
+The format for the broadcast instruction is
+
+::
 
    preamble 0 10111111 0 1000CDDD 0 EEEEEEEE 1
 
@@ -617,7 +653,9 @@ This packet shall be executed by all accessory decoders. CDDD is defined as spec
 Broadcast Command for Extended Accessory Decoders
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The format for the broadcast instruction is::
+The format for the broadcast instruction is
+
+::
 
    preamble 0 10111111 0 00000111 0 000XXXXX 0 EEEEEEEE 1
 
@@ -639,7 +677,9 @@ Basic Accessory Decoder Packet address for operations mode programming
 
    10AAAAAA 0 1AAACDDD
 
-Where ``DDD`` is used to indicate the output whose CVs are being modified and ``C`` = ``1``. If ``CDDD`` = ``0000`` then the CVs refer to the entire decoder. The resulting packet would be::
+Where ``DDD`` is used to indicate the output whose CVs are being modified and ``C`` = ``1``. If ``CDDD`` = ``0000`` then the CVs refer to the entire decoder. The resulting packet would be
+
+::
 
    preamble 10AAAAAA 0 1AAACDDD 0 1110CCVV 0 VVVVVVVV 0 DDDDDDDD 0 EEEEEEEE 1
             Accessory Decoder Address                              Error Byte
@@ -654,7 +694,9 @@ Extended Decoder Control Packet address for operations mode programming
 
    10AAAAAA 0 0AAA0AA1
 
-Please note that the use of ``0`` in bit 3 of byte 2 is to ensure that this packet cannot be confused with the legacy accessory-programming packets. The resulting packet would be::
+Please note that the use of ``0`` in bit 3 of byte 2 is to ensure that this packet cannot be confused with the legacy accessory-programming packets. The resulting packet would be
+
+::
 
    preamble 10AAAAAA 0 0AAA0AA1 0 1110CCVV 0 VVVVVVVV 0 DDDDDDDD 0 EEEEEEEE 1
             Signal Decoder Address                                 Error Byte
@@ -681,7 +723,9 @@ Accessory Decoder Configuration Variable Access Instruction [#f9]_
 
 The following command is included for backward compatibility for some older accessory decoders. Its use is discouraged in new decoder designs.
 
-The format for Accessory Decoder Configuration Variable Access Instructions is::
+The format for Accessory Decoder Configuration Variable Access Instructions is
+
+::
 
    preamble 0 10AAAAAA 0 0AAA11VV 0 VVVVVVVV 0 DDDDDDDD 0 EEEEEEEE 1
 

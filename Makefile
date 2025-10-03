@@ -22,21 +22,15 @@ build.ja:
 serve:
 	warp -d .build
 
-.PHONY: internationalize.template
-internationalize.template: $(pot_file_paths)
-
 $(pot_file_paths)&: $(rst_file_paths)
 	sphinx-build --builder gettext content .build/gettext
 
-.PHONY: internationalize.instance
-internationalize.instance: $(po_file_ja_paths)
+.PHONY: multilingual.update
+multilingual.update: $(po_file_ja_paths)
 
-po_file_ja_pat: $(pot_file_pat)
+$(po_file_ja_pat): $(pot_file_pat) FORCE
 	@mkdir -p $(@D)
-	if [ -f $@ ]; then msgmerge --update $@ $<; else cp $< $@; fi
-
-.PHONY: internationalize.instance-binary
-internationalize.instance-binary: $(mo_file_ja_paths)
+	if [ -f $@ ]; then msgmerge --update --no-wrap $@ $<; else cp $< $@; fi
 
 $(mo_file_ja_pat): $(po_file_ja_pat)
 	@mkdir -p $(@D)
@@ -63,3 +57,5 @@ pip.install:
 .PHONY: clean
 clean:
 	-rm -rf .build
+
+FORCE:

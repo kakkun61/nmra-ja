@@ -1,0 +1,343 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, the National Model Railroad Association, Inc. and Kazuki Okamoto (岡本和樹)
+# This file is distributed under the same license as the nmra-ja package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nmra-ja 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 1980-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:4
+msgid "S-9.2 DCC Communications Standards"
+msgstr "S-9.2 デジタルコマンドコントロールの通信標準"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:6
+msgid "`Original <https://www.nmra.org/sites/default/files/s-92-2004-07.pdf>`_"
+msgstr "`原文 <https://www.nmra.org/sites/default/files/s-92-2004-07.pdf>`_"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:8
+msgid "Original Version: July 2004"
+msgstr "原文版：July 2004"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:10
+msgid "This standard covers the format of the information sent via Digital Command Stations to Digital Decoders. A Digital Command Station transmits this information to Digital Decoders by sending a series of bits using the NMRA digital signal described in S-9.1. This sequence of bits, termed a packet, is used to encode one of a set of instructions that the Digital Decoder operates upon. Packets must be precisely defined to ensure that the intended instructions can be properly encoded and decoded."
+msgstr "この標準はデジタルコマンドステーションからデジタルデコーダーに送信される情報の形式について取り扱います。デジタルコマンドステーションは、S-9.1 に記載された NMRA デジタル信号を使って一連のビットを送信することで、この情報をデジタルデコーダーに転送します。この一連のビットをパケットと呼びます。デジタルデコーダーを動作させる命令のうちの1つを符号化するためにパケットは使用されます。意図した命令を適切に符号化・複合化するために、パケットは正確に定義されなければいけません。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:15
+msgid "A: General Packet Format"
+msgstr "A：一般パケット形式"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:17
+msgid "The following sequence of bits defines a valid NMRA packet. Any sequence of bits not meeting the full specifications of this general packet format is not, for the purpose of this standard, a “packet”. Digital decoders should not act on any instructions that are not contained within a valid packet while in the NMRA digital mode of operation [#f1]_."
+msgstr "下記の一連のビットによって妥当な NMRA パケットを定義します。この標準の目的において、この一般パケット形式の完全な定義に合致しないビットの並びは「パケット」ではありません。NMRA デジタルモードの動作において妥当なパケットに含まれない命令によってデジタルデコーダーは動作してはいけません [#f1]_。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:19
+msgid "**Preamble**"
+msgstr "**前文**"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:20
+msgid "The preamble to a packet consists of a sequence of ``1`` bits. A digital decoder must not accept as a valid, any preamble that has less than 10 complete ``1`` bits, or require for proper reception of a packet with more than 12 complete ``1`` bits. A command station must send a minimum of 14 full preamble bits."
+msgstr "パケットの前文は ``1`` ビットの並びからなります。デジタルデコーダーは、10個未満の完全な ``1`` ビットを妥当であると受理してはいけず、12個より多くの完全な ``1`` ビットの並びをもつパケットの適切な受信を要求します。コマンドステーションは少なくとも14個の完全な前文ビットを送信しないといけません。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:21
+msgid "**Packet Start Bit**"
+msgstr "**パケット開始ビット**"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:22
+msgid "The packet start bit is the first bit with a value of ``0`` that follows a valid preamble. The Packet Start Bit terminates the preamble and indicates that the next bits are an address data byte."
+msgstr "パケット開始ビットは最初のビットで妥当な前文に続く ``0`` の値を持ちます。パケット開始ビットは前文を終わらせ、次のビットがアドレスデータバイトであることをしめします。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:23
+msgid "**Address Data Byte**"
+msgstr "**アドレスデータバイト**"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:24
+msgid "The first data byte of the packet normally contains eight bits of address information [#f2]_. The first transmitted address bit shall be defined to be the most significant bit of the address data byte. Address Data Bytes with values ``00000000``, ``11111110``, and ``11111111`` are reserved for special operations and must not be transmitted except as provided in this Standard or associated Recommended Practices."
+msgstr "パケットの最初のバイトは通常、8ビットのアドレス情報をもちます [#f2]_。転送されるアドレスの最初のビットはアドレスデータバイトの最上位ビットであると定義されます。``00000000`` と ``11111110`` そして ``11111111`` の値をもつアドレスデータバイトは特別な操作のために予約されており、この標準もしくは関連する推奨慣例において提供される場合をのぞき転送してはいけません。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:25
+msgid "These must occur one or more times"
+msgstr "1回以上の繰り返し"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:26
+msgid "**Data Byte Start Bit**"
+msgstr "**データバイト開始ビット**"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:27
+msgid "This bit precedes a data byte and has the value of ``0``."
+msgstr "このビットはデータバイトに先行し ``0`` の値をもちます。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:28
+msgid "**Data Byte**"
+msgstr "**データバイト**"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:29
+msgid "Each data byte contains eight bits of information used for address, instruction, data, or error detection purposes. The first transmitted data bit of each data byte shall be defined to be the most significant bit of the data byte."
+msgstr "それぞれのデータバイトは8ビットを含み、アドレス・命令・データ・エラー検出目的に使用される情報をもちます。転送されるデータのそれぞれのデータバイトの最初のビットはデータバイトの最上位ビットであると定義されます。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:30
+msgid "**Packet End Bit**"
+msgstr "**パケット終了ビット**"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:31
+msgid "This bit marks the termination of the packet and has a value of ``1`` [#f3]_."
+msgstr "このビットはパケットの終了をしめし、 ``1`` の値をもちます [#f3]_。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:33
+msgid "Figure 1 provides an example of an acceptable command control packet that uses three data bytes: one address data byte, one instruction data byte and one error detection data byte."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:35
+msgid "bit encoding"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:38
+msgid "Figure 1: Example of a Transmitted Packet"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:43
+msgid "B: Baseline Packets"
+msgstr "B：基本パケット"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:45
+msgid "The Baseline Packets are included to provide the minimum interoperability between different systems. More complex packet formats that support different types of decoders, additional functions, addresses and speeds are provided in the Extended Packet Format Recommended Practice (RP-9.2.1). It is the intention of this Standard that, in order to conform: a Command Station must encode operator control input in conformance with the Baseline Packet semantics; and a Digital Decoder must recognize and provide suitable locomotive control electrical output in conformance with the Baseline Packet semantics. Digital Decoder Idle Packets and Digital Decoder Broadcast Stop Packets [#f4]_ (defined below) are optional for Command Stations, and required for decoders."
+msgstr "基本パケットは異なるシステム間の最低限の相互運用性を提供するために含まれます。ことなった種類のデコーダーや追加の機能・アドレス・速度のためのより複雑なパケットの形式は「拡張パケット形式の推奨慣例」（RP-9.2.1）で提供されます。この標準の意図するところは、コマンドステーションは基本パケット意味論にしたがって操縦者の制御の入力を符号化しなければいけないこと・デジタルデコーダーは基本パケット意味論にしたがって適切に機関車を制御する電気的な出力を識別し提供しなければいけないことの確認です。デジタルデコーダーアイドルパケットとデジタルデコーダーブロードキャスト停止パケット [#f4]_ （以下に定義）はコマンドステーションには任意でデコーダーには必須です。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:50
+msgid "Speed and Direction Packet For Locomotive Decoders"
+msgstr "機関車デコーダー用速度・方向パケット"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:57
+msgid "Byte One: Address Data Byte ``0AAAAAAA``"
+msgstr "バイト1：アドレスデータバイト ``0AAAAAAA``"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:58
+msgid "The address data byte contains the address of the intended recipient of the packet. Every Digital Decoder shall be capable of retaining and recognizing its own address for purposes of responding to Baseline Packets. Locomotive Digital Decoders shall support the full range of baseline addresses in such a manner that this address is easily configurable by the user [#f5]_. It is acceptable for Digital Command Stations to restrict the number of valid addresses supported so long as this restriction is clearly and plainly labeled on the package and in the instructions."
+msgstr "アドレスデータバイトは意図したパケットの受信者のアドレスをもちます。全てのデジタルデコーダーは、基本パケットに返答するために自身のアドレスを保持し識別できなければいけません。機関車デジタルデコーダーは使用者がこのアドレスを簡単に設定できる方法で基本アドレスの全範囲を処理できなければいけません [#f5]_。デジタルコマンドステーションが妥当なアドレスの個数を制限することは、包装や説明書にはっきりと明確に記載されている限り許容されます。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:59
+msgid "Byte Two: Instruction Data Byte ``01DCSSSS``"
+msgstr "バイト2：命令データバイト ``01DCSSSS``"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:60
+msgid "The instruction data byte is a data byte used to transmit speed and direction information to the locomotive Digital Decoder. Bits 0-3 [#f6]_ provides 4 bits for speed (``S``) with bit 0 being the least significant speed bit. Bit four of byte 2 (``C``) by default shall contain one additional speed bit, which is the least significant speed bit. For backward compatibility, this bit may instead be used to control the headlight. This optional use is defined in RP-9.2.1. Bit 5 provides one bit for direction (``D``). When the direction bit (``D``) has a value of ``1`` the locomotive should move in the forward direction [#f7]_. A direction bit with the value of ``0`` should cause the locomotive to go in the reverse direction. Bits 7 and 6 contain the bit sequence ``01`` [#f8]_ which are used to indicate that this instruction data byte is for speed and direction."
+msgstr "命令データバイトは速度と方向の情報を機関車デジタルデコーダーに転送するために使用されるデータバイトです。ビット0～3 [#f6]_ は速度 (``S``) のための4ビットを提供します。ビット0は最下位ビットです。バイト2のビット4 (``C``) はデフォルトで追加の速度ビットで、速度ビットの最下位ビットです。後方互換性のためにこのビットは代わりにヘッドライトを制御するために使用されることがあります。この任意の使用は RP-9.2.1 に定義されています。ビット5 (``D``) は方向のための1ビットです。方向ビット (``D``) が ``1`` の値のとき、機関車は前方に進まないといけません [#f7]_。``0`` の値をもつ方向ビットは機関車を後方に動かさないといけません。ビット6と7はこの命令データバイトが速度と方向であることをあらわす ``01`` のビットの並びをもちます [#f8]_。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:61
+msgid "Byte Three: Error Detection Data Byte ``EEEEEEEE``"
+msgstr "バイト3：エラー検出データバイト ``EEEEEEEE``"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:62
+msgid "The error detection data byte is a data byte used to detect the presence of transmission errors. The contents of the Error Detection Data Byte shall be the bitwise exclusive OR of the contents of the Address Data Byte and the Instruction Data Byte in the packet concerned. (e.g. the exclusive OR of bit 0 of the address data byte and bit 0 of the instruction data byte will be placed in bit 0 of the error detection data byte...) Digital Decoders receiving a Baseline Packet shall compare the received error detection data byte with the bitwise exclusive OR of the received address and instruction data bytes and ignore the contents of the packet if this comparison is not identical."
+msgstr "エラー検出データバイトは転送エラーの存在を検出するために使用されるデータバイトです。エラー検出データバイトの中身は、該当パケットのアドレスデータバイトと命令データバイトの中身のビット単位排他的論理和です。（e.g. the exclusive OR of bit 0 of the address data byte and bit 0 of the instruction data byte will be placed in bit 0 of the error detection data byte...）基本パケットを受信するデジタルデコーダーは、受信したエラー検出データバイトを、受信したアドレスデータバイトと命令データバイトのビット単位排他的論理和と比較し、一致しない場合パケットの中身を無視しなければいけません。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:64
+msgid "The example packet shown in figure 2 illustrates a baseline packet with the instruction to locomotive 55 to proceed in the forward direction at speed step 6."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:66
+msgid "Figure 2: Speed Table for Baseline Packet"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:69
+msgid "``CSSSS``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:69
+msgid "Speed"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:71
+msgid "``00000``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:71
+msgid "Stop"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:72
+msgid "``10000``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:72
+msgid "Stop [#g2]_"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:73
+msgid "``00001``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:73
+msgid "E-Stop [#g1]_"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:74
+msgid "``10001``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:74
+msgid "E-Stop [#g1]_ [#g2]_"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:75
+msgid "``00010``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:75
+msgid "Step 1"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:76
+msgid "``10010``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:76
+msgid "Step 2"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:77
+msgid "``00011``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:77
+msgid "Step 3"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:78
+msgid "``10011``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:78
+msgid "Step 4"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:79
+msgid "…"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:80
+msgid "``01111``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:80
+msgid "Step 27"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:81
+msgid "``11111``"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:81
+msgid "Step 28"
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:87
+msgid "Digital Decoder Reset Packet For All Decoders"
+msgstr "全デコーダー用デジタルデコーダーリセットパケット"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:94
+msgid "A three byte packet, where all eight bits within each of the three bytes contains the value of ``0``, is defined as a Digital Decoder Reset Packet. When a Digital Decoder receives a Digital Decoder Reset Packet, it shall erase all volatile memory (including any speed and direction data), and return to its normal power-up state. If the Digital Decoder is operating a locomotive at a non-zero speed when it receives a Digital Decoder Reset, it shall bring the locomotive to an immediate stop."
+msgstr "3バイトそれぞれの8ビットが全て ``0`` の値を持つ3バイトパケットはデジタルデコーダーリセットパケットとして定義されます。デジタルデコーダーがデジタルデコーダーリセットパケットを受信したとき、デジタルデコーダーは（速度と方向を含む）揮発記憶を消去し、通常起動状態に戻らないといけません。デジタルデコーダーがデジタルデコーダーリセットを受信したとき機関車を非ゼロ速度で制御していた場合、デジタルデコーダーは機関車を即座に停止させなければいけません。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:96
+msgid "Following a Digital Decoder Reset Packet, a Command Station shall not send any packets with an address data byte between the range ``01100100`` and ``01111111`` inclusive within 20 milliseconds, unless it is the intent to enter service mode [#f9]_."
+msgstr "デジタルデコーダーリセットパケットの後、コマンドステーションは、サービスモードに入ることを意図していない限り、アドレスデータバイトが ``01100100`` と ``01111111`` の間のパケットを20ミリ秒以内に送ってはいけません [#f9]_。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:101
+msgid "Digital Decoder Idle Packet For All Decoders"
+msgstr "全デコーダー用デジタルデコーダーアイドルパケット"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:108
+msgid "A three byte packet, whose first byte contains eight ``1``\\ s, whose second byte contains eight ``0``\\ s and whose third and final byte contains eight ``1``\\ s, is defined as a Digital Decoder Idle Packet. Upon receiving this packet, Digital Decoders shall perform no new action, but shall act upon this packet as if it were a normal digital packet addressed to some other decoder."
+msgstr "最初のバイトが8つの ``1`` をもち、2番目のバイトが8つの ``0`` をもち、3番目（最後）のバイトが8つの ``1`` をもつ3バイトパケットはデジタルデコーダーアイドルパケットとして定義されます。このパケットを受信すると、デジタルデコーダーは新規の動作をしてはいけないだけでなく、それが他のデコーダー向けの通常のデジタルパケットであるかのように動作しなければなりません。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:113
+msgid "Digital Decoder Broadcast Stop Packets For All Decoders [#f10]_"
+msgstr "全デコーダー用デジタルデコーダーブロードキャスト停止パケット [#f10]_"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:120
+msgid "A three byte packet, whose first byte contains eight ``0``\\ s, whose second byte contains a specific stop command and whose third and final byte contains an error byte that is identical to the second byte of the packet, is defined as a Digital Decoder Broadcast Stop Packet. Upon receiving this packet where bit zero of byte two (``S``) contains a value of ``0``, digital decoders intended to control a locomotive's motor shall bring the locomotive to a stop."
+msgstr "最初のバイトが8つの ``0`` をもち、2番目のバイトが特定の停止コマンドをもち、3番目（最後）のバイトが2番目のバイトと同一のエラーバイトをもつ3バイトパケットはデジタルデコーダーブロードキャスト停止パケットであると定義されます。バイト2のビット0 (``S``) が ``0`` の値をもつこのパケットを受信した場合、機関車のモーターを制御することを意図したデジタルデコーダーは機関車を停止させなければいけません。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:122
+msgid "Upon receiving this packet where bit zero of byte two (``S``) contains a value of ``1``, digital decoders intended to control a locomotive's motor shall stop delivering energy to the motor. If bit four of byte 2 (``C``) contains a value of ``1``, the direction bit contained in bit five of byte 2 (``D``) may optionally be ignored for all direction sensitive functions."
+msgstr "バイト2のビット0 (``S``) が ``1`` の値をもつこのパケットを受信した場合、機関車のモーターを制御することを意図したデジタルデコーダーはモーターへのエネルギー供給を停止させなければいけません。バイト2のビット4 (``C``) が ``1`` の値をもつ場合、バイト2のビット5 (``D``) の方向ビットは方向に影響する機能に対して任意に無視することができます。"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:127
+msgid "C: Frequency Of Packet Transmission"
+msgstr "C：パケット転送頻度"
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:129
+msgid "Packets sent to Digital Decoders should be repeated as frequently as possible, as a packet may have been lost due to noise or poor electrical conductivity between wheels and rails. Power may also be removed from the rails between the Packet End Bit and the Preamble of the next packet to allow for alternative command control formats. A Digital Decoder shall be able to act upon multiple packets addressed to it, provided the time between the packet end bit of the first packet and the packet start bit of the second packet are separated by at least 5 milliseconds [#f11]_. If a decoder receives a bit sequence with a missing or invalid data byte start bit, a missing or invalid packet end bit, or an incorrect error detection byte, it must recognize the next valid preamble sequence as the beginning of a new packet. Alternative command control formats are specifically allowed between the packet end bit and the start of the next preamble."
+msgstr "雑音や車輪とレールの間の接触不良によってパケットが紛失される可能性があるため、デジタルデコーダーへのパケットは可能な限り頻繁に繰り返されなければいけません。Power may also be removed from the rails between the Packet End Bit and the Preamble of the next packet to allow for alternative command control formats. A Digital Decoder shall be able to act upon multiple packets addressed to it, provided the time between the packet end bit of the first packet and the packet start bit of the second packet are separated by at least 5 milliseconds [#f11]_. If a decoder receives a bit sequence with a missing or invalid data byte start bit, a missing or invalid packet end bit, or an incorrect error detection byte, it must recognize the next valid preamble sequence as the beginning of a new packet. Alternative command control formats are specifically allowed between the packet end bit and the start of the next preamble."
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:131
+msgid "Manufacturers of decoders are encouraged to provide automatic conversion for a variety of power signals and command control formats in addition to the NMRA digital signal (per S-9.1), provided that automatic conversion to these alternate power signals can be disabled. If automatic conversion is enabled, Digital Decoders must remain in digital mode and not convert to using any alternate power signal so long as the time between Packet Start Bits is less than or equal to 30 milliseconds in duration. If automatic conversion is disabled, Digital Decoders must remain in digital mode regardless of the timing of Packet Start Bits. It shall be possible to configure Digital Command Stations to transmit at least one complete packet every 30 milliseconds as measured from the time between packet start bits [#f12]_ [#f13]_."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:134
+msgid "It is permissible for *Digital Decoders* to accept formats in addition to the NMRA General Packet Format. See Section C for details."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:136
+msgid "The first byte can also be used in special cases to indicate instructions. See the Service Mode Recommended Practice (RP-9.2.3) for an example of this dual use."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:138
+msgid "The Packet End Bit may count as one of the preamble bits of the subsequent packet if there are no inter-packet bits from an alternative command control protocol. The DCC bit stream must continue for an additional 26 µS (minimum) after the packet end bit."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:140
+#: ../../content/S-9.2-dcc-communications-standard.rst:152
+msgid "Broadcast Stop Packet requirement for decoders, effective 1-Aug-2002."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:142
+msgid "The Service Mode Recommended Practice (RP-9.2.3) contains one example of an acceptable method for user address configuration."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:144
+msgid "Bits within a byte are numbered right to left with bit 0 (the right most bit) being the least significant bit and bit 7 (the left most bit) being the most significant bit."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:146
+msgid "Forward in this case is in the direction of the front of the locomotive, as observed from the engineer's position within the locomotive."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:148
+msgid "Other bit patterns in bits 7 and 6 are reserved for other types of instruction data, and are defined in the Extended Packet Format Recommended Practice (RP-9.2.1)."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:150
+msgid "Digital Decoders can have their configurations altered immediately after a digital decoder reset packet. See the Service Mode Recommended Practice (RP-9.2.3) for details."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:154
+msgid "Care must be taken to ensure that two packets with identical addresses are not are not transmitted within 5 milliseconds of each other for addresses in the range between 112-127 as older decoders may interpret these packets as service mode packets (see RP-9.2.3)."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:156
+msgid "Some DCC decoders manufactured prior to the NMRA standards require a valid baseline packet be received every 30 milliseconds to prevent analog power conversion."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:158
+msgid "Longer repetition rates may result in less than optimal decoder performance."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:160
+msgid "Digital Decoders shall immediately stop delivering power to the motor."
+msgstr ""
+
+#: ../../content/S-9.2-dcc-communications-standard.rst:162
+msgid "Direction bit may be ignored for directional sensitive functions. (Optional)"
+msgstr ""
