@@ -36,24 +36,6 @@ $(mo_file_ja_pat): $(po_file_ja_pat)
 	@mkdir -p $(@D)
 	msgfmt -o $@ $<
 
-.PHONY: venv.init
-venv.init:
-	python -m venv .venv
-
-.PHONY: venv.activate
-venv.activate:
-	# eval "$$(make --silent venv.activate)"
-	echo source .venv/bin/activate
-
-.PHONY: venv.deactivate
-venv.deactivate:
-	# eval "$$(make --silent venv.deactivate)"
-	echo deactivate
-
-.PHONY: pip.install
-pip.install:
-	pip install -r requirements.txt
-
 .PHONY: clean
 clean:
 	-rm -rf .build
