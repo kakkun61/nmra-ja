@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 1980, Graziella
-# This file is distributed under the same license as the Lumache package.
+# Copyright (C) 2021, the National Model Railroad Association, Inc. and Kazuki Okamoto (岡本和樹)
+# This file is distributed under the same license as the nmra-ja package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lumache 0.1.0\n"
+"Project-Id-Version: nmra-ja 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 1980-01-01 00:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"

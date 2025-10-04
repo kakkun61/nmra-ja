@@ -36,6 +36,10 @@ $(mo_file_ja_pat): $(po_file_ja_pat)
 	@mkdir -p $(@D)
 	msgfmt -o $@ $<
 
+.PHONY: spellcheck
+spellcheck:
+	cspell lint .
+
 .PHONY: clean
 clean:
 	-rm -rf .build
