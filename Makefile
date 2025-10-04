@@ -15,7 +15,7 @@ build.en:
 	sphinx-build --builder html content .build/en
 
 .PHONY: build.ja
-build.ja:
+build.ja: multilingual.update
 	sphinx-build --builder html content .build/ja --define language=ja
 
 .PHONY: serve

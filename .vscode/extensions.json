@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "streetsidesoftware.code-spell-checker",
-    "mkhl.direnv"
+    "mkhl.direnv",
+    "mrorz.language-gettext"
   ]
 }
