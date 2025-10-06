@@ -971,7 +971,7 @@ msgstr "書き込みバイト"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:569
 msgid "The contents of the Configuration Variable as indicated by the 10-bit address are replaced by the data byte (``DDDDDDDD``). Two identical packets are needed before the decoder shall modify a configuration variable [#f8]_. These two packets need not be back to back on the track. However any other packet to the same decoder will invalidate the write operation. (This includes broadcast packets.) If the decoder successfully receives this second identical packet, it shall respond with a configuration variable access acknowledgment."
-msgstr "10ビットアドレスで示される CV の内容はデータバイト（``DDDDDDDD``）と置換されます。デコーダーが CV を変更する前に2つの同一のパケットが必要です8。これらの2つのパケットは線路で背中合わせになっている必要はありません。しかし、同じデコーダーへの別のパケットは書き込み操作を無効化します（これにはブロードキャストパケットも含まれます）。デコーダーが2番目の同一パケットの受信に成功した場合、デコーダーは CV 読み書き応答で返答しなければいけません。"
+msgstr "10ビットアドレスで示される CV の内容はデータバイト（``DDDDDDDD``）と置換されます。デコーダーが CV を変更する前に2つの同一のパケットが必要です [#f8]_。これらの2つのパケットは線路で背中合わせになっている必要はありません。しかし、同じデコーダーへの別のパケットは書き込み操作を無効化します（これにはブロードキャストパケットも含まれます）。デコーダーが2番目の同一パケットの受信に成功した場合、デコーダーは CV 読み書き応答で返答しなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:574
 msgid "Bit Manipulation"
