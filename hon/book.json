@@ -1,8 +1,0 @@
-{
-  "title": "NMRA Standards and Recommended Practices",
-  "plugins": [
-    "auto-scroll-table",
-    "katex",
-    "anchor-link"
-  ]
-}

@@ -16,6 +16,17 @@ To contributors
 
 Please read :doc:`CONTRIBUTING`.
 
+.. toctree::
+   :maxdepth: 2
+
+   S-9.1-electrical-standards
+   S-9.2-dcc-communications-standard
+   S-9.2.1-extended-packet-formats
+   S-9.2.2-configuration-variables-for-dcc
+
+   CONTRIBUTING
+   GLOSSARY
+
 ----
 
 `Original <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_
@@ -43,14 +54,3 @@ Technical References (TR)
     NMRA Technical References are, for the most part, internal documents that provide a history of action taken in the Standards and Conformance Department. Occasionally a Technical Reference is made public for reference and use by individuals involved with the Standards and Conformance Department. Technical References are reviewed by the appropriate technical working group and approved by the Manager, Standards & Conformance.
 
 TODO
-
-.. toctree::
-   :maxdepth: 2
-
-   S-9.1-electrical-standards
-   S-9.2-dcc-communications-standard
-   S-9.2.1-extended-packet-formats
-   S-9.2.2-configuration-variables-for-dcc
-
-   CONTRIBUTING
-   GLOSSARY

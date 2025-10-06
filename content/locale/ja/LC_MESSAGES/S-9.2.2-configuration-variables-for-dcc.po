@@ -19,137 +19,235 @@ msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:4
 msgid "S-9.2.2 Configuration Variables For Digital Command Control"
-msgstr ""
+msgstr "S-9.2.2 デジタルコマンドコントロールの設定変数（CV）"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:6
 msgid "`Original <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/s-9.2.2_decoder_cvs_2012.07.pdf>`_ (`Wayback Machine <https://web.archive.org/web/20230309154010/https://www.nmra.org/sites/default/files/standards/sandrp/pdf/s-9.2.2_decoder_cvs_2012.07.pdf>`_)"
-msgstr ""
+msgstr "`原文 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/s-9.2.2_decoder_cvs_2012.07.pdf>`_ (`Wayback Machine <https://web.archive.org/web/20230309154010/https://www.nmra.org/sites/default/files/standards/sandrp/pdf/s-9.2.2_decoder_cvs_2012.07.pdf>`_)"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:8
 msgid "Original Version: July 2012"
-msgstr ""
+msgstr "原文版：July 2012"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:10
 msgid "This Standard provides a map and descriptions for *Digital Decoder* Configuration Variables. Configuration Variables allow the decoder to be customized for each locomotive, or other mobile or stationary devices. Unless otherwise specified, configuration Variables shall be stored in non-volatile memory and must not change when power is removed from the decoder over long extended periods of time."
-msgstr ""
+msgstr "この標準はデジタルデコーダー CV の対応と記述を提供します。CV はそれぞれの機関車や他の可搬・不可搬の機器のためにデコーダーをカスタマイズできるようにします。CV は不揮発性記憶に保存され、長期間デコーダーの電源が切れていても変更されてはいけません。"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:15
 msgid "A: General Definitions"
-msgstr ""
+msgstr "A: 一般的定義"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:17
 msgid "Tables 1 and 2 identify each of the Configuration Variables (CVs), along with additional information about each one. Following Table 1 is a written description of each of the CVs. In Tables 1 and 2 each Configuration Variable (CV) is identified by name and number, along with the following information:"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:19
-msgid "Required: Mandatory (M), Recommended (R) or Optional (O). CVs identified as Mandatory (M) must be implemented in order to conform to this Standard, while those marked as Recommended (R) are strongly encouraged but not mandatory, and those marked Optional (O) are at the manufacturer's discretion."
-msgstr ""
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
+msgid "Required"
+msgstr "要求"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:20
-msgid "Default Value: the required factory default value when the CV is provided in an implementation."
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:21
-msgid "Read-Only: indicates a CV whose value should be set by the manufacturer and which the user cannot modify."
-msgstr ""
+msgid "Mandatory (M), Recommended (R) or Optional (O). CVs identified as Mandatory (M) must be implemented in order to conform to this Standard, while those marked as Recommended (R) are strongly encouraged but not mandatory, and those marked Optional (O) are at the manufacturer's discretion."
+msgstr "必須（Mandatory; M）か推奨（Recommended; R）か選択（Optional; O）。必須（M）の CV はこの標準に準拠するために実装しなければいけません。推奨（R）は強く推奨されますが必須ではありません。選択（O）は製造者の裁量です。"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:22
-msgid "Uniform Spec: Many CVs are implementation specific and no uniform specification is required. Others must be implemented in a uniform fashion in order to achieve compatibility. A \"Y\" in the Uniform Spec column indicates a CV which requires implementation by manufacturers according to a common specification. A blank in the Uniform Specification means that the CV must be used for its designated purpose, but the action taken by the decoder for a specific value can vary from manufacturer to manufacturer."
-msgstr ""
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
+msgid "Default Value"
+msgstr "デフォルト値"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:23
-msgid "Dynamic: CVs in this range are dynamic and are used for Unsolicited Decoder Initiated Transmission. Manufacturers who utilize these CVs are requested to contact the NMRA DCC WG for current uniform specifications."
-msgstr ""
+msgid "the required factory default value when the CV is provided in an implementation."
+msgstr "実装で CV が提供されるときに要求される工場出荷時値。"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:24
-msgid "Additional Comments: CVs identified as \"Reserved by NMRA for future use\" are allocated for future needs and must not be used by an implementer without prior written approval from the NMRA Technical Department. CVs identified as \"Values assigned by NMRA\" indicate that the allowable values are defined by the NMRA and any requests for additional values should be directed to the NMRA Technical Department. CVs identified as \"Reserved for manufacturer use\" are allocated for use by implementers, for which no prior NMRA authorization is needed, and for which no common usage across decoders from different implementers can be assured by the NMRA."
-msgstr ""
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:25
+msgid "Read-Only"
+msgstr "読み取り専用"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:26
-msgid "Note: While all Digital Decoders need not implement all variables, it is required that if a function is provided, that the all of the relevant CV information be adhered to."
-msgstr ""
+msgid "indicates a CV whose value should be set by the manufacturer and which the user cannot modify."
+msgstr "CV の値が製造者に設定されユーザーが変更できないことを示します。"
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:28
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
+msgid "Uniform Spec"
+msgstr "統一仕様"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:29
+msgid "Many CVs are implementation specific and no uniform specification is required. Others must be implemented in a uniform fashion in order to achieve compatibility. A \"Y\" in the Uniform Spec column indicates a CV which requires implementation by manufacturers according to a common specification. A blank in the Uniform Specification means that the CV must be used for its designated purpose, but the action taken by the decoder for a specific value can vary from manufacturer to manufacturer."
+msgstr "多くの CV は実装固有で、統一された仕様は要求されません。他は、互換性を確保するため統一された方式で実装されなければいけません。統一仕様列の「Y」は一般的な仕様にしたがって製造者によって実装されることを要求する CV であることを示します。統一仕様の空欄は、CV が指定された目的に使用されなければいけませんが、特定の値にデコーダーがとる動作は製造者によってことなることができます。"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:31
+msgid "Dynamic"
+msgstr "動的"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:32
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:468
+msgid "CVs in this range are dynamic and are used for Unsolicited Decoder Initiated Transmission. Manufacturers who utilize these CVs are requested to contact the NMRA DCC WG for current uniform specifications."
+msgstr "この範囲の CV は動的で Unsolicited Decoder Initiated Transmission として使用されます。これらの CV を使用する製造者は現在の統一仕様について NMRA DCC WG に問い合わせることを要求されます。"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:34
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
+msgid "Additional Comments"
+msgstr "備考"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:35
+msgid "CVs identified as \"Reserved by NMRA for future use\" are allocated for future needs and must not be used by an implementer without prior written approval from the NMRA Technical Department. CVs identified as \"Values assigned by NMRA\" indicate that the allowable values are defined by the NMRA and any requests for additional values should be directed to the NMRA Technical Department. CVs identified as \"Reserved for manufacturer use\" are allocated for use by implementers, for which no prior NMRA authorization is needed, and for which no common usage across decoders from different implementers can be assured by the NMRA."
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:39
+msgid "While all Digital Decoders need not implement all variables, it is required that if a function is provided, that the all of the relevant CV information be adhered to."
+msgstr "すべてのデコーダーがすべての CV を実装する必要はありませんが、機能が提供される場合、それに関連する CV 情報はすべて要求されます。"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:41
 msgid "Table 1: Multi-function Decoder Configuration Variables"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:31
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:487
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
 msgid "CV Name"
-msgstr ""
+msgstr "CV 名"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:31
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:487
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
 msgid "CV #"
-msgstr ""
+msgstr "CV 番号"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:31
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:487
-msgid "Required"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:31
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:487
-msgid "Default Value"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:31
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:487
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
 msgid "Read Only"
-msgstr ""
+msgstr "読み取り専用"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:31
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:487
-msgid "Uniform Spec"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:31
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
 msgid "Dynamic (Volatile)"
-msgstr ""
+msgstr "動的（揮発的）"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:31
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:487
-msgid "Additional Comments"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:33
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:46
 msgid "Primary Address"
-msgstr ""
+msgstr "主アドレス"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:33
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:281
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:302
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:319
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:489
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:606
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:46
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:294
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:317
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:336
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:510
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:627
 msgid "1"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:33
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:39
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:40
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:489
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:495
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:496
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:46
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:52
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:53
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:510
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:516
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:517
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:518
 msgid "M"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:33
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:46
 msgid "``3``"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:33
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:39
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:40
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:45
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:46
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:52
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:53
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:57
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:58
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:59
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:60
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:61
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:62
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:64
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:65
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:66
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:67
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:68
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:70
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:71
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:72
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:73
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:74
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:75
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:76
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:90
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:91
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:92
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:93
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:94
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:95
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:510
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:517
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:518
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:520
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:521
+msgid "Y"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:47
+msgid "V\\ :sub:`start`"
+msgstr "起動電圧"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:47
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:295
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:318
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:337
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:511
+msgid "2"
+msgstr ""
+
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:47
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:48
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:49
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:56
+msgid "R"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:48
+msgid "Acceleration Rate"
+msgstr "加速率"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:48
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:296
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:338
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:512
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:645
+msgid "3"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:49
+msgid "Deceleration Rate"
+msgstr "減速率"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:49
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:297
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:339
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:513
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:646
+msgid "4"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:50
+msgid "V\\ :sub:`hight`"
+msgstr "最高電圧"
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:50
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:298
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:340
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:514
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:647
+msgid "5"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:50
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:51
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:52
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:53
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:54
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:55
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:57
@@ -158,1608 +256,1526 @@ msgstr ""
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:60
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:61
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:62
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:63
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:64
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:65
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:66
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:67
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:68
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:70
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:71
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:73
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:74
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:75
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:76
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:77
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:78
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:79
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:80
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:81
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:82
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:489
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:496
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:497
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:499
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:500
-msgid "Y"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:34
-msgid "V\\ :sub:`start`"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:34
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:282
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:303
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:320
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:490
-msgid "2"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:34
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:35
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:36
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:43
-msgid "R"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:35
-msgid "Acceleration Rate"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:35
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:283
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:321
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:491
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:622
-msgid "3"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:36
-msgid "Deceleration Rate"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:36
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:284
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:322
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:492
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:623
-msgid "4"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:37
-msgid "V\\ :sub:`hight`"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:37
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:285
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:323
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:493
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:624
-msgid "5"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:37
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:38
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:41
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:42
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:45
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:46
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:47
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:48
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:49
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:51
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:52
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:53
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:54
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:55
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:57
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:58
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:60
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:61
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:62
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:63
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:64
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:65
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:66
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:67
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:68
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:70
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:71
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:74
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:78
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:79
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:80
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:81
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:82
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:490
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:491
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:492
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:493
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:494
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:499
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:505
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:83
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:84
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:87
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:91
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:92
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:93
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:94
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:95
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:511
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:512
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:513
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:514
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:515
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:520
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:524
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:526
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:529
 msgid "O"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:38
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:51
 msgid "V\\ :sub:`mid`"
-msgstr ""
+msgstr "中間電圧"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:38
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:324
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:494
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:625
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:51
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:341
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:515
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:648
 msgid "6"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:39
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:52
 msgid "Manufacturer Version No."
-msgstr ""
+msgstr "製造者バージョン番号"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:39
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:325
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:495
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:626
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:52
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:342
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:516
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:649
 msgid "7"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:39
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:495
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:52
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:516
 msgid "Manufacturer defined version info"
-msgstr ""
+msgstr "製造者の定義したバージョン情報"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:40
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:496
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:53
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:517
 msgid "Manufacturer ID"
-msgstr ""
+msgstr "製造者 ID"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:40
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:496
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:53
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:517
 msgid "8"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:40
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:496
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:53
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:57
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:517
 msgid "Values assigned by NMRA"
-msgstr ""
+msgstr "NMRA によって割り当てられた値"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:41
-msgid "Total PWS Period"
-msgstr ""
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:54
+#, fuzzy
+msgid "Total PWM Period"
+msgstr "PWM 全期間"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:41
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:54
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:518
 msgid "9"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:42
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:55
 msgid "EMF Feedback Cutout"
-msgstr ""
+msgstr "EMS フィードバックカットアウト"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:42
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:55
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
 msgid "10"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:43
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:56
 msgid "Packet Time-Out Value"
-msgstr ""
+msgstr "パケットタイムアウト値"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:43
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:56
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
 msgid "11"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:57
 msgid "Power Source Conversion"
-msgstr ""
+msgstr "電源変換"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:44
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:57
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
 msgid "12"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:45
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:58
 msgid "Alternative Mode Function Status F1-F8"
-msgstr ""
+msgstr "F1～F8 用代替モード機能状態"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:45
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:58
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
 msgid "13"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:46
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:59
 msgid "Alternative Mode Function Status FL, F9-F12"
-msgstr ""
+msgstr "FL・F9～F12 用代替モード機能状態"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:46
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:59
 msgid "14"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:47
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:60
 msgid "Decoder Lock"
-msgstr ""
+msgstr "デコーダーロック"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:47
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:60
 msgid "15-16"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:48
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:61
 msgid "Extended Address"
-msgstr ""
+msgstr "拡張アドレス"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:48
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:61
 msgid "17+18"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:49
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:62
 msgid "Consist Address"
-msgstr ""
+msgstr "編成アドレス"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:49
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:62
 msgid "19 20"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:50
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:56
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:63
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:69
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:72
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:73
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:82
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:85
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:86
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:519
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:522
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:525
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:530
 msgid "Reserved by NMRA for future use"
-msgstr ""
+msgstr "将来の使用のため NMRA によって予約"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:51
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:64
 msgid "Consist Address Active for F1-F8"
-msgstr ""
+msgstr "F1～F8 編成アドレス有効"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:51
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:64
 msgid "21"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:52
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:65
 msgid "Consist Address Active for FL, F9-F12"
-msgstr ""
+msgstr "FL・F9～F12 編成アドレス有効"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:52
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:65
 msgid "22"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:53
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:66
 msgid "Acceleration Adjustment"
-msgstr ""
+msgstr "加速調整"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:53
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:66
 msgid "23"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:54
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:67
 msgid "Deceleration Adjustment"
-msgstr ""
+msgstr "減速調整"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:54
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:67
 msgid "24"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:55
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:68
 msgid "Speed Table / Mid-range Cab Speed Step"
-msgstr ""
+msgstr "速度表・中間速度段階"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:55
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:68
 msgid "25 26"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:57
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:70
 msgid "Decoder Automatic Stopping Configuration"
-msgstr ""
+msgstr "デコーダー自動停止設定"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:57
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:70
 msgid "27"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:57
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:58
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:70
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:71
 msgid "Under re-evaluation — see details"
-msgstr ""
+msgstr "再評価中 — 詳細を参照"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:58
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:499
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:71
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:520
 msgid "Bi-Directional Communication Configuration"
-msgstr ""
+msgstr "双方向通信設定"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:58
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:499
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:71
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:520
 msgid "28"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:59
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:72
 msgid "Configuration Data #1"
-msgstr ""
+msgstr "設定値 1"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:59
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:72
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:521
 msgid "29"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:59
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:72
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:521
 msgid "M [#f1]_"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:60
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:73
 msgid "Error Information"
-msgstr ""
+msgstr "エラー情報"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:60
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:73
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:522
 msgid "30"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:61
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:74
 msgid "Index High Byte"
-msgstr ""
+msgstr "上位バイト添字"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:61
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:74
 msgid "31"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:61
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:74
 msgid "Primary index for CV 257-512 ``00000000``-``00001111`` Reserved by NMRA for future use"
-msgstr ""
+msgstr "CV 257～512 の主添字 ``00000000``～``00001111`` は将来の使用のため NMRA によって予約"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:62
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:75
 msgid "Index Low Byte"
-msgstr ""
+msgstr "下位バイト添字"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:62
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:75
 msgid "32"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:62
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:75
 msgid "Secondary index for CV 257-512"
-msgstr ""
+msgstr "CV 257～512 の副添字"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:63
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:76
 msgid "Output Location FL (f), FL (r), F1-F12"
-msgstr ""
+msgstr "出力位置 FL（前）・FL（後）・F1～F12"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:63
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:76
 msgid "33-46"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:64
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:74
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:503
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:505
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:506
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:77
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:87
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:524
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:526
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:527
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:529
 msgid "Manufacturer Unique"
-msgstr ""
+msgstr "製造者固有"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:64
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:77
 msgid "47-64"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:65
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:78
 msgid "Kick Start"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:65
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:78
 msgid "65"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:66
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:79
 msgid "Forward Trim"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:66
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:79
 msgid "66"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:67
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:80
 msgid "Speed Table"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:67
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:80
 msgid "67-94"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:68
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:81
 msgid "Reverse Trim"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:68
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:81
 msgid "95 96-104"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:70
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:83
 msgid "User Identification #1"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:70
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:83
 msgid "105"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:70
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:71
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:83
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:84
 msgid "Reserved for customer use"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:71
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:84
 msgid "User Identification #2"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:71
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:84
 msgid "106"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:72
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:85
 msgid "Expanded Manufacturer ID"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:72
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:85
 msgid "107-108"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:73
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:86
 msgid "Expanded CV 7"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:73
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:86
 msgid "109-111"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:74
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:87
 msgid "112-256"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:74
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:505
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:87
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:524
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:526
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:529
 msgid "Reserved for manufacturer use"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:75
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:507
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:88
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:528
 msgid "Indexed Area"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:75
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:88
 msgid "257-512 513-879 880-891"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:75
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:88
 msgid "See CV 31, 32. Index values of ``0``-``4095`` reserved by NMRA Reserved for manufacturer use Reserved for manufacturer use"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:78
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:91
 msgid "Decoder Load"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:78
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:91
 msgid "892"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:79
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:92
 msgid "Dynamic Flags"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:79
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:92
 msgid "893"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:80
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:93
 msgid "Fuel/Coal"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:80
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:93
 msgid "894"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:81
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:94
 msgid "Water"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:81
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:94
 msgid "895"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:82
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:95
 msgid "SUSI Sound and Function Modules"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:82
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:95
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:530
 msgid "896-1024"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:82
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:95
 msgid "See TN-9.2.3"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:85
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:98
 msgid "Binary numerical quantities are stored such that the rightmost bit is the least significant, and the leftmost is the most significant."
-msgstr ""
+msgstr "2進数値はもっとも右のビットが最下位ビット、もっとも左のビットが最上位ビットとなるように保存されます。"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:90
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:103
 msgid "Descriptions of Configuration Variables for Multi-Function Decoders"
-msgstr ""
+msgstr "多機能デコーダーの CV の説明"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:95
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:108
 msgid "Configuration Variable 1: Primary Address"
-msgstr ""
+msgstr "CV 1：主アドレス "
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:97
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:110
 msgid "Bits 0-6 contain an address with a value between 1 and 127. Bit seven must have a value of ``0``. If the value of Configuration Variable 1 is ``00000000`` then the decoder will go out of NMRA digital mode and convert to the alternate power source as defined by Configuration Variable 12. This setting will not affect the Digital Decoder's ability to respond to service mode packets (see S 9.2.3). The default value for this Configuration Variable is 3, if the decoder is not installed in a locomotive or other unit when shipped from the manufacturer."
-msgstr ""
+msgstr "ビット0～6は1～127の値のアドレスをもちます。ビット7は ``0`` でなければいけません。CV 1 の値が ``00000000`` であるときデコーダーは NMRA デジタルモードを終了し CV 12 に定義された代替電源に切り替わります。この設定はデジタルデコーダーがサービスモードパケットに返答できるかどうかには影響がありません（S-9.2.3 を参照）。工場出荷時、デコーダーが機関車やその他の車両に装備されていない場合、この CV のデフォルト値は3です"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:102
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:115
 msgid "Configuration Variable 2: V\\ :sub:`start`"
-msgstr ""
+msgstr "CV 2：V\\ :sub:`start`"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:104
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:117
 msgid "V\\ :sub:`start` is used to define the voltage drive level used as the start voltage on the motor. The voltage drive levels shall correspond linearly to the voltage applied to the motor at speed step one, as a fraction of available rectified supply voltage. When the voltage drive level is equal to zero, there shall be zero voltage applied to the motor. When it is at maximum ``11111111``, the full available rectified voltage shall be applied."
-msgstr ""
+msgstr "V\\ :sub:`high`\\ （起動電圧）は、モーターの起動電圧として使用される電圧駆動レベルを定義するために使用されます。使用可能な整流供給電圧の一部として、電圧駆動レベルは速度段階1でモーターに印加される電圧に線形に対応しなければいけません。電圧駆動レベルが0に等しいとき、モーターに印加される電圧は ``0`` でないといけません。最大値 ``11111111`` であるとき最大の使用可能な整流電圧が印加されなければいけません。"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:109
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:122
 msgid "Configuration Variable 3: Acceleration Rate"
-msgstr ""
+msgstr "CV 3：加速率"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:111
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:124
 msgid "Determines the decoder's acceleration rate. The formula for the acceleration rate :math:`a` shall be equal to:"
-msgstr ""
+msgstr "デコーダーの加速率を決定します。加速率 :math:`a` の式は、:math:`n` を CV 3 の値、:math:`s` を使用している速度段階の番号として、"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:113
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:126
 msgid "a = n \\times 0.896 / s,"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:117
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:130
 msgid "where :math:`n` is the contents of CV 3 and :math:`s` is the number of speed steps in use. For example, if the contents of CV 3 = 2, then the acceleration is 0.064 sec/step for a decoder currently using 28 speed steps. If the content of this parameter equals 0 then there is no programmed momentum during acceleration."
-msgstr ""
+msgstr "と等しくなくてはいけません。例えば、CV 3 の定数が2である場合、現在28段の速度を使用しているデコーダーに対して加速は 0.064 秒/段です。この引数が0と等しければ、プログラムされた運動量は加速中にありません。"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:122
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:135
 msgid "Configuration Variable 4: Deceleration Rate"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:124
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:137
 msgid "Determines a decoders braking rate, in the same fashion as acceleration above (CV 3)."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:129
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:142
 msgid "Configuration Variable 5: V\\ :sub:`high`"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:131
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:144
 msgid "V\\ :sub:`high` is used to specify the motor voltage drive levels at the maximum speed step. This value shall be specified as a fraction of available rectified supply voltage. When the contents of CV 5 equal ``11111111``, the full available rectified voltage shall be applied. Values of ``00000000`` or ``00000001`` shall indicate that V\\ :sub:`high` is not used in the calculation of the speed table."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:136
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:149
 msgid "Configuration Variable 6: V\\ :sub:`mid`"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:138
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:151
 msgid "V\\ :sub:`mid` specifies the voltage drive level at the middle speed step. V\\ :sub:`mid` is used to generate a performance curve in the decoder that translate speed step values into motor voltage drive levels and is specified as a fraction of available rectified supply voltage. Values of ``00000000`` or ``00000001`` shall indicate that V\\ :sub:`mid` is not used in the calculation of the speed table."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:143
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:156
 msgid "Configuration Variable 7: Manufacturer Version No."
-msgstr ""
+msgstr "CV 7：製造者バージョン番号 "
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:145
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:158
 msgid "This is reserved for the manufacturer to store information regarding the version of the decoder."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:150
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:163
 msgid "Configuration Variable 8: Manufacturer ID"
-msgstr ""
+msgstr "CV 8：製造者 ID"
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:152
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:165
 msgid "CV 8 shall contain the NMRA assigned id number of the manufacturer of this decoder. The currently assigned manufacturer ID codes are listed in Appendix A of this Standard. The use of a value not assigned by the NMRA shall immediately cause the decoder to not be in conformance to this Standard. The CV shall be implemented as a read-only value, which cannot be modified."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:157
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:170
 msgid "Configuration Variable 9: Total PWM Period"
-msgstr ""
+msgstr "CV 9：PWM 全期間 "
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:159
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:172
 msgid "The value of CV 9 sets the nominal PWM period at the decoder output and therefore the frequency is proportional to the reciprocal of the value. The recommend formula for PWM period should be:"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:161
-msgid "p = (131 + m \\times 4) \\times 2^e,"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:174
+msgid "p = (131 + m \\times 4) \\times 2e,"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:165
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:178
 msgid "where :math:`p` is PWM period in μs, :math:`m` is a mantissa in bits 0-4 bits of CV 9 (low order) and :math:`e` is an exp in bits 5-7 for CV 9. If the value programmed into CV 9 falls outside a decoder's capability, it is suggested (but not required) that the decoder \"adjust\" the value to the appropriate highest or lowest setting supported by the decoder."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:170
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:183
 msgid "Configuration Variable 10: EMF Feedback Cutout"
-msgstr ""
+msgstr "CV 10：EMF フィードバックカットアウト "
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:172
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:185
 msgid "Contains a value between 1 and 128 that indicates the speed step above which the back EMF motor control cuts off. When 14 or 28 speed steps are used the LSB's of the value are truncated appropriately."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:177
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:190
 msgid "Configuration Variable 11: Packet Time-Out Value"
-msgstr ""
+msgstr "CV 11：パケットタイムアウト値 "
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:179
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:192
 msgid "Contains the maximum time period that the decoder will maintain its speed without receiving a valid packet. See S 9.2.4 Section C for further information."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:184
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:197
 msgid "Configuration Variable 12: Power Source Conversion [#f2]_"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:186
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:199
 msgid "Contains the identity of the alternate power source to which the decoder will be converted should CV 1 contain all zeros. This is also the primary alternative power source selected should the decoder perform power source conversion. The currently assigned Power Source Conversion codes are listed in Appendix B of this Standard."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:191
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:204
 msgid "Configuration Variable 13: Alternate Mode Function Status"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:193
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:206
 msgid "Indicates the status of each function (F1 through F8) when the unit is operating in alternate power mode, which cannot control the functions. If a function **can** be controlled, then the corresponding bit is ignored. A value of ``0`` indicates the function is off, while a value of ``1`` indicates the function is on. Bit 0 corresponds to F1, while Bit 7 corresponds to F8."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:198
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:211
 msgid "Configuration Variable 14: Alternate Mode Function 2 Status"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:200
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:213
 msgid "Indicates the status of each function (F9 through F12, and FL) when the unit is operating in alternate power mode, which cannot control the functions. If a function **can** be controlled, then the corresponding bit is ignored. A value of ``0`` indicates the function is off, while a value of ``1`` indicates the function is on. FL in the forward direction is controlled by bit 0, FL in the reverse direction is controlled by bit 1. Bit 2 corresponds to F9, while Bit 5 corresponds to F12."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:205
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:218
 msgid "Configuration Variables 15, 16: Decoder Lock"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:207
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:220
 msgid "The Decoder Lock is used to change CVs in only one of several decoders with the same short address (CV 1) or long address (CV 17 and CV 18) that are installed in the same locomotive. Assign a number to CV 16 in each decoder (i.e. ``1`` to motor decoder, ``2`` to sound decoder, ``3`` or higher to other decoders) before the decoders are installed in the locomotive. To change a value in another CV of one of the installed decoders, first write the number ``1`` (motor), ``2`` (sound), or ``3`` or higher (other) into CV 15, then send the new value to the CV to be changed. The decoders will compare CV 15 to CV 16 and, if the values are equal, the CV to be changed will be changed. If the values in CV 15 and CV 16 are different, the update will be ignored."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:212
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:225
 msgid "Configuration Variables 17, 18: Extended Address"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:214
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:227
 msgid "The Extended Address is the locomotives address when the decoder is set up for extended addressing (indicated by a value of ``1`` in bit location 5 of CV 29). CV 17 contains the most significant bits of the two byte address and must have a value between ``11000000`` and ``11100111``, inclusive, in order for this two byte address to be valid. CV 18 contains the least significant bits of the address and may contain any value."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:219
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:232
 msgid "Configuration Variable 19: Consist Address"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:221
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:234
 msgid "Contains a seven bit address in bit positions 0-6. Bit 7 indicates the relative direction of this unit within a consist, with a value of ``0`` indicating normal direction, and a value of ``1`` indicating a direction opposite the unit's normal direction. If the seven bit address in bits 0-6 is ``0000000`` the unit is not in a consist."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:226
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:239
 msgid "Configuration Variable 21: Consist Address Active for F1-F8"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:228
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:241
 msgid "Defines for functions F1-F8 whether the function is controlled by the consist address. For each Bit a value of ``1`` indicates that the function will respond to instructions addressed to the consist address. A value of ``0`` indicates that the function will only respond to instructions addressed to the locomotive address. F1 is indicated by bit 0. F8 by bit 7."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:233
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:246
 msgid "Configuration Variable 22: Consist Address Active for FL and F9-F12"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:235
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:248
 msgid "Defines for function FL whether the function is controlled by the consist address. For each Bit a value of ``1`` indicates that the function will respond to instructions addressed to the consist address. A value of ``0`` indicates that the function will only respond to instructions addressed to the locomotive address. FL in the forward direction is indicated by bit 0, FL in the reverse direction is controlled by bit 1. Bit 2 corresponds to F9, while Bit 5 corresponds to F12."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:240
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:253
 msgid "Configuration Variable 23: Acceleration Adjustment"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:242
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:255
 msgid "This Configuration Variable contains additional acceleration rate information that is to be added to or subtracted from the base value contained in Configuration Variable 3 using the formula:"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:244
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:257
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:270
 msgid "a \\times 0.896 / s,"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:248
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:261
 msgid "where :math:`a` is the contents of CV 23, :math:`s` is the number of speed steps in use. This is a 7 bit value (bits 0-6) with bit 7 being reserved for a sign bit (``0`` — add, ``1`` — subtract). In case of overflow the maximum acceleration rate shall be used. In case of underflow no acceleration shall be used. The expected use is for changing momentum to simulate differing train lengths/loads, most often when operating in a consist."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:253
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:266
 msgid "Configuration Variable 24: Deceleration Adjustment"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:255
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:268
 msgid "This Configuration Variable contains additional braking rate information that is to be added to or subtracted from the base value contained in Configuration Variable 4 using the formula:"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:261
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:274
 msgid "where :math:`a` is the contents of CV 24, :math:`s` is the number of speed steps in use. This is a 7 bit value (bits 0-6) with bit 7 being reserved for a sign bit (``0`` — add, ``1`` — subtract). In case of overflow the maximum deceleration rate shall be used. In case of underflow no deceleration shall be used. The expected use is for changing momentum to simulate differing train lengths/loads, most often when operating in a consist."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:266
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:279
 msgid "Configuration Variable 25: Speed Table/Mid Range Cab Speed Step"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:268
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:281
 msgid "A value between 2 and 127 shall be used to indicate 1 of 126 factory preset speed tables. A value of ``00000010`` indicates that the curve shall be linear. A value between 128 and 154 defines the 28-speed step position (1-26) which will define where the mid range decoder speed value will be applied. In 14-speed mode the decoder will utilize this value divided by two. If the value in this variable is outside the range, the default mid cab speed of 14 (for 28 speed mode or 7 for 14 speed mode) shall be used as the mid speed value. Values of ``00000000`` or ``00000001`` shall indicate that this CV is not used in the calculation of the speed table."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:273
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:286
 msgid "Configuration Variable 27: Decoder Automatic Stopping Configuration"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:275
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:288
 msgid "Used to configure which actions will cause the decoder to automatically stop."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:278
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:299
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:316
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:603
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:619
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:291
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:314
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:333
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:624
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:642
 msgid "Bit"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:278
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:299
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:316
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:603
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:619
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:653
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:291
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:314
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:333
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:624
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:642
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:678
 msgid "Description"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:280
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:301
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:318
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:605
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:293
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:316
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:335
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:626
 msgid "0"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:280
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:293
 msgid "Enable/Disable Auto Stop in the presence of an asymmetrical DCC signal which is more positive on the right rail. ``0`` = Disabled, ``1`` = Enabled."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:281
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:294
 msgid "Enable/Disable Auto Stop in the presence of an asymmetrical DCC signal which is more positive on the left rail. ``0`` = Disabled, ``1`` = Enabled."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:282
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:295
 msgid "Enable/Disable Auto Stop in the presence of an Signal Controlled Influence cutout signal. ``0`` = Disabled, ``1`` = Enabled."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:283
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:296
 msgid "Reserved for future use"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:284
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:297
 msgid "Enable/Disable Auto Stop in the presence of reverse polarity DC. ``0`` = Disabled, ``1`` = Enabled."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:285
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:298
 msgid "Enable/Disable Auto Stop in the presence forward polarity DC. ``0`` = Disabled, ``1`` = Enabled."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:286
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:305
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:608
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:299
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:320
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:629
 msgid "6-7"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:286
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:304
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:324
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:607
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:621
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:623
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:299
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:319
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:341
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:628
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:644
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:646
 msgid "Reserved for future use."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:289
-msgid "Note: If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain it's default value)."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:304
+msgid "If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain it's default value)."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:294
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:309
 msgid "Configuration Variable 28: Bi-Directional Communication Configuration"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:296
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:311
 msgid "Used to configure decoder's Bi-Directional communication characteristics when CV 29-Bit 3 is set."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:301
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:605
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:316
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:626
 msgid "Enable/Disable Unsolicited Decoder Initiated Transmission. ``0`` = Disabled, ``1`` = Enabled."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:302
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:317
 msgid "Enable/Disable Initiated Broadcast Transmission using Asymmetrical DCC Signal. ``0`` = Disabled, ``1`` = Enabled."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:303
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:318
 msgid "Enable/Disable Initiated Broadcast Transmission using Signal Controlled Influence Signal. ``0`` = Disabled, ``1`` = Enabled."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:304
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:319
 msgid "3-5"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:305
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:320
 msgid "Flag Bits, Reserved for future use"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:308
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:328
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:344
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:611
-msgid "Note: If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value)."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:325
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:347
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:365
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:634
+msgid "If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value)."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:313
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:330
 msgid "Configuration Variable 29: Configurations Supported"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:318
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:335
 msgid "Locomotive Direction: ``0`` = Normal, ``1`` = Reversed. This bit controls the locomotive's forward and backward direction in digital mode only. Directional sensitive functions, such as headlights (FL and FR), will also be reversed so that they line up with the locomotive's new forward direction. See S-9.1.1 for more information."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:319
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:336
 msgid "FL location: ``0`` = bit 4 in Speed and Direction Instructions control FL, ``1`` = bit 4 in Function Group One Instruction controls FL. See S-9.2.1 for more information."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:320
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:337
 msgid "Power Source Conversion: ``0`` = NMRA Digital Only, ``1`` = Power Source Conversion Enabled, See CV 12 for more information,"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:321
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:338
 msgid "Bi-Directional Communications: ``0`` = Bi-Directional Communications disabled, ``1`` = Bi-Directional Communications enabled. See S-9.3.2 for more information."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:322
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:339
 msgid "Speed Table: ``0`` = Speed Table set by configuration variables 2, 5, and 6, ``1`` = Speed Table set by configuration variables 66-95."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:323
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:340
 msgid "``0`` = One Byte Addressing, ``1`` = Two Byte Addressing (also known as extended addressing), See S 9.2.1 for more information."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:325
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:342
 msgid "Accessory Decoder: ``0`` = Multifunction Decoder, ``1`` = Accessory Decoder (see CV 541 for a description of assignments for bits 0-6)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:333
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:352
 msgid "Configuration Variable 30: Error Information"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:335
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:354
 msgid "In the case where the decoder has an error condition this Configuration Variable shall contain the error condition as specified by the manufacturer. A value of ``0`` indicates that no error has occurred."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:340
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:359
 msgid "Configuration Variables 31, 32: Index High Byte, Index Low Byte"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:342
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:361
 msgid "The Indexed Address is the address of the indexed CV page when the decoder is set up for indexed CV operation. CV 31 contains the most significant bits of the two byte address and may have any value between ``00010000`` and ``11111111`` inclusive. Values of ``00000000`` thru ``00001111`` are reserved by the NMRA for future use (4096 indexed pages). CV 32 contains the least significant bits of the index address and may contain any value. This gives a total of 61,440 indexed pages, each with 256 bytes of CV data available to manufacturers."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:349
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:370
 msgid "Configuration Variables 33-46: Output Locations 1-14 for Functions FL (f), FL (r), and F1-F12"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:351
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:372
 msgid "Contains a matrix indication of which function inputs control which Digital Decoder outputs. This allows the user to customize which outputs are controlled by which input commands. The outputs that Function FL (f) controls are indicated in CV 33, FL (r) in CV 34, F1 in CV 35, to F12 in CV 46. A value of ``1`` in each bit location indicates that the function controls that output. This allows a single function to control multiple outputs, or the same output to be controlled by multiple functions. CVs 33-37 control outputs 1-8. CVs 38-42 control outputs 4-11 CVs 43-46 control outputs 7-14. The defaults is that FL (f) controls output 1, FL (r) controls output 2, F1 controls output 3 to F12 controls output 14. The lowest numbered output is in the LSB of the CV, as shown in the table below."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:353
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:374
 msgid "**Table 2: Output Position vs. CV (a 'd' indicates the default position)**"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
 msgid "CV"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
 msgid "14 (MSB)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:356
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
 msgid "1 (LSB)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:358
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:379
 msgid "33"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:358
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:379
 msgid "Forward Headlight FL (f)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:358
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:359
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:360
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:361
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:362
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:363
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:364
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:365
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:366
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:367
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:368
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:369
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:370
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:371
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:379
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:380
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:381
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:382
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:383
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:384
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:385
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:386
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:387
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:388
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:389
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:390
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:391
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:392
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:519
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:522
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:525
 msgid "—"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:358
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:359
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:360
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:361
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:362
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:363
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:364
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:365
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:366
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:367
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:368
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:369
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:370
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:371
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:379
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:380
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:381
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:382
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:383
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:384
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:385
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:386
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:387
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:388
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:389
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:390
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:391
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:392
 msgid "d"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:359
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:380
 msgid "34"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:359
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:380
 msgid "Reverse Headlight FL (r)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:360
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:381
 msgid "35"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:360
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:381
 msgid "Function 1"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:361
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:382
 msgid "36"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:361
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:382
 msgid "Function 2"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:362
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:383
 msgid "37"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:362
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:383
 msgid "Function 3"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:363
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:384
 msgid "38"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:363
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:384
 msgid "Function 4"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:364
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:385
 msgid "39"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:364
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:385
 msgid "Function 5"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:365
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:386
 msgid "40"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:365
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:386
 msgid "Function 6"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:366
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:387
 msgid "41"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:366
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:387
 msgid "Function 7"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:367
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:388
 msgid "42"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:367
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:388
 msgid "Function 8"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:368
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:389
 msgid "43"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:368
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:389
 msgid "Function 9"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:369
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:390
 msgid "44"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:369
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:390
 msgid "Function 10"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:370
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:391
 msgid "45"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:370
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:391
 msgid "Function 11"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:371
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:392
 msgid "46"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:371
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:392
 msgid "Function 12"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:377
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:398
 msgid "Configuration Variable 47-64: Manufacturer unique"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:382
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:403
 msgid "Configuration Variable 65: Kick Start"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:384
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:405
 msgid "Specifies the amount of extra Kick that will supplied to the motor when transitioning between stop and the first speed step."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:389
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:410
 msgid "Configuration Variable 66: Forward Trim"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:391
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:412
 msgid "Specifies a scale factor by which a voltage drive level should be multiplied, when the controller is driving the unit in the forward direction. It is interpreted as :math:`n/128`. If the Forward Trim configuration variable contains a value of ``0`` then forward trim is not implemented."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:396
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:417
 msgid "Configuration Variables 67-94: Speed Table"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:398
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:419
 msgid "The speed table is defined to be 28 bytes wide, consisting of 28 values for forward speeds. A digital controller that uses this table shall have at least 64 voltage drive levels and can have as many as 256 so that a smooth power curve can be constructed. Note that voltage drive levels are specified in integer values, in the same way as most other parameters. This means that a drive level of :math:`1/4` maximum voltage corresponds to ``0100000``, not ``0010000``, as you would expect if the number specified a fraction with a fixed denominator, i.e. value 32 out of a fixed 128 levels (see Definitions section)."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:403
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:424
 msgid "Configuration Variable 95: Reverse Trim"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:405
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:426
 msgid "Specifies a scale factor by which a voltage drive level should be multiplied, when the controller is driving the unit in the reverse direction. It is interpreted as :math:`n/128`. If the Reverse Trim configuration variable contains a value of ``0`` then reverse trim is not implemented."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:410
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:431
 msgid "Configuration Variable 96-104: NMRA Reserved"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:415
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:436
 msgid "Configuration Variable 105-106: User Identification #1 and #2"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:417
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:438
 msgid "These CVs are reserved for use by the owner of the decoder to store identification information, e.g. NMRA membership number. CV 105 is ID #1 and CV 106 is ID #2."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:422
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:443
 msgid "Configuration Variable 107-111: NMRA Reserved"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:424
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:445
 msgid "CVs 107, 108: with CV 8 = ``0xEE``, a 16-bit manufacturer ID is stored in these two CVs"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:426
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:447
 msgid "CVs 109-111: with CV7= _________, these three CVs expand the version number feature."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:431
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:452
 msgid "Configuration Variable 112-256: Manufacturer Unique"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:433
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:454
 msgid "CVs in this range are already being used by many manufacturers. Opening up this area officially is an attempt to legitimize what is already being done."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:438
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:459
 msgid "Configuration Variable 257-512: Indexed Access Area (see also CV 31, 32)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:440
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:461
 msgid "This is the indexed area. It contains a total of 65536 pages, each 256 bytes in length. The first 4096 pages are reserved for NMRA use. The remaining 61440 pages are available to manufacturers for their own purposes. For the manufacturer that needs only 256 additional bytes of CVs, he can simply specify a base address in CV 31-32 and not respond if that address is not enabled without actually paging data."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:445
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:466
 msgid "Configuration Variable 880-895: Dynamic CVs"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:447
-msgid "CVs in this range are dynamic and are used for Unsolicited Decoder Initiated Transmission. Manufacturers who utilize these CVs are requested to contact the NMRA DCC WG for current uniform specifications."
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:452
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:473
 msgid "Configuration Variable 892: Decoder Load"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:454
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:475
 msgid "Specifies the current load of the decoder. The load is volatile and is not stored across power interruptions. Bits 0-6 indicate the value of the load with ``0`` indicating no load, Bit 7 indicates a positive or negative load."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:459
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:480
 msgid "Configuration Variable 893: Flags"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:461
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:482
 msgid "Up to 8 dynamic flags can be transmitted. Bits 0-7 Reserved for future use."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:466
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:487
 msgid "Configuration Variable 894: Fuel/Coal"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:468
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:489
 msgid "Specifies the amount of Fuel/Coal left before the decoder will stop the locomotive. A value of ``0`` indicates that the Fuel/Coal is totally consumed, a value of ``254`` indicates totally full and a value of ``255`` indicates that this CV is not currently supported and its contents should not be transmitted."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:473
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:494
 msgid "Configuration Variable 895: Water"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:475
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:496
 msgid "Specifies the amount of water left before the decoder will stop the locomotive. A value of ``0`` indicates that the water is totally consumed, a value of ``254`` indicates totally full and a value of ``255`` indicates that this CV is not currently supported and its contents should not be transmitted."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:480
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:501
 msgid "Configuration Variable 896-1024: SUSI (Serial User Standard Interface)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:482
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:503
 msgid "Reserved until March 2005 for use by SUSI to define CVs for Sound and Function auxiliary modules. See Technical Note TI-9.2.3 for details."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:484
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:505
 msgid "**Table 3: Accessory Decoder Configuration Variables**"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:487
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
 msgid "CV # (Optional)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:489
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:510
 msgid "Decoder Address LSB"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:489
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:510
 msgid "513"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:489
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:510
 msgid "``1``"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:489
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:510
 msgid "6 LSB of accessory decoder address"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:490
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:511
 msgid "Auxiliary Activation"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:490
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:511
 msgid "514"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:490
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:511
 msgid "Auxiliary activation of outputs"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:491
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:512
 msgid "Time On F1"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:491
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:512
 msgid "515"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:492
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:513
 msgid "Time On F2"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:492
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:513
 msgid "516"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:493
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:514
 msgid "Time On F3"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:493
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:514
 msgid "517"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:494
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:515
 msgid "Time On F4"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:494
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:515
 msgid "518"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:495
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:516
 msgid "Manufacturer Version Info"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:495
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:516
 msgid "519"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:496
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:517
 msgid "520"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:497
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:518
 msgid "Decoder Address MSB"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:497
-msgid "9 10-27"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:497
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:518
 msgid "521"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:497
-msgid "M —"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:497
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:518
 msgid "``0``"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:497
-msgid "3 MSB of accessory decoder address Reserved by NMRA for future use"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:518
+msgid "3 MSB of accessory decoder address"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:499
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:519
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:522
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:525
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:530
+msgid "Not in Use"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:519
+msgid "10-27"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:520
 msgid "540"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:500
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:521
 msgid "Accessory Decoder Configuration"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:500
-msgid "29 30"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:500
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:521
 msgid "541"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:500
-msgid "M [#f1]_ —"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:521
+msgid "Similar to CV 29 for accessory decoders"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:500
-msgid "Similar to CV 29 for accessory decoders Reserved by NMRA for future use"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:502
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:523
 msgid "Indexed Area Pointers"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:502
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:523
 msgid "32, 32"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:502
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:523
 msgid "Index High and Low Address"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:503
-msgid "33-81 82-111"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:503
-msgid "O —"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:503
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
-msgid "Reserved for manufacturer use Reserved by NMRA for future use"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:505
-msgid "112-128"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:506
-msgid "129-256"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:507
-msgid "257-512"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:507
-msgid "See CV 31, 32. Index address values of ``0``-``4095`` reserved by NMRA"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:508
-msgid "513-895 896-1024"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:515
-msgid "Descriptions of Configuration Variables for Accessory Decoders"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:517
-msgid "Previous version of this Standard established CVs 513-1024 to be used by accessory decoders. CVs 1-512 were reserved for NMRA use. However, many accessory decoders were sold that used CVs 1-512. This was done for various reasons, including in inability of some command stations to access CVs above 512. In recognition of many accessory decoders using the lower CVs and the desire to create more space for manufacturers, the CV definitions as previously defined have been moved from 513-1024 down to 1-512. Using the CVs 513-1024, as defined in Table 2, are optional. The manufacturer may use these upper CVs in any manner they see appropriate. These changes will allow existing accessory decoders to use CVs 513-1024 as previously defined."
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:522
-msgid "Configuration Variable 1 [513]: Decoder Address (LSB)"
-msgstr ""
-
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:524
-msgid "Contains the low-order address bits for Accessory Decoders. The high-order address bits are stored in CV 9 [521]. Two types of Accessory Decoder addressing are supported: Decoder Address and Output Address. An accessory decoder must support one type, and optionally the other type. The type of decoder is specified in CV 29 [541], bit 6. Decoders using either type of addressing will respond to the same Accessory Decoder Control Packet when CV 1 [513] = ``1`` and CV 9 [521] = ``0``. The factory default value is ``1``. The type(s) of addressing supported must be clearly documented in the manual and on the packaging."
+msgid "33-81"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:525
+msgid "82-111"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:526
-msgid "Decoder Address: Contains the six least significant bits of the accessory decoder's address in bits 0-5. These bits are transmitted as bits 0-5 in the first byte of the accessory decoder packet. See S-9.2.1 for more information."
+msgid "112-128"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:527
+msgid "129-256"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:528
-msgid "Output Address: Contains the address value results from the following formula:"
+msgid "257-512"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:530
-msgid "a_o = a \\bmod 256,"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:528
+msgid "See CV 31, 32. Index address values of ``0``-``4095`` reserved by NMRA"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:534
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:591
-msgid "where :math:`a_o` is the Output Address, and :math:`a` is the address."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:529
+msgid "513-895"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:536
-msgid "The values contained in CV 1 [513] and CV 9 [521] correspond to the bits in the Accessory Decoder packets as follows:"
+msgid "Descriptions of Configuration Variables for Accessory Decoders"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:538
-msgid "o = (n_1 + n_9 \\times 256) - 1,"
+msgid "Previous version of this Standard established CVs 513-1024 to be used by accessory decoders. CVs 1-512 were reserved for NMRA use. However, many accessory decoders were sold that used CVs 1-512. This was done for various reasons, including in inability of some command stations to access CVs above 512. In recognition of many accessory decoders using the lower CVs and the desire to create more space for manufacturers, the CV definitions as previously defined have been moved from 513-1024 down to 1-512. Using the CVs 513-1024, as defined in Table 2, are optional. The manufacturer may use these upper CVs in any manner they see appropriate. These changes will allow existing accessory decoders to use CVs 513-1024 as previously defined."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:542
-msgid "where :math:`o` is the Accessory Output, :math:`n_1` is the value in CV 1 [513], and :math:`n_9` is the value in CV 9 [521]."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:543
+msgid "Configuration Variable 1 [513]: Decoder Address (LSB)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:544
-msgid "Bits 0 and 1 of the Accessory Output are transmitted as bits 1 and 2 of byte 2 of both Accessory Decoder Control Packets. Bits 2-7 of the Accessory Output are transmitted as bits 0-5 of byte 1 of both Accessory Decoder Control Packets. The three least-significant bits of CV 9 [521] contain the ones-complement of bits 4-6 of both Accessory Decoder Control Packets (See S-9.2.1 for more information on the Accessory Decoder Control Packets)."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:545
+msgid "Contains the low-order address bits for Accessory Decoders. The high-order address bits are stored in CV 9 [521]. Two types of Accessory Decoder addressing are supported: Decoder Address and Output Address. An accessory decoder must support one type, and optionally the other type. The type of decoder is specified in CV 29 [541], bit 6. Decoders using either type of addressing will respond to the same Accessory Decoder Control Packet when CV 1 [513] = ``1`` and CV 9 [521] = ``0``. The factory default value is ``1``. The type(s) of addressing supported must be clearly documented in the manual and on the packaging."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:546
-msgid "If an accessory decoder supports more than one sequential output the value in CV 1 [513] will be the first output in the series."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:547
+msgid "Decoder Address: Contains the six least significant bits of the accessory decoder's address in bits 0-5. These bits are transmitted as bits 0-5 in the first byte of the accessory decoder packet. See S-9.2.1 for more information."
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:549
+msgid "Output Address: Contains the address value results from the following formula:"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:551
-msgid "Configuration Variable 2 [514]: Auxiliary Activation"
+msgid "a_o = a \\mod 256,"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:553
-msgid "Bits 1-8 are Auxiliary activation, ``0`` output is not activated by an auxiliary input, ``1`` output can be activated by an auxiliary input."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:555
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:612
+msgid "where :math:`a_o` is the Output Address, and :math:`a` is the address."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:558
-msgid "Configuration Variables 3-6 [515-518]: Time On for Functions F1-F4"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:557
+msgid "The values contained in CV 1 [513] and CV 9 [521] correspond to the bits in the Accessory Decoder packets as follows:"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:560
-msgid "Functions F1-F4 can have the time the outputs are active set by Configuration Variables 3 [515] – 6 [518]. Configuration Variable 3 [515] controls Function F1 and Configuration Variable 6 [518] Controls Function F4. Contains a time that the output is on each time the state of the function is activated. A value of all ``0``\\ s indicates continuous on."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:559
+msgid "o = (n_1 + n_9 \\times 256) - 1,"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:563
+msgid "where :math:`o` is the Accessory Output, :math:`n_1` is the value in CV 1 [513], and :math:`n_9` is the value in CV 9 [521]."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:565
-msgid "Configuration Variable 7 [519]: Manufacturer Version Number"
+msgid "Bits 0 and 1 of the Accessory Output are transmitted as bits 1 and 2 of byte 2 of both Accessory Decoder Control Packets. Bits 2-7 of the Accessory Output are transmitted as bits 0-5 of byte 1 of both Accessory Decoder Control Packets. The three least-significant bits of CV 9 [521] contain the ones-complement of bits 4-6 of both Accessory Decoder Control Packets (See S-9.2.1 for more information on the Accessory Decoder Control Packets)."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:567
-msgid "See CV 7 for the description."
+msgid "If an accessory decoder supports more than one sequential output the value in CV 1 [513] will be the first output in the series."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:572
-msgid "Configuration Variable 8 [520]: Manufacturer ID (See Appendix A for a list of Manufacturer IDs)"
+msgid "Configuration Variable 2 [514]: Auxiliary Activation"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:574
-msgid "See CV 8 for the description."
+msgid "Bits 1-8 are Auxiliary activation, ``0`` output is not activated by an auxiliary input, ``1`` output can be activated by an auxiliary input."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:579
-msgid "Configuration Variable 9 [521]: Decoder Address (MSB)"
+msgid "Configuration Variables 3-6 [515-518]: Time On for Functions F1-F4"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:581
-msgid "Contains the high-order address bits for Accessory Decoders. The low-order address bits are stored in CV 1 [513]. Two types of Accessory Decoder addressing are supported: Decoder Address and Output Address. An accessory decoder must support one type, and optionally the other type. The type of decoder is specified in CV 29 [541], bit 6. Decoders using either type of addressing will respond to the same Accessory Decoder Control Packet when CV1 [513] = ``1`` and CV9 [521] = ``0``. The type(s) of addressing supported must be clearly documented in the manual and on the packaging. The bits transmitted are the ones complement of the value in this CV. See S-9.2.1 for more information on the Accessory Decoder Control Packets."
+msgid "Functions F1-F4 can have the time the outputs are active set by Configuration Variables 3 [515] – 6 [518]. Configuration Variable 3 [515] controls Function F1 and Configuration Variable 6 [518] Controls Function F4. Contains a time that the output is on each time the state of the function is activated. A value of all ``0``\\ s indicates continuous on."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:583
-msgid "Decoder Address: Contains the three most significant bits of the accessory decoder's address in bits 0-2. These bits are transmitted as bits 4-6 in the second byte of the accessory decoder packet."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:586
+msgid "Configuration Variable 7 [519]: Manufacturer Version Number"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:585
-msgid "Output Address: Contains the address value results from the quotient of the following formula:"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:587
-msgid "a_o = a / 256,"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:588
+msgid "See CV 7 for the description."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:593
-msgid "See CV 513 [1] for an explanation of how to determine the contents of CV 1 [513] and CV 9 [521]."
+msgid "Configuration Variable 8 [520]: Manufacturer ID (See Appendix A for a list of Manufacturer IDs)"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:598
-msgid "Configuration Variable 28 [540]: Bi-Directional Communication Configuration"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:595
+msgid "See CV 8 for the description."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:600
-msgid "Used to configure decoder's Bi-Directional communication characteristics, when CV 29 [541] bit 3 is set."
+msgid "Configuration Variable 9 [521]: Decoder Address (MSB)"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:602
+msgid "Contains the high-order address bits for Accessory Decoders. The low-order address bits are stored in CV 1 [513]. Two types of Accessory Decoder addressing are supported: Decoder Address and Output Address. An accessory decoder must support one type, and optionally the other type. The type of decoder is specified in CV 29 [541], bit 6. Decoders using either type of addressing will respond to the same Accessory Decoder Control Packet when CV1 [513] = ``1`` and CV9 [521] = ``0``. The type(s) of addressing supported must be clearly documented in the manual and on the packaging. The bits transmitted are the ones complement of the value in this CV. See S-9.2.1 for more information on the Accessory Decoder Control Packets."
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:604
+msgid "Decoder Address: Contains the three most significant bits of the accessory decoder's address in bits 0-2. These bits are transmitted as bits 4-6 in the second byte of the accessory decoder packet."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:606
-msgid "Not used."
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:607
-msgid "2-5"
+msgid "Output Address: Contains the address value results from the quotient of the following formula:"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:608
-msgid "Flag Bits, Reserved for future use."
+msgid "a_o = a / 256,"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:616
-msgid "Configuration Variable 29 [541]: Accessory Decoder Configurations Supported"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:614
+msgid "See CV 513 [1] for an explanation of how to determine the contents of CV 1 [513] and CV 9 [521]."
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:619
+msgid "Configuration Variable 28 [540]: Bi-Directional Communication Configuration"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:621
-msgid "0-2"
+msgid "Used to configure decoder's Bi-Directional communication characteristics, when CV 29 [541] bit 3 is set."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:622
-msgid "Bi-Directional Communications. See S-9.3.2 for more information. ``0`` = Disabled, ``1`` = Enabled."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:627
+msgid "Not used."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:624
-msgid "Decoder Type. ``0`` = Basic Accessory Decoder, ``1`` = Extended Accessory Decoder."
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:625
-msgid "Addressing Method. ``0`` = Decoder Address method, ``1`` = Output Address method."
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:626
-msgid "Accessory Decoder, ``0`` = Multifunction Decoder (See CV 29 for description of bit Assignments for bits 0-6), ``1`` = Accessory Decoder. If bit 7 = ``1``, then the decoder may ignore the two most-significant bits of the CV number **in Service Mode only**. Using this feature CV 513 becomes CV 1, etc. Decoders which perform the translation must clearly document the feature in their manual."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:628
+msgid "2-5"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:629
-msgid "Note: If the decoder does not support a feature contained in this table, it must not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value)."
+msgid "Flag Bits, Reserved for future use."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:634
-msgid "Configuration Variable 31, 32: Index Address High Byte, Index Address Low Byte"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:639
+msgid "Configuration Variable 29 [541]: Accessory Decoder Configurations Supported"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:636
-msgid "The Indexed Address is the address of the indexed CV page when the decoder is set up for indexed CV operation. CV 31 contains the most significant bits of the two byte address and may have any value between ``00010000`` and ``11111111`` inclusive. Values of ``00000000`` through ``00001111`` are reserved by the NMRA for future use. (4096 indexed pages) CV 32 contains the least significant bits of the index address and may contain any value. This gives a total of 61,440 indexed pages, each with 256 bytes of CV data available to manufacturers."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:644
+msgid "0-2"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:641
-msgid "Appendix A: Manufacturer ID codes as assigned by the NMRA"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:645
+msgid "Bi-Directional Communications. See S-9.3.2 for more information. ``0`` = Disabled, ``1`` = Enabled."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:643
-msgid "*This appendix is published separately since it is under constant revision.*"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:647
+msgid "Decoder Type. ``0`` = Basic Accessory Decoder, ``1`` = Extended Accessory Decoder."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:648
-msgid "Appendix B: Power Source Conversion codes as assigned by the NMRA"
+msgid "Addressing Method. ``0`` = Decoder Address method, ``1`` = Output Address method."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:650
-msgid "The following Power Source Conversion codes have been assigned by the NMRA Technical Department. Manufacturers wishing to use conversions not on this list shall apply to the NMRA Technical Department for the assignment for a conversion ID."
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:649
+msgid "Accessory Decoder, ``0`` = Multifunction Decoder (See CV 29 for description of bit Assignments for bits 0-6), ``1`` = Accessory Decoder. If bit 7 = ``1``, then the decoder may ignore the two most-significant bits of the CV number **in Service Mode only**. Using this feature CV 513 becomes CV 1, etc. Decoders which perform the translation must clearly document the feature in their manual."
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:653
-msgid "ID"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:655
-msgid "``00000001``"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:655
-msgid "Analog Power Conversion"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:656
-msgid "``00000010``"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:656
-msgid "Radio"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:657
-msgid "``00000100``"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:657
-msgid "Zero-1465"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:658
-msgid "``00001000``"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:658
-msgid "TRIX"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:654
+msgid "If the decoder does not support a feature contained in this table, it must not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value)."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:659
-msgid "``00010000``"
+msgid "Configuration Variable 31, 32: Index Address High Byte, Index Address Low Byte"
 msgstr ""
 
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:659
-msgid "CTC 16 / Railcommand"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:660
-msgid "``00100000``"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:660
-msgid "FMZ (Fleischmann)"
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:661
+msgid "The Indexed Address is the address of the indexed CV page when the decoder is set up for indexed CV operation. CV 31 contains the most significant bits of the two byte address and may have any value between ``00010000`` and ``11111111`` inclusive. Values of ``00000000`` through ``00001111`` are reserved by the NMRA for future use. (4096 indexed pages) CV 32 contains the least significant bits of the index address and may contain any value. This gives a total of 61,440 indexed pages, each with 256 bytes of CV data available to manufacturers."
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:666
-msgid "Appendix C: Process for changing Manufacturer Specific CVs to Optional or Uniform"
+msgid "Appendix A: Manufacturer ID codes as assigned by the NMRA"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:668
-msgid "*An official process whereby CVs incorporated initially as Manufacturer Specific options may be incorporated into the Standard for optional and/or uniform usage by all manufacturers needs to be defined and inserted here.*"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:671
-msgid "Footnotes"
-msgstr ""
-
-#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:672
-msgid "If any of these features are provided, then this CV is Mandatory"
+msgid "*This appendix is published separately since it is under constant revision.*"
 msgstr ""
 
 #: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:673
+msgid "Appendix B: Power Source Conversion codes as assigned by the NMRA"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:675
+msgid "The following Power Source Conversion codes have been assigned by the NMRA Technical Department. Manufacturers wishing to use conversions not on this list shall apply to the NMRA Technical Department for the assignment for a conversion ID."
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:678
+msgid "ID"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:680
+msgid "``00000001``"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:680
+msgid "Analog Power Conversion"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:681
+msgid "``00000010``"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:681
+msgid "Radio"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:682
+msgid "``00000100``"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:682
+msgid "Zero-1465"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:683
+msgid "``00001000``"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:683
+msgid "TRIX"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:684
+msgid "``00010000``"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:684
+msgid "CTC 16 / Railcommand"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:685
+msgid "``00100000``"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:685
+msgid "FMZ (Fleischmann)"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:691
+msgid "Appendix C: Process for changing Manufacturer Specific CVs to Optional or Uniform"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:693
+msgid "*An official process whereby CVs incorporated initially as Manufacturer Specific options may be incorporated into the Standard for optional and/or uniform usage by all manufacturers needs to be defined and inserted here.*"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:696
+msgid "Footnotes"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:697
+msgid "If any of these features are provided, then this CV is Mandatory"
+msgstr ""
+
+#: ../../content/S-9.2.2-configuration-variables-for-dcc.rst:698
 msgid "Allocation of these bits is done by the NMRA on an as needed basis."
 msgstr ""

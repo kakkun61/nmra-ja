@@ -1,0 +1,11 @@
+{
+  "[restructuredtext]": {
+    "editor.wordWrap": "on"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on"
+  },
+  "[po]": {
+    "editor.wordWrap": "on"
+  }
+}

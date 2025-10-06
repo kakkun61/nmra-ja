@@ -43,5 +43,6 @@ spellcheck:
 .PHONY: clean
 clean:
 	-rm -rf .build
+	-rm content/locale/*/LC_MESSAGES/*.mo
 
 FORCE:

@@ -16,14 +16,27 @@ A: General Definitions
 
 Tables 1 and 2 identify each of the Configuration Variables (CVs), along with additional information about each one. Following Table 1 is a written description of each of the CVs. In Tables 1 and 2 each Configuration Variable (CV) is identified by name and number, along with the following information:
 
-- Required: Mandatory (M), Recommended (R) or Optional (O). CVs identified as Mandatory (M) must be implemented in order to conform to this Standard, while those marked as Recommended (R) are strongly encouraged but not mandatory, and those marked Optional (O) are at the manufacturer's discretion.
-- Default Value: the required factory default value when the CV is provided in an implementation.
-- Read-Only: indicates a CV whose value should be set by the manufacturer and which the user cannot modify.
-- Uniform Spec: Many CVs are implementation specific and no uniform specification is required. Others must be implemented in a uniform fashion in order to achieve compatibility. A "Y" in the Uniform Spec column indicates a CV which requires implementation by manufacturers according to a common specification. A blank in the Uniform Specification means that the CV must be used for its designated purpose, but the action taken by the decoder for a specific value can vary from manufacturer to manufacturer.
-- Dynamic: CVs in this range are dynamic and are used for Unsolicited Decoder Initiated Transmission. Manufacturers who utilize these CVs are requested to contact the NMRA DCC WG for current uniform specifications.
-- Additional Comments: CVs identified as "Reserved by NMRA for future use" are allocated for future needs and must not be used by an implementer without prior written approval from the NMRA Technical Department. CVs identified as "Values assigned by NMRA" indicate that the allowable values are defined by the NMRA and any requests for additional values should be directed to the NMRA Technical Department. CVs identified as "Reserved for manufacturer use" are allocated for use by implementers, for which no prior NMRA authorization is needed, and for which no common usage across decoders from different implementers can be assured by the NMRA.
+Required
+    Mandatory (M), Recommended (R) or Optional (O). CVs identified as Mandatory (M) must be implemented in order to conform to this Standard, while those marked as Recommended (R) are strongly encouraged but not mandatory, and those marked Optional (O) are at the manufacturer's discretion.
 
-Note: While all Digital Decoders need not implement all variables, it is required that if a function is provided, that the all of the relevant CV information be adhered to.
+Default Value
+    the required factory default value when the CV is provided in an implementation.
+
+Read-Only
+    indicates a CV whose value should be set by the manufacturer and which the user cannot modify.
+
+Uniform Spec
+    Many CVs are implementation specific and no uniform specification is required. Others must be implemented in a uniform fashion in order to achieve compatibility. A "Y" in the Uniform Spec column indicates a CV which requires implementation by manufacturers according to a common specification. A blank in the Uniform Specification means that the CV must be used for its designated purpose, but the action taken by the decoder for a specific value can vary from manufacturer to manufacturer.
+
+Dynamic
+    CVs in this range are dynamic and are used for Unsolicited Decoder Initiated Transmission. Manufacturers who utilize these CVs are requested to contact the NMRA DCC WG for current uniform specifications.
+
+Additional Comments
+    CVs identified as "Reserved by NMRA for future use" are allocated for future needs and must not be used by an implementer without prior written approval from the NMRA Technical Department. CVs identified as "Values assigned by NMRA" indicate that the allowable values are defined by the NMRA and any requests for additional values should be directed to the NMRA Technical Department. CVs identified as "Reserved for manufacturer use" are allocated for use by implementers, for which no prior NMRA authorization is needed, and for which no common usage across decoders from different implementers can be assured by the NMRA.
+
+.. note::
+
+   While all Digital Decoders need not implement all variables, it is required that if a function is provided, that the all of the relevant CV information be adhered to.
 
 .. table:: Table 1: Multi-function Decoder Configuration Variables
 
@@ -38,7 +51,7 @@ Note: While all Digital Decoders need not implement all variables, it is require
    V\ :sub:`mid`                                        6        O
    Manufacturer Version No.                             7        M                      Y                                         Manufacturer defined version info
    Manufacturer ID                                      8        M                      Y         Y                               Values assigned by NMRA
-   Total PWS Period                                     9        O
+   Total PWM Period                                     9        O
    EMF Feedback Cutout                                  10       O
    Packet Time-Out Value                                11       R
    Power Source Conversion                              12       O                                Y                               Values assigned by NMRA
@@ -160,7 +173,7 @@ The value of CV 9 sets the nominal PWM period at the decoder output and therefor
 
 .. math::
 
-   p = (131 + m \times 4) \times 2^e,
+   p = (131 + m \times 4) \times 2e,
 
 where :math:`p` is PWM period in μs, :math:`m` is a mantissa in bits 0-4 bits of CV 9 (low order) and :math:`e` is an exp in bits 5-7 for CV 9. If the value programmed into CV 9 falls outside a decoder's capability, it is suggested (but not required) that the decoder "adjust" the value to the appropriate highest or lowest setting supported by the decoder.
 
@@ -286,7 +299,9 @@ Bit   Description
 6-7   Reserved for future use.
 ===== ===================================================================================================================================================
 
-Note: If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain it's default value).
+.. note::
+
+   If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain it's default value).
 
 .. _cv-28-bi-directional-communication-configuration:
 
@@ -305,7 +320,9 @@ Bit   Description
 6-7   Flag Bits, Reserved for future use
 ===== ============================================================================================================================
 
-Note: If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
+.. note::
+
+   If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
 
 .. _cv-29-configurations-supported:
 
@@ -325,7 +342,9 @@ Bit   Description
 7     Accessory Decoder: ``0`` = Multifunction Decoder, ``1`` = Accessory Decoder (see CV 541 for a description of assignments for bits 0-6)
 ===== ==========================================================================================================================================================================================================================================================================================================================================
 
-Note: If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
+.. note::
+
+   If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
 
 .. _cv-30-error-information:
 
@@ -341,7 +360,9 @@ Configuration Variables 31, 32: Index High Byte, Index Low Byte
 
 The Indexed Address is the address of the indexed CV page when the decoder is set up for indexed CV operation. CV 31 contains the most significant bits of the two byte address and may have any value between ``00010000`` and ``11111111`` inclusive. Values of ``00000000`` thru ``00001111`` are reserved by the NMRA for future use (4096 indexed pages). CV 32 contains the least significant bits of the index address and may contain any value. This gives a total of 61,440 indexed pages, each with 256 bytes of CV data available to manufacturers.
 
-Note: If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
+.. note::
+
+   If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
 
 .. _cv-33-46-output-locations:
 
@@ -495,18 +516,18 @@ Time On F4                                 6        518             O
 Manufacturer Version Info                  7        519             M                                             Manufacturer defined version info
 Manufacturer ID                            8        520             M                      Y         Y            Values assigned by NMRA
 Decoder Address MSB                        9        521             M        ``0``                   Y            3 MSB of accessory decoder address
-                                           10-27                    —                                             Reserved by NMRA for future use
+Not in Use                                 10-27                    —                                             Reserved by NMRA for future use
 Bi-Directional Communication Configuration 28       540             O                                Y
 Accessory Decoder Configuration            29       541             M [#f1]_                         Y            Similar to CV 29 for accessory decoders
-                                           30                       —                                             Reserved by NMRA for future use
+Not in Use                                 30                       —                                             Reserved by NMRA for future use
 Indexed Area Pointers                      32, 32                                                                 Index High and Low Address
 Manufacturer Unique                        33-81                    O                                             Reserved for manufacturer use
-                                           82-111                   —                                             Reserved by NMRA for future use
+Not in Use                                 82-111                   —                                             Reserved by NMRA for future use
 Manufacturer Unique                        112-128                  O                                             Reserved for manufacturer use
 Manufacturer Unique                        129-256
 Indexed Area                               257-512                                                                See CV 31, 32. Index address values of ``0``-``4095`` reserved by NMRA
 Manufacturer Unique                        513-895                  O                                             Reserved for manufacturer use
-                                           896-1024                                                               Reserved by NMRA for future use
+Not in Use                                 896-1024                                                               Reserved by NMRA for future use
 ========================================== ======== =============== ======== ============= ========= ============ ======================================================================
 
 .. _descriptions-of-configuration-variables-for-accessory-decoders:
@@ -529,7 +550,7 @@ Contains the low-order address bits for Accessory Decoders. The high-order addre
 
 .. math::
 
-   a_o = a \bmod 256,
+   a_o = a \mod 256,
 
 where :math:`a_o` is the Output Address, and :math:`a` is the address.
 
@@ -608,7 +629,9 @@ Bit   Description
 6-7   Flag Bits, Reserved for future use.
 ===== =============================================================================================
 
-Note: If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
+.. note::
+
+   If the decoder does not support a feature contained in this table, it shall not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
 
 .. _cv-29-541-accessory-decoder-configurations-supported:
 
@@ -626,7 +649,9 @@ Bit   Description
 7     Accessory Decoder, ``0`` = Multifunction Decoder (See CV 29 for description of bit Assignments for bits 0-6), ``1`` = Accessory Decoder. If bit 7 = ``1``, then the decoder may ignore the two most-significant bits of the CV number **in Service Mode only**. Using this feature CV 513 becomes CV 1, etc. Decoders which perform the translation must clearly document the feature in their manual.
 ===== ======================================================================================================================================================================================================================================================================================================================================================================================================
 
-Note: If the decoder does not support a feature contained in this table, it must not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
+.. note::
+
+   If the decoder does not support a feature contained in this table, it must not allow the corresponding bit to be set improperly (i.e. the bit should always contain its default value).
 
 .. _cv-31-32-index-address-high-byte-index-address-low-byte:
 
