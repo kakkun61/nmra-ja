@@ -14,7 +14,6 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             gettext
-            python313
             nodePackages.cspell
             python313Packages.sphinx
             python313Packages.sphinx_rtd_theme
