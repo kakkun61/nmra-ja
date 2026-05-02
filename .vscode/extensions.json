@@ -1,7 +1,10 @@
 {
   "recommendations": [
-    "streetsidesoftware.code-spell-checker",
     "mkhl.direnv",
-    "mrorz.language-gettext"
+    "mrorz.language-gettext",
+    "ms-python.python",
+    "streetsidesoftware.code-spell-checker",
+    "swyddfa.esbonio",
+    "trond-snekvik.simple-rst"
   ]
 }
