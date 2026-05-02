@@ -19,8 +19,15 @@ build.ja: multilingual.update
 	sphinx-build --builder html content .build/ja --define language=ja
 
 .PHONY: serve
-serve:
-	warp -d .build
+serve: serve.ja
+
+.PHONY: serve.en
+serve.en:
+	warp -d .build/en
+
+.PHONY: serve.ja
+serve.ja:
+	warp -d .build/ja
 
 $(pot_file_paths)&: $(rst_file_paths)
 	sphinx-build --builder gettext content .build/gettext

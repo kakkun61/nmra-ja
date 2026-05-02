@@ -8,6 +8,12 @@ https://nmra-ja.readthedocs.io/
 
 この文書は [Sphinx](https://www.sphinx-doc.org/) を使用してビルドする。
 
-```sh
+```console
 $ make
+```
+
+生成されたコンテンツを閲覧する場合は、サーバーを起動しブラウザーで接続する。
+
+```console
+$ make serve
 ```
