@@ -31,11 +31,11 @@ msgstr "原文版：July 2012"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:12
 msgid "This document received approval from the NMRA Board of Trustees in July 1995, March 1997, July 2003 and January 2006. Changes since the last approved version are indicated by change bars on the left or right side of the document. Minor edit changes made to agree with :doc:`S-9.2.2-configuration-variables-for-dcc`. Edit changes made July 2009. Changed to Standard July 2012."
-msgstr ""
+msgstr "この文書は 1995 年 7 月・1997 年 3 月・2003 年 7 月・2006 年 1 月に NMRA 理事会の承認を受けました。最後に承認されたバージョンからの変更は文書の左右のチェンジバーで示されています。:doc:`S-9.2.2-configuration-variables-for-dcc` に合わせてマイナーな編集変更が行われました。2009 年 7 月に編集変更。2012 年 7 月に標準へ変更。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:14
 msgid "The NMRA Communications Standard for Digital Communications (S-9.2) provides a minimal, basic packet format required for interoperability. This Standard provides Extended Packet Formats that provide the framework to enable realistic operations to occur. These formats adhere to the general packet format as defined in S-9.2. While the baseline packet has a length of 3 data bytes separated by a ``0`` bit, a packet using the extended packet format definition may have a length of between 3 and 6 data bytes each separated by a ``0`` bit."
-msgstr "NMRA の「デジタルコマンドコントロールの通信標準（S-9.2）」は相互運用性のための最低限で基本的なパケット形式を提供しています。この標準は、発生する現実的な運用を可能にする枠組みを提供する拡張パケット形式を提供します。この形式は S-9.2 で定義される一般パケット形式にしたがいます。基本パケットは ``0`` ビットで分割された3バイトでしたが、拡張パケット形式では ``0`` ビットで分割された3から6バイトをもちえます。"
+msgstr "NMRA の「デジタルコマンドコントロールの通信標準（S-9.2）」は相互運用性のための最低限で基本的なパケット形式を提供しています。この標準は、発生する現実的な運用を可能にする枠組みを提供する拡張パケット形式を提供します。この形式は S-9.2 で定義される一般パケット形式にしたがいます。基本パケットは ``0`` ビットで分割された 3 バイトでしたが、拡張パケット形式では ``0`` ビットで分割された 3 から 6 バイトをもちえます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:19
 msgid "Format Definitions"
@@ -43,7 +43,7 @@ msgstr "形式定義"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:21
 msgid "Within this Standard, bits within the address and data bytes will be defined using the following abbreviations. Individual bytes within a specific packet format are separated by spaces. Bytes which are within square ``[]`` brackets can occur one or more times as necessary. Bits are numbered from right to left with bit 0 (the right most bit) being the least significant bit (LSB) and bit 7 (the left most bit) being the most significant bit (MSB)."
-msgstr "この標準では、アドレスとデータバイト内のビットは次に示す省略によって定義されます。パケット形式のそれぞれのバイトは空白によって分割されます。角括弧（``[``・``]``）によって囲われたバイトは必要に応じて1回以上出現します。ビットは右から左の順に番号が付けられます。ビット0（最右ビット）は最下位ビット（least significant bit; LSB）、ビット7（最左ビット）は最上位ビット（most significant bit; MSB）となります。"
+msgstr "この標準では、アドレスとデータバイト内のビットは次に示す省略によって定義されます。パケット形式のそれぞれのバイトは空白によって分割されます。角括弧（``[``・``]``）によって囲われたバイトは必要に応じて 1 回以上出現します。ビットは右から左の順に番号が付けられます。ビット 0（最右ビット）は最下位ビット（least significant bit; LSB）、ビット 7（最左ビット）は最上位ビット（most significant bit; MSB）となります。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:26
 #: ../../content/S-9.2.1-extended-packet-formats.rst:737
@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:53
 msgid "Signal head aspect data bit"
-msgstr ""
+msgstr "信号頭部現示データビット"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:54
 msgid "``E``"
@@ -208,7 +208,7 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:72
 msgid "Multi function decoders with 7 bit addresses"
-msgstr "7ビットアドレス多機能デコーダー"
+msgstr "7 ビットアドレス多機能デコーダー"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:73
 msgid "``10000001``-``10111111`` (``128``-``191``)"
@@ -216,7 +216,7 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:74
 msgid "Basic accessory decoders with 9 bit addresses and extended accessory decoders with 11 bit addresses"
-msgstr "9ビットアドレス基本アクセサリーデコーダーと11ビットアドレス拡張アクセサリーデコーダー"
+msgstr "9 ビットアドレス基本アクセサリーデコーダーと 11 ビットアドレス拡張アクセサリーデコーダー"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:75
 msgid "``11000001``-``11100111`` (``192``-``231``)"
@@ -224,7 +224,7 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:76
 msgid "Multi function decoders with 14 bit addresses"
-msgstr "14ビットアドレス多機能デコーダー"
+msgstr "14 ビットアドレス多機能デコーダー"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:77
 msgid "``11101000``-``11111110`` (``232``-``254``)"
@@ -260,7 +260,7 @@ msgstr "このパケットの形式は下記です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:93
 msgid "Instructions addressed to \"broadcast address\" ``00000000`` must be executed by all Multi Function Digital Decoders. The single instruction has the same definition as defined by the Multi Function Digital Decoder packet and can be one, two, or three bytes in length depending on the instruction. Digital Decoders should ignore any instruction they do not support. The manufacturer must document which broadcast commands a decoder supports."
-msgstr "「ブロードキャストアドレス」\\ ``00000000`` 向けの命令はすべての多機能デジタルデコーダーによって実行されなければいけません。単一の命令は「多機能デジタルデコーダーパケット」で定義されるものと同じ定義をもち、命令によって1から3バイトになります。デジタルデコーダーは自身が解釈できない命令は無視しなければいけません。製造者はデコーダーが解釈できるブロードキャストコマンドを記載しなければいけません。"
+msgstr "「ブロードキャストアドレス」\\ ``00000000`` 向けの命令はすべての多機能デジタルデコーダーによって実行されなければいけません。単一の命令は「多機能デジタルデコーダーパケット」で定義されるものと同じ定義をもち、命令によって 1 から 3 バイトになります。デジタルデコーダーは自身が解釈できない命令は無視しなければいけません。製造者はデコーダーが解釈できるブロードキャストコマンドを記載しなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:98
 msgid "C: Instruction Packets for Multi Function Digital Decoders"
@@ -268,15 +268,15 @@ msgstr "C：多機能デジタルデコーダー用命令パケット"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:106
 msgid "Multi Function Digital Decoders are used for the purpose of controlling one or more motors and/or accessories. The packet format used to control these devices consists of between 3 and 6 bytes where the first bytes are address bytes followed by one or two instruction bytes and ended by an error control byte."
-msgstr "多機能デジタルデコーダーは1つ以上のモーターやアクセサリーを操作する目的で使用されます。これらの機器を操作するために使用されるパケット形式は3から6バイトで構成されます。最初のバイトはアドレスバイトで、それに続き1つか2つの命令バイトが、最後はエラー制御バイトで終わります。"
+msgstr "多機能デジタルデコーダーは 1 つ以上のモーターやアクセサリーを操作する目的で使用されます。これらの機器を操作するために使用されるパケット形式は 3 から 6 バイトで構成されます。最初のバイトはアドレスバイトで、それに続き 1 つか 2 つの命令バイトが、最後はエラー制御バイトで終わります。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:108
 msgid "The first address byte contains 8 bits of address information. If the most significant bits of the address are ``11`` and the remaining bits are not ``111111``, then a second address byte must immediately follow. This second address byte will then contain an additional 8 bits of address data. When 2 bytes of address information are present they are separated by a ``0`` bit. The most significant bit of two byte addresses is bit 5 of the first address byte. (bits 6 and 7 having the value of ``1`` in this case)."
-msgstr "最初のアドレスバイトは、8ビットのアドレス情報をもちます。もしアドレスの最上位の2ビットが ``11`` で残りが ``111111`` でない場合、2番目のアドレスバイトがそのすぐ後に続かなければいけません。この2番目のアドレスバイトは8ビットの追加のアドレス情報をもちます。 アドレス情報が2バイトあるとき、それらは ``0`` ビットで分割されます。2バイトアドレスの最上位ビットは最初のアドレスバイトのビット5です（この場合ビット6とビット7は ``1`` の値をもちます）。"
+msgstr "最初のアドレスバイトは、8 ビットのアドレス情報をもちます。もしアドレスの最上位の 2 ビットが ``11`` で残りが ``111111`` でない場合、2 番目のアドレスバイトがそのすぐ後に続かなければいけません。この 2 番目のアドレスバイトは 8 ビットの追加のアドレス情報をもちます。 アドレス情報が 2 バイトあるとき、それらは ``0`` ビットで分割されます。2 バイトアドレスの最上位ビットは最初のアドレスバイトのビット 5 です（この場合ビット 6 とビット 7 は ``1`` の値をもちます）。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:110
 msgid "Instruction-bytes are data bytes used to send commands to Multi Function Digital Decoders. Although it is unlikely that all Digital Decoders will implement all instructions, it is important that if they support packets with more than a single instruction, they can sufficiently parse the packet to be able to recognize if a byte is a new instruction or the second byte of a previous instruction."
-msgstr "命令バイトは多機能デジタルデコーダーにコマンドを送信するために使用されるデータバイトです。すべてのデジタルデコーダーがすべての命令を実装していませんが、もし1つ以上の命令を解釈できる場合、バイトが新規の命令なのか前の命令の2番目のバイトなのかを認識できるようにデジタルデコーダーがパケットを十分に解析できることは重要です。"
+msgstr "命令バイトは多機能デジタルデコーダーにコマンドを送信するために使用されるデータバイトです。すべてのデジタルデコーダーがすべての命令を実装していませんが、もし 1 つ以上の命令を解釈できる場合、バイトが新規の命令なのか前の命令の 2 番目のバイトなのかを認識できるようにデジタルデコーダーがパケットを十分に解析できることは重要です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:112
 #, fuzzy
@@ -285,7 +285,7 @@ msgstr "それぞれの命令は下記のように定義されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:120
 msgid "Each instruction consists of a 3-bit instruction type field followed by a 5-bit data field. Some instructions have one or two or three additional bytes of data. The 3-bit instruction type field is defined as follows:"
-msgstr ""
+msgstr "それぞれの命令は 3 ビットの命令種別フィールドとそれに続く 5 ビットのデータフィールドで構成されます。命令によっては 1・2・3 の追加データバイトをもちます。3 ビットの命令種別フィールドは下記のように定義されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:125
 msgid "``CCC``"
@@ -329,7 +329,7 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:136
 msgid "Function group one instruction"
-msgstr "第1機能群命令"
+msgstr "第 1 機能群命令"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:137
 msgid "``101``"
@@ -337,7 +337,7 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:138
 msgid "Function group two instruction"
-msgstr "第2機能群命令"
+msgstr "第 2 機能群命令"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:139
 msgid "``110``"
@@ -357,7 +357,7 @@ msgstr "CV 読み書き命令"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:144
 msgid "The last byte of the packet is the Error Detection Byte, which is calculated the same as is done in the baseline packet using all address, and all instruction bytes (see S-9.2)."
-msgstr ""
+msgstr "パケットの最後のバイトはエラー検出バイトで、基本パケットと同じようにすべてのアドレスバイトとすべての命令バイトを使用して計算されます（S-9.2 参照）。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:149
 msgid "Decoder and Consist Control Instruction (``000``)"
@@ -365,7 +365,7 @@ msgstr "デコーダー制御命令と編成制御命令（``000``）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:151
 msgid "With the exception of the decoder acknowledgement function (``00001111``), only a single decoder and consist control instruction may be contained in a packet."
-msgstr "デコーダー応答機能（``00001111``）を除いて、パケットにはデコーダーと編成制御命令は1つしか含まれません。"
+msgstr "デコーダー応答機能（``00001111``）を除いて、パケットにはデコーダーと編成制御命令は 1 つしか含まれません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:156
 msgid "Decoder Control (``0000``)"
@@ -431,7 +431,7 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:187
 msgid "Set extended address (CV 29 bit 5)"
-msgstr "拡張アドレスの設定（CV 29 のビット5）"
+msgstr "拡張アドレスの設定（CV 29 のビット 5）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:188
 msgid "``110D``"
@@ -451,7 +451,7 @@ msgstr "デジタルデコーダーリセット"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:198
 msgid "A Digital Decoder Reset shall erase all volatile memory (including and speed and direction data), and return to its initial power up state as defined in S-115 9.2.4 section A. Command Stations shall not send packets to addresses 112-127 for 10 packet times following a Digital Decoder Reset. This is to ensure that the decoder does not start executing service mode instruction packets as operations mode packets (Service Mode instruction packets have a short address in the range of 112 to 127 decimal.)"
-msgstr "デジタルデコーダーリセットは（速度と方向データを含め）すべての揮発性記憶を消去し、S-9.2.4 の A に定義された初期起動状態へ戻らなければいけません。コマンドステーションはアドレス112～127にデジタルデコーダーリセットの後10パケット期間はパケットを送信してはいけません。これは、デコーダーがサービスモード命令パケットを運転モードパケットとして実行しはじめないようにするためです（サービスモード命令パケットは10進数で112～127の短形式アドレスをもちます）。"
+msgstr "デジタルデコーダーリセットは（速度と方向データを含め）すべての揮発性記憶を消去し、S-9.2.4 の A に定義された初期起動状態へ戻らなければいけません。コマンドステーションはアドレス 112～127 にデジタルデコーダーリセットの後 10 パケット期間はパケットを送信してはいけません。これは、デコーダーがサービスモード命令パケットを運転モードパケットとして実行しはじめないようにするためです（サービスモード命令パケットは 10 進数で 112～127 の短形式アドレスをもちます）。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:203
 msgid "Hard Reset"
@@ -483,7 +483,7 @@ msgstr "デコーダーフラグ設定は拡張されたデコーダー制御機
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:231
 msgid "SSS is the decoder's sub-address. This allows for up to 7 decoders to share the same decoder primary address, yet have certain functions (such as Configuration Variable Access Instructions) be performed on an individual basis. If ``SSS`` = ``000`` then the operation affects all decoders within the group. The decoder sub-address is defined in CV15."
-msgstr "``SSS`` はそのデコーダーの副アドレスです。これは、最大で7つのデコーダーに主アドレスを共有することを許可し、しかし特定の機能（設定値アクセス命令のような）では個別に実施されます。``SSS`` が ``000`` のとき操作はグループ内のすべてのデコーダーに反映されます。デコーダー副アドレスは CV15 で定義されます。"
+msgstr "``SSS`` はそのデコーダーの副アドレスです。これは、最大で 7 つのデコーダーに主アドレスを共有することを許可し、しかし特定の機能（設定値アクセス命令のような）では個別に実施されます。``SSS`` が ``000`` のとき操作はグループ内のすべてのデコーダーに反映されます。デコーダー副アドレスは CV15 で定義されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:233
 msgid "``CCCC`` is defined in the following table:"
@@ -529,11 +529,11 @@ msgstr "デコーダー応答要求命令の無効化"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:248
 msgid "Acknowledgement and Address are not transmitted in response to a Decoder Acknowledgement Instruction for all sub addresses."
-msgstr ""
+msgstr "すべての副アドレスに対してデコーダー応答命令への返答として応答とアドレスが送信されません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:249
 msgid "Until power is removed long enough to power down the decoder."
-msgstr ""
+msgstr "デコーダーの電源が切れるほど長く電力が除去されるまで。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:250
 msgid "``0101``"
@@ -545,11 +545,11 @@ msgstr "双方向通信の有効化"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:252
 msgid "B-Directional Communications are enabled per CVs (See note below)."
-msgstr ""
+msgstr "CV によって双方向通信が有効化されます（下記の注を参照）。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:253
 msgid "Permanent (sets CV 29 (or 541), bit 3) or internal Flag if sent to Consist Address."
-msgstr ""
+msgstr "恒久的（CV 29（または 541）のビット 3 を設定する）、または編成アドレスへ送信される場合は内部フラグ。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:254
 msgid "``1000``"
@@ -561,11 +561,11 @@ msgstr "双方向通信のセット"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:256
 msgid "Bi-Directional communications are enabled for specified sub address; all other sub addresses are disabled. (Not valid at Consist Address)."
-msgstr ""
+msgstr "指定した副アドレスの双方向通信が有効化されます。他のすべての副アドレスは無効化されます（編成アドレスでは無効）。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:257
 msgid "Permanent (sets CV 16, bit 0)"
-msgstr ""
+msgstr "恒久的（CV 16 のビット 0 を設定する）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:258
 #: ../../content/S-9.2.1-extended-packet-formats.rst:521
@@ -574,15 +574,15 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:259
 msgid "Set 111 Instruction"
-msgstr ""
+msgstr "``111`` 命令の設定"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:260
 msgid "Enables 111 Instructions for specified subaddress, all other sub addresses are disabled. (Not valid at Consist Address)."
-msgstr ""
+msgstr "指定した副アドレスの ``111`` 命令を有効化します。他のすべての副アドレスは無効化されます（編成アドレスでは無効）。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:261
 msgid "Permanent (sets CV 16, bit 1)"
-msgstr ""
+msgstr "恒久的（CV 16 のビット 1 を設定する）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:262
 msgid "``1111``"
@@ -590,11 +590,11 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:263
 msgid "Accept 111 Instructions"
-msgstr ""
+msgstr "``111`` 命令の受け入れ"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:264
 msgid "All multi-CV programming instructions are now valid."
-msgstr ""
+msgstr "すべての複数 CV プログラミング命令が有効になります。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:265
 msgid "One-Time"
@@ -636,7 +636,7 @@ msgstr "この命令の形式は下記です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:290
 msgid "A value of ``1`` in bit 7 of the second byte is reserved for future use. Within this instruction ``CCCC`` contains a consist setup instruction, and the ``AAAAAAA`` in the second byte is a seven bit consist address. If the address is ``0000000`` then the consist is deactivated. If the address is non-zero, then the consist is activated."
-msgstr "2番目のバイトのビット7の値 ``1`` は将来の使用のため予約されています。この命令において ``CCCC`` は編成セットアップ命令を含み、2番目のバイトの ``AAAAAAA`` は7ビットの編成アドレスです。アドレスが ``0000000`` なら編成は無効化されます。アドレスが0でない場合は編成は有効化されます。"
+msgstr "2 番目のバイトのビット 7 の値 ``1`` は将来の使用のため予約されています。この命令において ``CCCC`` は編成セットアップ命令を含み、2 番目のバイトの ``AAAAAAA`` は 7 ビットの編成アドレスです。アドレスが ``0000000`` なら編成は無効化されます。アドレスが 0 でない場合は編成は有効化されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:292
 msgid "If the consist is deactivated (by setting the consist to ``0000000``), the Bi-Directional communications settings are set as specified in CVs 26-28."
@@ -657,7 +657,7 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:304
 msgid "Set the consist address as specified in the second byte, and activate the consist. The consist address is stored in bits 0-6 of CV 19 and bit 7 of CV 19 is set to a value of ``0``. The direction of this unit in the consist is the normal direction. If the consist address is ``0000000`` the consist is deactivated."
-msgstr "2番目のバイトで指定された編成アドレスを設定し、編成を有効化します。編成アドレスは CV 19 のビット0～6に保存され、CV 19 のビット7は ``0`` の値に設定されます。編成内のこの車両の方向は通常の方向です。編成アドレスが ``0000000`` なら編成は無効化されます。"
+msgstr "2 番目のバイトで指定された編成アドレスを設定し、編成を有効化します。編成アドレスは CV 19 のビット 0～6 に保存され、CV 19 のビット 7 は ``0`` の値に設定されます。編成内のこの車両の方向は通常の方向です。編成アドレスが ``0000000`` なら編成は無効化されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:305
 #: ../../content/S-9.2.1-extended-packet-formats.rst:519
@@ -666,7 +666,7 @@ msgstr ""
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:306
 msgid "Set the consist address as specified in the second byte and activate the consist. The consist address is stored in bits 0-6 of CV 19 and bit 7 of CV 19 is set to a value of ``1``. The direction of this unit in the consist is opposite its normal direction. If the consist address is ``0000000`` the consist is deactivated."
-msgstr "2番目のバイトで指定された編成アドレスを設定し、編成を有効化します。編成アドレスは CV 19 のビット0～6に保存され、CV 19 のビット7は ``1`` の値に設定されます。編成内のこの車両の方向は通常と逆の方向です。編成アドレスが ``0000000`` なら編成は無効化されます。"
+msgstr "2 番目のバイトで指定された編成アドレスを設定し、編成を有効化します。編成アドレスは CV 19 のビット 0～6 に保存され、CV 19 のビット 7 は ``1`` の値に設定されます。編成内のこの車両の方向は通常と逆の方向です。編成アドレスが ``0000000`` なら編成は無効化されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:307
 msgid "Others"
@@ -682,7 +682,7 @@ msgstr "発展運転命令（``001``）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:315
 msgid "These instructions control advanced decoder functions. Only a single advanced operations instruction may be contained in a packet."
-msgstr "これらの命令は発展したデコーダー機能を制御します。パケットにはただ1つの発展運転命令が含まれえます。"
+msgstr "これらの命令は発展したデコーダー機能を制御します。パケットにはただ 1 つの発展運転命令が含まれえます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:326
 #: ../../content/S-9.2.1-extended-packet-formats.rst:436
@@ -697,7 +697,7 @@ msgstr ""
 #: ../../content/S-9.2.1-extended-packet-formats.rst:329
 #: ../../content/S-9.2.1-extended-packet-formats.rst:338
 msgid "128 Speed Step Control"
-msgstr "128段階速度制御"
+msgstr "128 段階速度制御"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:330
 #: ../../content/S-9.2.1-extended-packet-formats.rst:442
@@ -721,11 +721,11 @@ msgstr "アナログ機能群"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:340
 msgid "Instruction ``11111`` is used to send one of 126 Digital Decoder speed steps. The subsequent single byte shall define speed and direction with bit 7 being direction (``1`` is forward and ``0`` is reverse) and the remaining bits used to indicate speed. The most significant speed bit is bit 6. A data-byte value of ``U0000000`` is used for stop, and a data-byte value of ``U0000001`` is used for emergency stop. This allows up to 126 speed steps. When operations mode acknowledgement is enabled, receipt of a 128 Speed Step Control packet must be acknowledged with an operations mode acknowledgement."
-msgstr "命令 ``11111`` は126デジタルデコーダー速度段階のうちの1つを送信することに使用されます。続く単一のバイトは、ビット7が方向（``1`` が前方で ``0`` が後方）、残りのビットが速度を示すのに使用されるように、速度と方向を定義しなければいけません。速度の最上位ビットはビット6です。``U0000000`` のデータバイト値は停止に使用され、``U0000001`` のデータバイト値は緊急停止に使用されます。これは最大126速度段階まで許容されます。運転モード応答が有効であるとき、128速度段階制御パケットの受信は運転モード応答によって応答されなければいけません。"
+msgstr "命令 ``11111`` は 126 デジタルデコーダー速度段階のうちの 1 つを送信することに使用されます。続く単一のバイトは、ビット 7 が方向（``1`` が前方で ``0`` が後方）、残りのビットが速度を示すのに使用されるように、速度と方向を定義しなければいけません。速度の最上位ビットはビット 6 です。``U0000000`` のデータバイト値は停止に使用され、``U0000001`` のデータバイト値は緊急停止に使用されます。これは最大 126 速度段階まで許容されます。運転モード応答が有効であるとき、128 速度段階制御パケットの受信は運転モード応答によって応答されなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:347
 msgid "Instruction ``11110`` is used to restrict the maximum speed of a decoder. Bit 7 of the data byte (``DDDDDDDD`` above) is used to enable (``0``) or disable (``1``) restricted speed operation. Bits 0-5 of the Data byte are the Speed Steps defined in S-9.2 [#f2]_. When operations mode acknowledgement is enabled, receipt of a Restricted Speed Instruction must be acknowledged with an operations mode acknowledgement."
-msgstr "命令 ``11110`` はデコーダーの最大速度を制限するために使用されます。データバイト（上記で ``DDDDDDDD``）のビット7は制限された速度運転を有効化（``0``）・無効化（``1``）します。データバイトのビット0～5は S-9.2 に定義された速度段階です [#f2]_。運転モード応答が有効であるとき、制限された速度命令の受信は運転モード応答によって応答されなければいけません。"
+msgstr "命令 ``11110`` はデコーダーの最大速度を制限するために使用されます。データバイト（上記で ``DDDDDDDD``）のビット 7 は制限された速度運転を有効化（``0``）・無効化（``1``）します。データバイトのビット 0～5 は S-9.2 に定義された速度段階です [#f2]_。運転モード応答が有効であるとき、制限された速度命令の受信は運転モード応答によって応答されなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:360
 msgid "where ``VVVVVVVV`` is Analog Function Output (0-255) and ``DDDDDDDD`` is Analog Function Data (0-255). Analog Output use ``00000001`` Volume Control."
@@ -741,7 +741,7 @@ msgstr "運転モード応答が有効であるとき、アナログ機能群命
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:366
 msgid "The remaining 29 instructions are reserved for future use."
-msgstr "残りの29の命令は将来の使用のために予約されています。"
+msgstr "残りの 29 の命令は将来の使用のために予約されています。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:371
 msgid "Speed and Direction Instructions (``010`` and ``011``)"
@@ -750,37 +750,37 @@ msgstr "速度方向命令（``010``・``011``）"
 #: ../../content/S-9.2.1-extended-packet-formats.rst:373
 #, fuzzy
 msgid "These two instructions have these formats"
-msgstr "これら2つの命令は下記の形式です。"
+msgstr "これら 2 つの命令は下記の形式です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:380
 msgid "A speed and direction instruction is used send information to motors connected to Multi Function Digital Decoders. Instruction ``010`` indicates a Speed and Direction Instruction for reverse operation and instruction ``011`` indicates a Speed and Direction Instruction for forward operation. In these instructions the data is used to control speed with bits 0-3 being defined exactly as in S-9.2 Section B. If Bit 1 of CV 29 has a value of one (``1``), then bit 4 is used as an intermediate speed step, as defined in S-9.2, Section B. If Bit 1 of CV 29 has a value of zero (``0``), then bit 4 shall be used to control FL [#f3]_. In this mode, Speed ``U0000`` is stop, speed ``U0001`` is emergency stop, speed ``U0010`` is the first speed step and speed ``U1111`` is full speed. This provides 14 discrete speed steps in each direction. If a decoder receives a new speed step that is within one step of current speed step, the Digital Decoder may select a step half way between these two speed steps. This provides the potential to control 56 speed steps should the command station alternate speed packets. Decoders may ignore the direction information transmitted in a broadcast packet for Speed and Direction commands that do not contain stop or emergency stop information. When operations mode acknowledgement is enabled, receipt of any speed and direction packet must be acknowledged with an operations mode acknowledgement."
-msgstr "速度方向命令は多機能デジタルデコーダーに接続されたモーターに情報を送信するために使用されます。命令 ``010`` は後方運転のための速度方向命令を示し、命令 ``011`` は前方運転のための速度方向命令を示します。これらの命令ではデータは S-9.2 の B に定義されるようにビット0～3が速度を制御するために使用されます。CV 29 のビット1が ``1`` の値をもつ場合、 S-9.2 の B に定義されるようにビット4は中間速度段階として使用されます。CV 29 のビット1が ``0`` の値をもつ場合、ビット4は FL を制御するために使用されなければいけません [#f3]_。このモードでは速度 ``U0000`` は停止、速度 ``U0001`` は緊急停止、速度 ``U0010`` は1段速度、速度 ``U1111`` は最高速です。それぞれの方向に14段の離散速度が提供されます。デコーダーが現在の速度段階の1段以内の新しい速度段階を受信した場合、デジタルデコーダーはこれら2つの速度段階の中間の段階を選択することがあります。This provides the potential to control 56 speed steps should the command station alternate speed packets. Decoders may ignore the direction information transmitted in a broadcast packet for Speed and Direction commands that do not contain stop or emergency stop information. When operations mode acknowledgement is enabled, receipt of any speed and direction packet must be acknowledged with an operations mode acknowledgement."
+msgstr "速度方向命令は多機能デジタルデコーダーに接続されたモーターに情報を送信するために使用されます。命令 ``010`` は後方運転のための速度方向命令を示し、命令 ``011`` は前方運転のための速度方向命令を示します。これらの命令ではデータは S-9.2 の B に定義されるようにビット 0～3 が速度を制御するために使用されます。CV 29 のビット 1 が ``1`` の値をもつ場合、 S-9.2 の B に定義されるようにビット 4 は中間速度段階として使用されます。CV 29 のビット 1 が ``0`` の値をもつ場合、ビット 4 は FL を制御するために使用されなければいけません [#f3]_。このモードでは速度 ``U0000`` は停止、速度 ``U0001`` は緊急停止、速度 ``U0010`` は 1 段速度、速度 ``U1111`` は最高速です。それぞれの方向に 14 段の離散速度が提供されます。デコーダーが現在の速度段階の 1 段以内の新しい速度段階を受信した場合、デジタルデコーダーはこれら 2 つの速度段階の中間の段階を選択することがあります。This provides the potential to control 56 speed steps should the command station alternate speed packets. Decoders may ignore the direction information transmitted in a broadcast packet for Speed and Direction commands that do not contain stop or emergency stop information. When operations mode acknowledgement is enabled, receipt of any speed and direction packet must be acknowledged with an operations mode acknowledgement."
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:385
 msgid "Function Group One Instruction (``100``) [#f4]_"
-msgstr "第1機能群命令（``100``）\\ [#f4]_"
+msgstr "第 1 機能群命令（``100``）\\ [#f4]_"
 
 # 脚注がうまく表示されない
 #: ../../content/S-9.2.1-extended-packet-formats.rst:393
 msgid "Up to 5 auxiliary functions (functions FL and F1-F4) can be controlled by the Function Group One instruction. Bits 0-3 shall define the value of functions F1-F4 with function F1 being controlled by bit 0 and function F4 being controlled by bit 3. A value of ``1`` shall indicate that the function is \"on\" while a value of ``0`` shall indicate that the function is \"off\". If Bit 1 of CV 29 has a value of one (``1``), then bit 4 controls function FL, otherwise bit 4 has no meaning."
-msgstr "5つまでの補助機能（FL と F1～F4）が第1機能群命令で制御できます。ビット0～3は機能F1～F4 の値として定義されなければいけず、F1 はビット0で、F4 はビット3で制御されます。``1`` の値は機能がオンであること、``0`` の値は機能がオフであることを示さなければいけません。CV 29 のビット1が ``1`` の値をもつならばビット4は機能 FL を制御し、そうでないならばビット4は意味をもちません。"
+msgstr "5 つまでの補助機能（FL と F1～F4）が第 1 機能群命令で制御できます。ビット 0～3 は機能F1～F4 の値として定義されなければいけず、F1 はビット 0 で、F4 はビット 3 で制御されます。``1`` の値は機能がオンであること、``0`` の値は機能がオフであることを示さなければいけません。CV 29 のビット 1 が ``1`` の値をもつならばビット 4 は機能 FL を制御し、そうでないならばビット 4 は意味をもちません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:395
 msgid "When operations mode acknowledgment is enabled, receipt of a function group 1 packet must be acknowledged according with an operations mode acknowledgement."
-msgstr "運転モード応答が有効であるとき、第1機能群命令は運転モード応答によって応答されなければいけません。"
+msgstr "運転モード応答が有効であるとき、第 1 機能群命令は運転モード応答によって応答されなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:400
 msgid "Function Group Two Instruction(``101``) [#f5]_"
-msgstr "第2機能群命令（``101``）\\ [#f5]_"
+msgstr "第 2 機能群命令（``101``）\\ [#f5]_"
 
 # 脚注がうまく表示されない
 #: ../../content/S-9.2.1-extended-packet-formats.rst:408
 msgid "Up to 8 additional auxiliary functions (F5-F12) can be controlled by a Function Group Two instruction. Bit 4 defines the use of Bits 0-3. When bit 4 (``S``) is ``1``, Bits 0-3 (``DDDD``) shall define the value of functions F5-F8 with function F5 being controlled by bit 0 and function F8 being controlled by bit 3. When bit 4 (``S``) is ``0``, Bits 0-3 (``DDDD``) shall define the value of functions F9-F12 with function F9 being controlled by bit 0 and function F12 being controlled by bit 3. A value of ``1`` hall indicate that the function is \"on\" while a value of ``0`` shall indicate that the function is \"off\"."
-msgstr "8つまでの補助機能（F5～F12）が第2機能群命令で制御できます。ビット4がビット0～3の使われ方を定義します。ビット4が ``1`` のとき、ビット0～3（``DDDD``）は機能F5～F8 の値として定義されなければいけず、F5 はビット0で、F8 はビット3で制御されます。ビット4が ``0`` のとき、ビット0～3（``DDDD``）は機能 F9～F12 の値として定義されなければいけず、F9 はビット0で、F12 はビット3で制御されます。``1`` の値は機能がオンであること、``0`` の値は機能がオフであることを示さなければいけません。"
+msgstr "8 つまでの補助機能（F5～F12）が第 2 機能群命令で制御できます。ビット 4 がビット 0～3 の使われ方を定義します。ビット 4 が ``1`` のとき、ビット 0～3（``DDDD``）は機能F5～F8 の値として定義されなければいけず、F5 はビット 0 で、F8 はビット 3 で制御されます。ビット 4 が ``0`` のとき、ビット 0～3（``DDDD``）は機能 F9～F12 の値として定義されなければいけず、F9 はビット 0 で、F12 はビット 3 で制御されます。``1`` の値は機能がオンであること、``0`` の値は機能がオフであることを示さなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:410
 msgid "When operations mode acknowledgment is enabled, receipt of function group 2 packet shall be acknowledged according with an operations mode acknowledgement."
-msgstr "運転モード応答が有効であるとき、第2機能群命令は運転モード応答によって応答されなければいけません。"
+msgstr "運転モード応答が有効であるとき、第 2 機能群命令は運転モード応答によって応答されなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:415
 msgid "Feature Expansion Instruction (``110``)"
@@ -793,16 +793,16 @@ msgstr "この群の命令はデコーダーに追加の機能のサポートを
 #: ../../content/S-9.2.1-extended-packet-formats.rst:419
 #, fuzzy
 msgid "The format of two byte instructions in this group is:"
-msgstr "この群の2バイト命令の形式は下記です。"
+msgstr "この群の 2 バイト命令の形式は下記です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:425
 #, fuzzy
 msgid "The format of three byte instructions in this group is:"
-msgstr "この群の3バイト命令の形式は下記です。"
+msgstr "この群の 3 バイト命令の形式は下記です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:431
 msgid "The 5-bit sub-instruction ``CCCCC`` allows for 32 separate Feature Expansion Sub-instructions."
-msgstr "5ビットの副命令 ``CCCCC`` は32の別々の機能拡張副命令のために許可されます。"
+msgstr "5 ビットの副命令 ``CCCCC`` は 32 の別々の機能拡張副命令のために許可されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:438
 msgid "``00000``"
@@ -811,12 +811,12 @@ msgstr ""
 #: ../../content/S-9.2.1-extended-packet-formats.rst:439
 #: ../../content/S-9.2.1-extended-packet-formats.rst:450
 msgid "Binary State Control Instruction - Long Form"
-msgstr "2値状態制御命令（長形式）"
+msgstr "2 値状態制御命令（長形式）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:441
 #: ../../content/S-9.2.1-extended-packet-formats.rst:459
 msgid "Binary State Control Instruction - Short Form"
-msgstr "2値状態制御命令（短形式）"
+msgstr "2 値状態制御命令（短形式）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:443
 #: ../../content/S-9.2.1-extended-packet-formats.rst:470
@@ -830,35 +830,35 @@ msgstr "F21～F28 機能制御"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:452
 msgid "Sub instruction ``00000`` is a three byte instruction and provides for control of one of 32767 binary states within the decoder. The two bytes following this instruction byte have the format ``DLLLLLLL 0 HHHHHHHH``. Bits 0-6 of the first data byte (``LLLLLLL``) shall define the low order bits of the binary state address; bits 0-7 of the second data byte (``HHHHHHHH``) shall define the high order bits of binary state address. The addresses range from 1 to 32767. Bit 7 of the second byte (``D``) defines the binary state. A value of ``1`` shall indicate that the binary state is \"on\" while a value of ``0`` shall indicate that the binary state is \"off\". The value of ``0`` for the address is reserved as broadcast to clear or set **all** 32767 binary states. An instruction ``11000000 0 00000000 0 00000000`` sets all 32767 binary states to off."
-msgstr "副命令 ``00000`` は3バイト命令でデコーダー内の ``32767`` の2値状態の内の1つの制御を提供します。この命令バイトに続く2バイトは ``DLLLLLLL 0 HHHHHHHH`` の形式をもちます。最初のデータバイトのビット0～6（``LLLLLL``）は2値状態アドレスの下位ビットを定義しなければいけません。2番目のバイトのビット0～7（``HHHHHHHH``）は2値状態アドレスの上位ビットを定義しなければいけません。アドレスの範囲は1から32767までです。2番目のバイトのビット7（``D``）は2値状態を定義します。1 の値はその2値状態がオンであることを示し、``0`` の値はその2値状態がオフであることを示さなければいけません。``0`` の値のアドレスは、32767個の2値状態の\\ **すべて**\\ を消去・セットをブロードキャストするために予約されています。命令 ``11000000 0 00000000 0 00000000`` はすべての32767個の2値状態をオフに設定します。"
+msgstr "副命令 ``00000`` は 3 バイト命令でデコーダー内の ``32767`` の 2 値状態の内の 1 つの制御を提供します。この命令バイトに続く 2 バイトは ``DLLLLLLL 0 HHHHHHHH`` の形式をもちます。最初のデータバイトのビット 0～6（``LLLLLL``）は 2 値状態アドレスの下位ビットを定義しなければいけません。2 番目のバイトのビット 0～7（``HHHHHHHH``）は 2 値状態アドレスの上位ビットを定義しなければいけません。アドレスの範囲は 1 から 32767 までです。2 番目のバイトのビット 7（``D``）は 2 値状態を定義します。1 の値はその 2 値状態がオンであることを示し、``0`` の値はその 2 値状態がオフであることを示さなければいけません。``0`` の値のアドレスは、32767 個の 2 値状態の\\ **すべて**\\ を消去・セットをブロードキャストするために予約されています。命令 ``11000000 0 00000000 0 00000000`` はすべての 32767 個の 2 値状態をオフに設定します。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:454
 msgid "Binary states accessed with all high address bits set to zero would be the same as accessed by the short form of the binary state control. Command stations shall use the short form in this case, i.e. Binary State Controls 1 to 127 should always be addressed using the short form. Decoders supporting the long form shall support the short form as well."
-msgstr "すべての上位アドレスビットが0にセットされたアドレスで読み書きされた2値状態は、2値状態制御の短形式で読み書きされたものと同じです。コマンドステーションはこの場合短形式を使用しなければいけません。つまり、1から127まで2値状態制御はつねに短形式を使用して読み書きされなければいけません。長形式をサポートするデコーダーは同様に短形式をサポートしなければいけません。"
+msgstr "すべての上位アドレスビットが 0 にセットされたアドレスで読み書きされた 2 値状態は、2 値状態制御の短形式で読み書きされたものと同じです。コマンドステーションはこの場合短形式を使用しなければいけません。つまり、1 から 127 まで 2 値状態制御はつねに短形式を使用して読み書きされなければいけません。長形式をサポートするデコーダーは同様に短形式をサポートしなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:461
 msgid "Sub-instruction ``11101`` is a two byte instruction and provides for control of one of 127 binary states within the decoder. The single byte following this instruction byte has the format ``DLLLLLLL``. Bits 0-6 of the second byte (``LLLLLLL``) shall define the number of the binary state starting with 1 and ending with 127. Bit 7 (``D``) defines the binary state. A value of ``1`` shall indicate the binary state is \"on\" while a value of ``0`` shall indicate the binary state is \"off\". The value of ``0`` for ``LLLLLLL`` is reserved as broadcast to clear or set **all** 127 binary states accessible by the short form of the binary state control. An instruction ``11011101 0 00000000`` sets all 127 binary states accessed by this instruction to off."
-msgstr "副命令 ``11101`` は2バイト命令で、デコーダーの127個の2値状態の1つを制御するために提供されます。この命令バイトに続く単一バイトは ``DLLLLLLL`` の形式をもちます。2番目のバイトのビット0～6（``LLLLLLL``）は1で始まり127で終わる2値状態の数を定義しなければいけません。ビット7（``D``）は2値状態を定義します。``1`` の値はその2値状態がオンであることを示し、``0`` の値はその2値状態がオフであることを示さなければいけません。``LLLLLLL`` の 0 の値は2値状態制御の短形式で読み書きする127個の2値状態のすべてを消去・セットをブロードキャストするために予約されています。命令 ``11011101 0 00000000`` はこの命令でアクセスされるすべての127個の2値状態をオフにセットします。"
+msgstr "副命令 ``11101`` は 2 バイト命令で、デコーダーの 127 個の 2 値状態の 1 つを制御するために提供されます。この命令バイトに続く単一バイトは ``DLLLLLLL`` の形式をもちます。2 番目のバイトのビット 0～6（``LLLLLLL``）は 1 で始まり 127 で終わる 2 値状態の数を定義しなければいけません。ビット 7（``D``）は 2 値状態を定義します。``1`` の値はその 2 値状態がオンであることを示し、``0`` の値はその 2 値状態がオフであることを示さなければいけません。``LLLLLLL`` の 0 の値は 2 値状態制御の短形式で読み書きする 127 個の 2 値状態のすべてを消去・セットをブロードキャストするために予約されています。命令 ``11011101 0 00000000`` はこの命令でアクセスされるすべての 127 個の 2 値状態をオフにセットします。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:463
 msgid "Binary State Controls are quite similar to Functions, as they may control any output, sound or any other feature of digital nature within a decoder in direct response to a packet received. But Binary State Controls do have a different access method and function space. Therefore they have a different name."
-msgstr "受信したパケットに直接応答してデコーダーのデジタル特性の出力やサウンド・他の特徴を制御しうるという点で、2値状態制御は機能によく似ています。しかし、2値状態制御はことなった読み書き方法と機能空間をもちます。なので、別の名前をもちます。"
+msgstr "受信したパケットに直接応答してデコーダーのデジタル特性の出力やサウンド・他の特徴を制御しうるという点で、2 値状態制御は機能によく似ています。しかし、2 値状態制御はことなった読み書き方法と機能空間をもちます。なので、別の名前をもちます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:465
 msgid "Binary state control packets – both short and long form – will not be refreshed. Therefore non-volatile storage of the function status is suggested. When operations mode acknowledgment is enabled, receipt of a Binary State Control packet shall be acknowledged accordingly with an operations mode acknowledgment. Consult the Technical Note(s) for additional information on this instruction (See TN-4-05)."
-msgstr "2値状態制御パケットは短形式も長形式もリフレッシュされません。なので機能状況の非揮発記憶装置が提案されます。運転モード応答が有効であるとき、2値状態制御パケットは運転モード応答によって応答されなければいけません。この命令の追加情報は技術的注釈を参考にしてください（TN-4.05）。"
+msgstr "2 値状態制御パケットは短形式も長形式もリフレッシュされません。なので機能状況の非揮発記憶装置が提案されます。運転モード応答が有効であるとき、2 値状態制御パケットは運転モード応答によって応答されなければいけません。この命令の追加情報は技術的注釈を参考にしてください（TN-4.05）。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:472
 msgid "Sub-instruction ``11110`` is a two byte instruction and provides for control of eight (8) additional auxiliary functions F13-F20. The single byte following this instruction byte indicates whether a given function is turned on or off, with the least significant bit (Bit 0) controlling F13, and the most significant bit (bit 7) controlling F20. A value of ``1`` in ``D`` for a given function shall indicate the function is \"on\" while a value of ``0`` in ``D`` for a given function shall indicate a given function is \"off\". It is recommended, but not required, that the status of these functions be saved in decoder storage such as NVRAM. It is not required, and should not be assumed that the state of these functions is constantly refreshed by the command station. Command Stations that generate these packets, and which are not periodically refreshing these functions, must send at least two repetitions of these commands when any function state is changed. When operations mode acknowledgment is enabled, receipt of an F13-F20 Function Control packet shall be acknowledged accordingly with an operations mode acknowledgement. Consult the Technical Note(s), TN-4-05, for additional information on this instruction."
-msgstr "副命令 ``11110`` は2バイト命令で、8つの追加の補助的な機能 F13～F20 を制御するために提供されます。この命令バイトに続く単一バイトは与えられた機能がオンにされるかオフにされるかをしめします。最下位ビット（ビット0）は F13 を制御し、最上位ビット（ビット7）は F20 を制御します。与えられた機能の ``D`` の ``1`` の値はその機能がオンであることをしめし、与えられた機能の ``D`` の ``0`` の値は与えられた機能がオフであることをしめさなければいけません。これらの機能の状況が NVRAM のようなデコーダー記憶装置に保存されることは推奨されますが、必須ではありません。これらの機能の状態がコマンドステーションにつねにリフレッシュされることは必須ではなく、想定すべきではありません。これらのパケットを生成するコマンドステーションは、機能の状態が変わるときはこれらのコマンドを少なくとも2回くりかえして送信しなければいけません。運転モード応答が有効であるとき、F13～F20 機能制御パケットは運転モード応答によって応答されなければいけません。この命令の追加情報は技術的注釈を参考にしてください（TN-4.05）。"
+msgstr "副命令 ``11110`` は 2 バイト命令で、8 つの追加の補助的な機能 F13～F20 を制御するために提供されます。この命令バイトに続く単一バイトは与えられた機能がオンにされるかオフにされるかをしめします。最下位ビット（ビット 0）は F13 を制御し、最上位ビット（ビット 7）は F20 を制御します。与えられた機能の ``D`` の ``1`` の値はその機能がオンであることをしめし、与えられた機能の ``D`` の ``0`` の値は与えられた機能がオフであることをしめさなければいけません。これらの機能の状況が NVRAM のようなデコーダー記憶装置に保存されることは推奨されますが、必須ではありません。これらの機能の状態がコマンドステーションにつねにリフレッシュされることは必須ではなく、想定すべきではありません。これらのパケットを生成するコマンドステーションは、機能の状態が変わるときはこれらのコマンドを少なくとも 2 回くりかえして送信しなければいけません。運転モード応答が有効であるとき、F13～F20 機能制御パケットは運転モード応答によって応答されなければいけません。この命令の追加情報は技術的注釈を参考にしてください（TN-4.05）。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:479
 msgid "Sub-instruction ``11111`` is a two byte instruction and provides for control of eight (8) additional auxiliary functions F21-F28. The single byte following this instruction byte indicates whether a given function is turned on or off, with the least significant bit (Bit 0) controlling F21, and the most significant bit (bit 7) controlling F28. A value of ``1`` in ``D`` for a given function shall indicate the function is \"on\" while a value of ``0`` in ``D`` for a given function shall indicate a given function is \"off\". It is recommended, but not required that the status of these functions be saved in decoder storage such as NVRAM. It is not required, and should not be assumed that the state of these functions is constantly refreshed by the command station. Command Stations that generate these packets, and which are not periodically refreshing these functions, must send at least two repetitions of these commands when any function state is changed. When operations mode acknowledgment is enabled, receipt of an F21-F28 Function Control packet shall be acknowledged accordingly with an operations mode acknowledgement. Consult the Technical Note(s), TN-4-05, for additional information on this instruction."
-msgstr "副命令 ``11110`` は2バイト命令で、8つの追加の補助的な機能 F21～F28 を制御するために提供されます。この命令バイトに続く単一バイトは与えられた機能がオンにされるかオフにされるかをしめします。最下位ビット（ビット0）は F21 を制御し、最上位ビット（ビット7）は F28 を制御します。与えられた機能の ``D`` の ``1`` の値はその機能がオンであることをしめし、与えられた機能の ``D`` の ``0`` の値は与えられた機能がオフであることをしめさなければいけません。これらの機能の状況が NVRAM のようなデコーダー記憶装置に保存されることは推奨されますが、必須ではありません。これらの機能の状態がコマンドステーションにつねにリフレッシュされることは必須ではなく、想定すべきではありません。これらのパケットを生成するコマンドステーションは、機能の状態が変わるときはこれらのコマンドを少なくとも2回くりかえして送信しなければいけません。運転モード応答が有効であるとき、F23～F28 機能制御パケットは運転モード応答によって応答されなければいけません。この命令の追加情報は技術的注釈を参考にしてください（TN-4.05）。"
+msgstr "副命令 ``11110`` は 2 バイト命令で、8 つの追加の補助的な機能 F21～F28 を制御するために提供されます。この命令バイトに続く単一バイトは与えられた機能がオンにされるかオフにされるかをしめします。最下位ビット（ビット 0）は F21 を制御し、最上位ビット（ビット 7）は F28 を制御します。与えられた機能の ``D`` の ``1`` の値はその機能がオンであることをしめし、与えられた機能の ``D`` の ``0`` の値は与えられた機能がオフであることをしめさなければいけません。これらの機能の状況が NVRAM のようなデコーダー記憶装置に保存されることは推奨されますが、必須ではありません。これらの機能の状態がコマンドステーションにつねにリフレッシュされることは必須ではなく、想定すべきではありません。これらのパケットを生成するコマンドステーションは、機能の状態が変わるときはこれらのコマンドを少なくとも 2 回くりかえして送信しなければいけません。運転モード応答が有効であるとき、F23～F28 機能制御パケットは運転モード応答によって応答されなければいけません。この命令の追加情報は技術的注釈を参考にしてください（TN-4.05）。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:481
 msgid "The remaining 28 sub-instructions are reserved by the NMRA for future use [#f6]_."
-msgstr "残りの28の副命令は NMRA によって将来の使用のために予約されています [#f6]_。"
+msgstr "残りの 28 の副命令は NMRA によって将来の使用のために予約されています [#f6]_。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:486
 msgid "Configuration Variable Access Instruction (``111``)"
@@ -866,7 +866,7 @@ msgstr "CV 読み書き命令（``111``）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:488
 msgid "The Configuration Variable Access instructions are intended to set up or modify Configurations Variables either on the programming track or on the main line. There are two forms of this instruction. The short form is for modifying selected frequently modified Configuration Variables. The long form is for verifying or modifying any selected Configuration Variable. Only a single configuration variable access instruction may be contained in a packet."
-msgstr "CV 読み書き命令は、プログラム線路もしくは主線路で CV をセットしたり書き換えたりすることを意図されています。この命令には2通りの形式があります。短形式は選択された高頻度に書き換える CV を書き換えるためにあります。長形式は選択された CV を検証したり書き換えたりするためにあります。単一の CV 読み書き命令のみが1つのパケットに含まれえます。"
+msgstr "CV 読み書き命令は、プログラム線路もしくは主線路で CV をセットしたり書き換えたりすることを意図されています。この命令には 2 通りの形式があります。短形式は選択された高頻度に書き換える CV を書き換えるためにあります。長形式は選択された CV を検証したり書き換えたりするためにあります。単一の CV 読み書き命令のみが 1 つのパケットに含まれえます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:493
 msgid "Configuration Variable Access Acknowledgment"
@@ -882,7 +882,7 @@ msgstr "CV 読み書き手順（短式） "
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:508
 msgid "The 8 bit data ``DDDDDDDD`` is placed in the configuration variable identified by ``CCCC`` according to the following table."
-msgstr "8ビットデータ ``DDDDDDDD`` は下記の表にしたがって ``CCCCC`` で識別される CV に配置されます。"
+msgstr "8 ビットデータ ``DDDDDDDD`` は下記の表にしたがって ``CCCCC`` で識別される CV に配置されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:516
 msgid "Not available for use"
@@ -919,11 +919,11 @@ msgstr "長式はすべての CV を直接操作することを許します [#f7
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:539
 msgid "The actual Configuration Variable desired is selected via the 10-bit address with the 2-bit address (``VV``) in the first data byte being the most significant bits of the address. The Configuration variable being addressed is the provided 10-bit address plus 1. For example, to address CV 1 the 10 bit address is ``00 00000000``."
-msgstr "要求される実際の CV は10ビットアドレスと最初のデータバイトの2ビットアドレス（アドレスの最上位ビット ``VV``）で選択されます。読み書きされる CV は提供された10ビットアドレス足す1です。例えば、CV 1 を読み書きするには10ビットアドレスは ``00 00000000`` です。"
+msgstr "要求される実際の CV は 10 ビットアドレスと最初のデータバイトの 2 ビットアドレス（アドレスの最上位ビット ``VV``）で選択されます。読み書きされる CV は提供された 10 ビットアドレス足す 1 です。例えば、CV 1 を読み書きするには 10 ビットアドレスは ``00 00000000`` です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:541
 msgid "The defined values for Instruction type (``CC``) are:"
-msgstr ""
+msgstr "命令種別（``CC``）の定義済みの値は下記です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:546
 msgid "``CC``"
@@ -963,7 +963,7 @@ msgstr "検証バイト"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:562
 msgid "The contents of the Configuration Variable as indicated by the 10-bit address are compared with the data byte (``DDDDDDDD``). If the decoder successfully receives this packet and the values are identical, the Digital Decoder shall respond with the contents of the CV as the Decoder Response Transmission, if enabled."
-msgstr "10ビットアドレスで示される CV の内容はデータバイト（``DDDDDDDD``）と比較されます。デコーダーがこのパケットの受信に成功し、その値が同一であり、かつデコーダー返答転送が有効な場合、デジタルデコーダーはデコーダー返答転送として CV の内容を返答しなければいけません。"
+msgstr "10 ビットアドレスで示される CV の内容はデータバイト（``DDDDDDDD``）と比較されます。デコーダーがこのパケットの受信に成功し、その値が同一であり、かつデコーダー返答転送が有効な場合、デジタルデコーダーはデコーダー返答転送として CV の内容を返答しなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:567
 msgid "Write Byte"
@@ -971,7 +971,7 @@ msgstr "書き込みバイト"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:569
 msgid "The contents of the Configuration Variable as indicated by the 10-bit address are replaced by the data byte (``DDDDDDDD``). Two identical packets are needed before the decoder shall modify a configuration variable [#f8]_. These two packets need not be back to back on the track. However any other packet to the same decoder will invalidate the write operation. (This includes broadcast packets.) If the decoder successfully receives this second identical packet, it shall respond with a configuration variable access acknowledgment."
-msgstr "10ビットアドレスで示される CV の内容はデータバイト（``DDDDDDDD``）と置換されます。デコーダーが CV を変更する前に2つの同一のパケットが必要です [#f8]_。これらの2つのパケットは線路で背中合わせになっている必要はありません。しかし、同じデコーダーへの別のパケットは書き込み操作を無効化します（これにはブロードキャストパケットも含まれます）。デコーダーが2番目の同一パケットの受信に成功した場合、デコーダーは CV 読み書き応答で返答しなければいけません。"
+msgstr "10 ビットアドレスで示される CV の内容はデータバイト（``DDDDDDDD``）と置換されます。デコーダーが CV を変更する前に 2 つの同一のパケットが必要です [#f8]_。これらの 2 つのパケットは線路で背中合わせになっている必要はありません。しかし、同じデコーダーへの別のパケットは書き込み操作を無効化します（これにはブロードキャストパケットも含まれます）。デコーダーが 2 番目の同一パケットの受信に成功した場合、デコーダーは CV 読み書き応答で返答しなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:574
 msgid "Bit Manipulation"
@@ -995,7 +995,7 @@ msgstr "検証ビット"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:594
 msgid "The Verify Bit and Write Bit instructions operate in a manner similar to the Verify Byte and Write Byte instructions (but operates on a single bit). Using the same criteria as the Verify Byte instruction, an operations mode acknowledgment will be generated in response to a Verify Bit instruction if appropriate. Using the same criteria as the Write Byte instruction, a configuration variable access acknowledgment will be generated in response to the second identical Write Bit instruction if appropriate."
-msgstr "検証ビット命令と書き込みビット命令は（単一のビットに対してということを除いて）検証バイト命令と検証バイト命令と同様に動作します。検証バイト命令と同じ基準を使用し、適切な場合、運転モード応答が検証ビット命令に返答して生成されます。書き込みバイト命令と同じ基準を使用し、適切な場合、CV 読み書き応答が2番目の同一の書き込みビット命令に返答して生成されます。"
+msgstr "検証ビット命令と書き込みビット命令は（単一のビットに対してということを除いて）検証バイト命令と検証バイト命令と同様に動作します。検証バイト命令と同じ基準を使用し、適切な場合、運転モード応答が検証ビット命令に返答して生成されます。書き込みバイト命令と同じ基準を使用し、適切な場合、CV 読み書き応答が 2 番目の同一の書き込みビット命令に返答して生成されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:599
 msgid "D: Accessory Digital Decoder Packet Formats"
@@ -1016,7 +1016,7 @@ msgstr "アクセサリーデジタルデコーターのパケットの形式は
 #: ../../content/S-9.2.1-extended-packet-formats.rst:614
 #, fuzzy
 msgid "Accessory Digital Decoders can be designed to control momentary or constant-on devices, the duration of time each output is active being controlled by configuration variables CVs 515 through 518. Bit 3 of the second byte ``C`` is used to activate or deactivate the addressed device. (Note if the duration the device is intended to be on is less than or equal the set duration, no deactivation is necessary.) Since most devices are paired, the convention is that bit 0 of the second byte is used to distinguish between which of a pair of outputs the accessory decoder is activating or deactivating. Bits 1 and 2 of byte two are used to indicate which of 4 pairs of outputs the packet is controlling. The most significant bits of the 9-bit address are bits 4-6 of the second data byte. By convention these bits (bits 4-6 of the second data byte) are in ones' complement."
-msgstr "アクセサリーデジタルデコーダーは、瞬間的なものや常時オンのものを制御するように設計できます。各出力がアクティブになる時間の長さは、設定変数 CV 515～518 によって制御されます。バイト2のビット3 ``C`` は、アドレス指定されたデバイスをアクティブにするか非アクティブにするかを制御するために使用されます（デバイスがオンになる期間が設定された期間以下の場合、非アクティブにする必要はありません）。ほとんどのデバイスはペアになっているので、慣例としてバイト2のビット0は、アクセサリーデコーダーが有効にするか無効にするかを区別するために使用されます。バイト2のビット1と2は、パケットが制御している4組の出力のうちどれかを示すために使用されます。9ビットアドレスの最上位ビットは、第2データバイトのビット4～6です。慣習として、これらのビット（第2データバイトのビット4～6）は1の補数表現になっています。"
+msgstr "アクセサリーデジタルデコーダーは、瞬間的なものや常時オンのものを制御するように設計できます。各出力がアクティブになる時間の長さは、設定変数 CV 515～518 によって制御されます。バイト 2 のビット 3 ``C`` は、アドレス指定されたデバイスをアクティブにするか非アクティブにするかを制御するために使用されます（デバイスがオンになる期間が設定された期間以下の場合、非アクティブにする必要はありません）。ほとんどのデバイスはペアになっているので、慣例としてバイト 2 のビット 0 は、アクセサリーデコーダーが有効にするか無効にするかを区別するために使用されます。バイト 2 のビット 1 と 2 は、パケットが制御している 4 組の出力のうちどれかを示すために使用されます。9 ビットアドレスの最上位ビットは、第 2 データバイトのビット 4～6 です。慣習として、これらのビット（第 2 データバイトのビット 4～6）は 1 の補数表現になっています。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:616
 #: ../../content/S-9.2.1-extended-packet-formats.rst:631
@@ -1029,11 +1029,11 @@ msgstr "拡張アクセサリーデコーダー制御パケット形式"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:623
 msgid "The Extended Accessory Decoder Control Packet is included for the purpose of transmitting aspect control to signal decoders or data bytes to more complex accessory decoders. Each signal head can display one aspect at a time."
-msgstr ""
+msgstr "拡張アクセサリーデコーダー制御パケットは、信号デコーダーへの現示制御や複雑なアクセサリーデコーダーへのデータバイトを転送する目的で含まれています。それぞれの信号頭部は一度に 1 つの現示を表示できます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:629
 msgid "XXXXX is for a single head. A value of 00000 for XXXXX indicates the absolute stop aspect. All other aspects represented by the values for XXXXX are determined by the signaling system used and the prototype being modeled."
-msgstr ""
+msgstr "``XXXXX`` は単一の信号頭部に使用されます。``XXXXX`` の ``00000`` の値は絶対停止現示を示します。``XXXXX`` の値で表されるその他のすべての現示は使用される信号システムと模型化されている実物によって決定されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:636
 msgid "Broadcast Command for Accessory Decoders"
@@ -1050,7 +1050,7 @@ msgstr "この命令の形式は下記です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:649
 msgid "This packet shall be executed by all accessory decoders. CDDD is defined as specified in the paragraph on Basic Accessory Decoder Packet Format."
-msgstr ""
+msgstr "このパケットはすべてのアクセサリーデコーダーによって実行されなければいけません。``CDDD`` は「基本アクセサリーデコーダーパケット形式」の段落に定義されています。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:654
 msgid "Broadcast Command for Extended Accessory Decoders"
@@ -1063,7 +1063,7 @@ msgstr "この命令の形式は下記です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:662
 msgid "All extended accessory decoders must execute this packet. XXXXX is defined as specified in the paragraph on Extended Accessory Decoder Packet Format."
-msgstr ""
+msgstr "すべての拡張アクセサリーデコーダーはこのパケットを実行しなければいけません。``XXXXX`` は「拡張アクセサリーデコーダー制御パケット形式」の段落に定義されています。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:667
 msgid "Accessory Decoder Configuration Variable Access Instruction"
@@ -1071,7 +1071,7 @@ msgstr "アクセサリーデコーダー CV 読み書き手順 "
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:669
 msgid "Accessory decoders can have their Configuration variables changed in the same method as locomotive decoders using the Configuration Variable Access Instruction - Long Form instruction defined above. For the purpose of this instruction, the accessory decoders' address is expanded to two bytes in the following method. If operations470 mode acknowledgement is enabled, the receipt of an Accessory Decoder Configuration Variable Access instruction must be acknowledged in the same manner as the Configuration Variable Access Instruction – Long Form."
-msgstr ""
+msgstr "アクセサリーデコーダーの CV は上記で定義された「CV 読み書き手順（長式）」を使用して機関車デコーダーと同様の方法で変更できます。この命令の目的として、アクセサリーデコーダーのアドレスは下記の方法で 2 バイトに拡張されます。運転モード応答が有効な場合、アクセサリーデコーダー CV 読み書き命令の受信は「CV 読み書き手順（長式）」と同様の方法で応答しなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:674
 msgid "Basic Accessory Decoder Packet address for operations mode programming"
@@ -1079,7 +1079,7 @@ msgstr "運転モードプログラミングのための基本アクセサリー
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:680
 msgid "Where ``DDD`` is used to indicate the output whose CVs are being modified and ``C`` = ``1``. If ``CDDD`` = ``0000`` then the CVs refer to the entire decoder. The resulting packet would be:"
-msgstr ""
+msgstr "ただし、``DDD`` は CV が変更される出力を示し、``C`` = ``1`` とします。``CDDD`` = ``0000`` の場合は CV はデコーダー全体を参照します。結果のパケットは下記です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:691
 msgid "Extended Decoder Control Packet address for operations mode programming"
@@ -1087,7 +1087,7 @@ msgstr "運転モードプログラミングのための拡張デコーダー制
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:697
 msgid "Please note that the use of ``0`` in bit 3 of byte 2 is to ensure that this packet cannot be confused with the legacy accessory-programming packets. The resulting packet would be:"
-msgstr ""
+msgstr "バイト 2 のビット 3 に ``0`` を使用することは、このパケットが旧来のアクセサリープログラミングパケットと混同されないようにするためであることに注意してください。結果のパケットは下記です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:708
 msgid "E: Operations Mode Acknowledgment"
@@ -1095,7 +1095,7 @@ msgstr "E：運転モード応答"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:710
 msgid "The operations-mode acknowledgement mechanism as defined in S-9.3.1 and S-9.3.2 are the only valid acknowledgement in operations mode. Whenever an acknowledgement is requested, the decoder shall respond using this mechanism described in S-9.3.1 and S-9.3.2."
-msgstr ""
+msgstr "S-9.3.1 と S-9.3.2 で定義された運転モード応答機構は運転モードでの唯一の有効な応答です。応答が要求されるたびに、デコーダーは S-9.3.1 と S-9.3.2 に記述された機構を使用して応答しなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:715
 msgid "Appendix A"
@@ -1103,15 +1103,15 @@ msgstr "付録 A"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:717
 msgid "This Appendix contains additional useful information and/or legacy instructions. A DCC product need not implement any items described in this appendix."
-msgstr ""
+msgstr "この付録には追加の有用な情報・旧来の命令が含まれています。DCC 製品はこの付録に記述された項目を実装する必要はありません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:722
 msgid "Accessory Decoder Configuration Variable Access Instruction [#f9]_"
-msgstr ""
+msgstr "アクセサリーデコーダー CV 読み書き命令 [#f9]_"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:724
 msgid "The following command is included for backward compatibility for some older accessory decoders. Its use is discouraged in new decoder designs."
-msgstr ""
+msgstr "下記のコマンドはいくつかの古いアクセサリーデコーダーとの後方互換性のために含まれています。新しいデコーダーの設計でのこの使用は推奨されません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:726
 #, fuzzy
@@ -1120,61 +1120,61 @@ msgstr "CV 読み書き命令（``111``）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:732
 msgid "Where:"
-msgstr ""
+msgstr "ただし："
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:740
 msgid "Decoder address bits"
-msgstr ""
+msgstr "デコーダーアドレスビット"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:742
 msgid "Desired CV address - (CV 513 = ``10 00000000``)"
-msgstr ""
+msgstr "希望する CV アドレス（CV 513 = ``10 00000000``）"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:744
 msgid "Data for CV"
-msgstr ""
+msgstr "CV のデータ"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:746
 msgid "The bit patterns described by ``VV VVVVVVVV`` in the second and third bytes and ``DDDDDDDD`` in the fourth byte are also identical to the corresponding bits in the Configuration Variable Access Instruction - Long Form (see S520 9.2.1)."
-msgstr ""
+msgstr "2 番目と 3 番目のバイトの ``VV VVVVVVVV`` と 4 番目のバイトの ``DDDDDDDD`` で記述されたビットパターンは「CV 読み書き手順（長式）」（S-9.2.1 参照）の対応するビットと同一です。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:748
 msgid "The purpose of this instruction is to provide a means of programming all parameters of an accessory decoder after it is installed on the layout. It is recommended that Command Stations exercise caution if changes to the address (CV 513 and CV 521) are allowed."
-msgstr ""
+msgstr "この命令の目的は、レイアウトに設置された後にアクセサリーデコーダーのすべてのパラメーターをプログラムする手段を提供することです。アドレス（CV 513 と CV 521）の変更が許可されている場合は、コマンドステーションが注意を払うことが推奨されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:751
 msgid "Footnotes"
-msgstr ""
+msgstr "脚注"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:752
 msgid "This instruction also applies to accessory decoders."
-msgstr ""
+msgstr "この命令はアクセサリーデコーダーにも適用されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:753
 msgid "In 128 speed step mode, the maximum restricted speed is scaled from 28 speed mode."
-msgstr ""
+msgstr "128 速度段階モードでは、最大制限速度は 28 速度モードからスケールされます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:754
 msgid "FL is used for the control of the headlights."
-msgstr ""
+msgstr "FL は前照灯の制御に使用されます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:755
 #: ../../content/S-9.2.1-extended-packet-formats.rst:756
 msgid "Any function in this packet group may be directionally qualified."
-msgstr ""
+msgstr "このパケット群の機能は方向付けできます。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:757
 msgid "The NMRA shall not issue a NMRA Conformance Warrant for any product that uses an instruction or subinstruction that has been reserved by the NMRA."
-msgstr ""
+msgstr "NMRA によって予約された命令または副命令を使用する製品に対して、NMRA は NMRA 適合保証を発行しません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:758
 msgid "Because of the length of this instruction, care must be taken to ensure that the maximum time between packets is not exceeded."
-msgstr ""
+msgstr "この命令の長さのために、パケット間の最大時間を超えないようにするよう注意しなければいけません。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:759
 msgid "Note that CV 17 and CV 18 are a \"paired CV\". A \"paired CV\" refers to a pair of CVs which taken together hold one piece of data. A Write Byte instruction to CV17 will take effect only when CV18 is written. Other paired CVs will work in a similar manner. See :doc:`S-9.2.2-configuration-variables-for-dcc` for more information on paired CVs."
-msgstr ""
+msgstr "CV 17 と CV 18 は「ペア CV」であることに注意してください。「ペア CV」とは一緒に 1 つのデータを保持する一対の CV を指します。CV17 への書き込みバイト命令は CV18 が書き込まれたときのみ有効になります。他のペア CV も同様に動作します。ペア CV の詳細については :doc:`S-9.2.2-configuration-variables-for-dcc` を参照してください。"
 
 #: ../../content/S-9.2.1-extended-packet-formats.rst:760
 msgid "For backward compatibility, decoders should check the length of instruction packets when bit 7 of byte 2 is zero."
-msgstr ""
+msgstr "後方互換性のために、バイト 2 のビット 7 が 0 のとき、デコーダーは命令パケットの長さを確認するべきです。"

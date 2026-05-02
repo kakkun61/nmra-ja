@@ -7,6 +7,10 @@ This book is a reformatted one of the "Standards and Recommended Practices" of N
 
 Source repository https://github.com/kakkun61/nmra-ja/
 
+.. caution::
+
+    This project is still in progress.
+
 - S-9.1 Electrical Standards *Done*
 
 .. _to-contributors:
