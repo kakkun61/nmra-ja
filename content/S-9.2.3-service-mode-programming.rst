@@ -1,0 +1,598 @@
+.. _service-mode-programming-for-digital-command-control:
+
+S-9.2.3 Service Mode Programming For Digital Command Control
+============================================================
+
+`Original <https://www.nmra.org/sites/default/files/standards/sandrp/DCC/S/S-9.2.3_2012_07.pdf>`_
+
+Original Version: July 2012
+
+.. note::
+
+   This Recommended Practice received approval from the NMRA Board of Trustees in March 1997, July 2002, July 2003 and January 2006. Changes since the last approved version are indicated by change bars on the left or right side of the document. Changed to Standard July 2012.
+
+.. _introduction:
+
+A: Introduction
+---------------
+
+The NMRA Standards and Recommended Practices for Digital Command Control (DCC) define two modes of Digital Decoder operation: Operations Mode and Service Mode. This Standard describes Service Mode. The purpose of Service Mode is to allow customization and testing of Digital Decoders.
+
+.. _service-mode-environment:
+
+B: Service Mode Environment
+---------------------------
+
+Given that Service Mode is designed for testing and customization of Digital Decoders, it is recommended that:
+
+1. Service Mode operations should occur on an isolated section of track.
+2. External locomotive loads (for example, smoke generator, constant lighting, sound generators) should be switched off during programming operations. Decoders should switch off all external loads connected to the decoder upon entering service mode.
+3. Service Mode operations should be performed in an environment with limited energy to prevent damage to decoders during programming. For the purposes of this Standard, limited energy is defined as 250 mA, sustained for more than 100 ms. A programmer may further limit the energy via a current limiting resistor, if it is clearly documented that not all compatible DCC devices may be programmed by this programmer.
+
+A Programmer is the device used to create these conditions, and may be incorporated within or separate from the system Digital Command Station.
+
+.. _digital-decoder-entry-to-and-exit-from-service-mode:
+
+C: Digital Decoder Entry to and Exit from Service Mode
+-------------------------------------------------------
+
+A Digital Decoder will only act on service mode instruction packets while in service mode. A Digital Decoder will enter service mode upon receipt of a valid service mode instruction packet immediately preceded by a reset packet.
+
+A Digital Decoder will exit service mode but not enter operations mode when any of the following conditions are true:
+
+1. The Digital Decoder successfully receives a non-service-mode instruction packet.
+2. 20 milliseconds have occurred since the last valid reset or service mode instruction packet was received.
+
+Once a Digital Decoder has exited service mode, it will only re-enter operations mode upon receipt of a valid operations mode packet that is not identical to a service mode packet. This is to ensure that the decoder does not start executing service mode instruction packets as operations mode packets (Service Mode instruction packets have a short address in the range of 112 to 127 decimal.)
+
+.. _decoder-acknowledgment-mechanism:
+
+D: Decoder Acknowledgment Mechanism
+-----------------------------------
+
+Service Mode operations provide for an acknowledgment mechanism from the decoder to the command station/programmer. Acknowledgment refers to the ability of the Digital Decoder to respond to a Service Mode instruction issued by a Programmer. Service Mode instructions can be executed regardless of whether or not the acknowledgment mechanism is detected by the command station/programmer.
+
+Two acknowledgment mechanisms are available:
+
+- Basic Acknowledgment
+- Advanced Acknowledgment
+
+Digital Decoders may provide either form of acknowledgment.
+
+.. _basic-acknowledgment:
+
+Basic Acknowledgment
+~~~~~~~~~~~~~~~~~~~~
+
+Basic acknowledgment is defined by the Digital Decoder providing an increased load (positive delta) on the programming track of at least 60 mA for 6 ms +/-1 ms. It is permissible to provide this increased load by applying power to the motor or other similar device controlled by the Digital Decoder.
+
+.. _advanced-acknowledgment:
+
+Advanced Acknowledgment
+~~~~~~~~~~~~~~~~~~~~~~~
+
+See S-9.3.1 and S-9.3.2.
+
+.. _general-acknowledgment-timing:
+
+General Acknowledgment Timing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For either type of acknowledgment, if a Service Mode write is being performed, acknowledgment pulse(s) should not occur from the decoder until internal updating of all affected non-volatile data storage is complete in the decoder. During Service Mode, the Programmer should scan for any acknowledgment current pulse(s) in the acknowledgment time window starting at the Packet End bit of the second service mode instruction packet and extending through the required number of instruction packets and, in the case of write operations, through the specified decoder-recovery-time. A Command Station/Programmer may not stop sending packets to the programming track (which turns off power to the decoder) until the end of the Decoder-Recovery-Time.
+
+.. _service-mode-instruction-packets:
+
+E: Service Mode Instruction Packets
+-----------------------------------
+
+Service Mode supports four different methods for access to Configuration Variables (CVs): Direct Configuration, Address-Only, Physical Register, and Paged Addressing. The Service Mode instruction packet sequences are defined from a Command Station/Programmer perspective. A Digital Decoder must not execute any Verify or Write operations (as specified herein) unless it is in service mode (see section C) and has received two identical Service Mode packets without any intervening valid packets. Digital Decoders must successfully perform the desired programming operation (including performing its acknowledgment function if required) within the time frame defined by this packet sequence.
+
+.. _definitions:
+
+Definitions
+~~~~~~~~~~~
+
+Within this Standard, bits are numbered from right to left with bit 0 (the right-most bit) being the least significant bit (LSB) and bit 7 (the left-most bit) being the most significant bit (MSB). Bits are defined using the following abbreviations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Symbol
+     - Description
+   * - ``0``
+     - bit with a value of ``0``
+   * - ``1``
+     - bit with a value of ``1``
+   * - ``A``
+     - the configuration variable address
+   * - ``C``
+     - instruction type
+   * - ``K``
+     - instruction type
+   * - ``R``
+     - register number
+   * - ``B``
+     - position of bit
+   * - ``D``
+     - data value to be read or written
+   * - ``E``
+     - error detection bit [#f1]_
+   * - ``[]``
+     - sequences between braces may be repeated, and nested one or more times as needed
+
+Long Preamble
+   In Service Mode the Command Station/Programmer increases the preamble of the packet from the minimum (per S-9.2) to at least 20 bits to allow extra time for the Digital Decoder to process the packets. This is designated as “long-preamble” in the packet descriptions.
+
+Power-On Cycle
+   Upon applying power to the track, the Command Station/Programmer must transmit at least 20 valid packets to the Digital Decoder to allow it time to stabilize internal operation before any Service Mode operations are initiated. During the initial decoder power-up sequence, a current load of greater than 250 mA sustained after 100 milliseconds (ms) of initiation of packet transmission should be interpreted as an over-current fault condition for the decoder being programmed. After the power-up sequence, a decoder with all outputs turned off (for example, lamps, amplifiers, etc.) shall not draw more than 100 mA of current except for when processing an acknowledgment.
+
+Decoder Recovery Time
+   Command Station/Programmer shall send the same service mode write packets or reset packets during the Decoder-Recovery-Time until the specified packet time has been met or until the command station/programmer has received a valid acknowledgment.
+
+Reset Packet
+   Herein, a reset packet is defined as a Broadcast Decoder Reset packet, valid for all decoders (see S-9.2).
+
+Hard-Reset-Cycle
+   A hard reset (see RP-9.2.1), followed by 10 idle or reset packets. This sequence is used when a Command Station/Programmer desires to return the decoder to its initial predefined state.
+
+Page-Preset-Instruction
+   A packet sequence sent to guarantee the contents of the page register. The instruction sequence is [#f2]_:
+
+   ::
+
+      long-preamble 0 01111101 0 00000001 0 01111100 1
+
+.. _service-mode-instruction-packets-for-direct-mode:
+
+Service Mode Instruction Packets for Direct Mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Direct Mode service mode instruction packets support accessing Configuration Variables by their configuration variable number (see S-9.2.2). As an example, to determine if a Digital Decoder supports Direct Configuration Variable Addressing, the Universal Command Station/Programmer should perform two bit verifies, one verify for a bit value of ``0`` and one verify for a bit value of ``1`` to the most significant bit within CV 8 (Manufacturer's ID). Acknowledgment of either bit-verify indicates that the decoder fully supports all modes of Direct Configuration Variable Addressing (Verify Byte, Write Byte, and Bit Manipulation). A Command Station, Programmer, or Decoder, which supports Direct Mode, must implement all three instruction types.
+
+The following table shows the required packet sequence for direct mode.
+
+* Optional Power-On-Cycle, if needed
+* one or more times:
+
+  * 3 or more Reset Packets
+  * either:
+
+    * one or more times:
+
+      * if an acknowledgment is detected:
+
+        * 5 or more Verify packets to a single CV 1-1023
+        * 1 or more Reset Packets
+
+    *
+
+      * 5 or more Writes to a single CV 1-1023
+      * 6 or more identical Write or Reset packets (Decoder-Recovery-Time)
+
+* Optional Power-Off
+
+Within a verify or write sequence, the Command Station/Programmer may cease sending packets and continue with the next step in the sequence when either a decoder acknowledgment is successfully received or the number of packets specified to be transmitted is completed.
+
+Instruction packets using Direct CV Addressing are 4-byte packets of the format:
+
+::
+
+   long-preamble 0 0111CCAA 0 AAAAAAAA 0 DDDDDDDD 0 EEEEEEEE 1
+
+The actual Configuration Variable desired is selected via the 10-bit address, with the two-bit address (``AA``) in the first data byte being the most significant bits of the CV number. The Configuration Variable being addressed is the provided 10-bit address plus 1. CV 1 is defined by the address ``00 00000000``. A Command Station/Programmer must provide full read and write manipulation for all values of 8-bit data.
+
+The defined values for instruction types (``CC``) are:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ``CC``
+     - Description
+   * - ``10``
+     - Bit Manipulation
+   * - ``01``
+     - Verify byte
+   * - ``11``
+     - Write byte
+
+Verify CV Byte (``01``)
+   The contents of the Configuration Variable as indicated by the 10-bit address are compared with the data byte (``DDDDDDDD``). If the values are identical, the Digital Decoder shall respond with an acknowledgment as defined in Section D.
+
+Write CV Byte (``11``)
+   The contents of the Configuration Variable as indicated by the 10-bit address are replaced by the data byte (``DDDDDDDD``). Upon completion of all write operations, the Digital Decoder may respond with an acknowledgment as defined in Section D.
+
+CV Bit Manipulation (``10``)
+   The bit manipulation instructions in Direct Addressing mode use a special format for the data byte ``DDDDDDDD``:
+
+   ::
+
+      long-preamble 0 011110AA 0 AAAAAAAA 0 111KDBBB 0 EEEEEEEE 1
+
+Where ``BBB`` represents the bit position within the CV (``000`` being defined as bit 0), and ``D`` contains the value of the bit to be verified or written. ``K`` = ``1`` signifies a “Write Bit” operation and ``K`` = ``0`` signifies a “Bit Verify” operation.
+
+Each bit manipulation instruction operates in a manner similar to the Verify CV Byte and Write CV Byte instructions (but operates on a single bit within the CV). Using the same criteria as the Verify CV Byte or Write CV Byte instructions, an acknowledgment is generated in response to a Verify Bit or Write Bit instruction if appropriate.
+
+.. _service-mode-instruction-packets-for-address-only-mode:
+
+Service Mode Instruction Packets for Address-Only Mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Address-only service mode instruction packets support access to Configuration Variable #1, the Digital Decoder's short address. When a new short address (CV 1) is written using any method, a decoder must reset the extended addressing bit in the Configuration Register (CV 29) to have a value of ``0``, and clear the consist address (CV 19).
+
+The following table shows the packet sequence.
+
+* Optional Power-On-Cycle, if needed
+* 3 or more Reset Packets
+* 5 or more Page-Preset-packets
+* 6 or more Page Preset or Reset packets (Decoder-Recovery-Time from write to Page Register)
+* optional
+
+  * Power-Off
+  * Power-On-Cycle
+
+* one or more times:
+
+  * 3 or more Reset Packets
+  * either:
+
+    * one or more times:
+
+      * 5 or more Verifies to CV 1
+
+    *
+
+      * 5 or more Writes to CV 1
+      * 10 or more identical Write or Reset packets (Decoder-Recovery-Time)
+
+* Optional Power-Off
+
+Within a verify or write sequence, the Command Station/Programmer may cease sending packets and continue with the next step in the sequence when either a decoder acknowledgment is successfully received or the number of packets specified to be transmitted is completed.
+
+Instruction packets using Address-Only Mode are 3-byte packets of the format:
+
+::
+
+   long-preamble 0 0111C000 0 0DDDDDDD 0 EEEEEEEE 1
+
+In Address-Only Mode, two instruction types (``C``) are defined:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ``C``
+     - Description
+   * - ``0``
+     - Verify Address
+   * - ``1``
+     - Write Address
+
+Verify Address Contents (``0``)
+   This instruction type causes a Verify operation that compares the eight (8) bit data value ``0DDDDDDD`` with the contents of CV 1, the Address. If these two values are equal, the Digital Decoder shall generate an acknowledgment as defined in Section D.
+
+Write Address Contents (``1``)
+   This instruction type causes a Write operation that stores the eight (8) bit data value ``0DDDDDDD`` into CV 1, the Address. Upon completion of all write operations, the Digital Decoder may respond with an acknowledgment as defined in Section D.
+
+.. _service-mode-instruction-packets-for-physical-register-addressing:
+
+Service Mode Instruction Packets for Physical Register Addressing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Physical Register addressing supports access to a limited number of Configuration Variables by using the internal ”Registers” of a decoder. The following table shows the packet sequence.
+
+* Optional Power-On-Cycle, if needed
+* 3 or more Reset Packets
+* 5 or more Page-Preset-packets
+* 6 or more reset packets (Decoder Recovery Time from write to Page Register)
+* one or more times:
+
+  * optional
+
+    * Power-Off
+    * Power-On-Cycle [#f3]_
+
+  * one or more times:
+
+    * 3 or more Reset Packets
+    * either:
+
+      * one or more times:
+
+        * 7 or more Verifies to a specific Register
+
+      *
+
+        * 5 or more Writes to a specific Register
+        * 6 or more identical Writes or Reset packets (Decoder Recovery Time from write to Register)
+
+          * **Note: The Decoder Recovery Time is 10 packets long after a write to Register 1 (see Address-Only mode).**
+
+* Optional Power-Off
+
+Within a verify or write sequence, the Command Station/Programmer may cease sending packets and continue with the next step in the sequence when either a decoder acknowledgment is successfully received or the number of packets specified to be transmitted is completed.
+
+Instruction packets using Physical Register Addressing are 3 byte packets of the format:
+
+::
+
+   long-preamble 0 0111CRRR 0 DDDDDDDD 0 EEEEEEEE 1
+
+The value encoded in bits (``RRR``) defines one of 8 possible Physical Registers that may be read or written by a programmer. The following table maps the Physical Registers to Configuration Variables.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Register
+     - ``RRR`` Value
+     - CVs for Accessory Decoders
+     - CVs for Mobile Digital Decoders
+   * - 1
+     - ``000``
+     - Lower Address (CV 513)
+     - Address (CV 1)
+   * - 2
+     - ``001``
+     - Undefined, see Manufacturing Documentation
+     - Start Voltage (CV 2)
+   * - 3
+     - ``010``
+     - Undefined, see Manufacturing Documentation
+     - Acceleration (CV 3)
+   * - 4
+     - ``011``
+     - Undefined, see Manufacturing Documentation
+     - Deceleration (CV 4)
+   * - 5
+     - ``100``
+     - Undefined, see Manufacturing Documentation
+     - Basic Configuration Register (CV 29) [#f4]_
+   * - 6
+     - ``101``
+     - Undefined, see Manufacturing Documentation
+     - (Reserved for Page Register)
+   * - 7
+     - ``110``
+     - Version Number (CV 7)
+     - Version Number (CV 7)
+   * - 8
+     - ``111``
+     - Manufacturer ID (CV 520)
+     - Manufacturer ID Number (CV 8)
+
+It is recommended that a Command Station/Programmer provide full read and write access to the 8 Physical registers (``000``) to (``111``) for all values of 8-bit data. This allows a user to directly manipulate Physical registers 1 (``000``) to 8 (``111``) and CV data in any manner. The Command Station/Programmer documentation should indicate the numbering or naming scheme in use, and how these correspond to the 8 Physical Registers.
+
+In Physical Register Addressing Mode two instruction types (``C``) are defined:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ``C``
+     - Description
+   * - ``0``
+     - Verify register/CV contents
+   * - ``1``
+     - Write register/CV contents
+
+Verify Register Contents (``0``)
+   This instruction type causes a Verify operation that compares the eight (8) bit data value ``DDDDDDDD`` with the contents of the specified three (3) bit register address ``RRR``. If these two values are equal, the Digital Decoder shall generate an acknowledgment as defined in Section D.
+
+Write Register Contents (``1``)
+   This instruction type causes a Write operation that stores the eight (8) bit data value ``DDDDDDDD`` into one of the eight registers as specified by the three (3) bit register address ``RRR``. Upon completion of all write operations, the Digital Decoder may respond with an acknowledgment as defined in Section D.
+
+.. _service-mode-instruction-packets-for-paged-cv-addressing:
+
+Service Mode Instruction Packets for Paged CV Addressing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Implementations that require access to a larger number of Configuration Variables than possible using just the 8 Physical Registers can use an extended 3-byte programming format called Paged CV Addressing. If a decoder does not implement Paged CV Addressing, it must not respond to Paged CV programming commands when the page register has a value greater than 1.
+
+Paged CV Addressing implements access to all 1024 Configuration Variables through advanced usage of the 8 Physical ``registers`` or storage locations. The first four registers are used as Data Registers on a particular page. The sixth register holds the current page number. The following diagram shows the order of packet sequence for paged mode:
+
+* Optional Power-On-Cycle, if needed
+* one or more times:
+
+  * 3 or more Reset Packets
+  * 5 or more Writes to the Page Register
+  * 6 or more reset packets (Decoder Recovery Time from write to Page Register)
+  * one ore more times:
+
+    * 3 or more Reset Packets
+    * either:
+
+      * 5 or more Verifies to a single Data Register 1-4
+      *
+
+        * 5 or more Writes to a single Data Register 1-4
+        * 6 or more identical Write or Reset packets (Decoder Recovery Time from write to Data Register)
+
+* Optional Power-Off
+
+Within a verify or write sequence, the Command Station/Programming may cease sending packets and continue with the next step in the sequence when either a decoder acknowledgment is successfully received or the number of packets specified to be transmitted is completed.
+
+Instruction packets using Paged Mode programming are 3-byte packets of the format:
+
+::
+
+   long-preamble 0 0111CRRR 0 DDDDDDDD 0 EEEEEEEE 1
+
+It is recommended that a Command Station/Programmer provide full read and write manipulation for all values of 8 bit data.
+
+The five (5) additional Physical registers, defined by (``RRR``), in use for Paged CV Addressing are:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Register
+     - ``RRR`` Value
+     - Meaning
+   * - 1
+     - ``000``
+     - Data Register 0
+   * - 2
+     - ``001``
+     - Data Register 1
+   * - 3
+     - ``010``
+     - Data Register 2
+   * - 4
+     - ``011``
+     - Data Register 3
+   * - 5
+     - ``100``
+     - Basic Configuration Register [#f5]_
+   * - 6
+     - ``101``
+     - Paging Register
+
+Data Registers (1 through 4; ``000``-``011``)
+   They point to a set of 4 Configuration Variables as determined by the contents of the Paging Register. Register 0 points to the first CV in the set while Register 3 points to the last CV in the set.
+
+Basic Configuration Register (5; ``100``)
+   This register defines the basic configuration of the Digital Decoder. See the definition of Configuration Variable 29 (RP-9.2.2) for further information on the contents of this register in a Multi-function Digital Decoder and see Configuration Variable 541 (RP-9.2.2) for further information on the contents of this register in an Accessory Decoder.
+
+Paging Register (6; ``101``)
+   This register is used as an offset for the Data Registers to allow access to the larger set of 1024 configuration variables. The default value for this register is ``1``.
+
+   To calculate the CV number referred to by a Data Register and Page Register value:
+
+      1. Subtract 1 from the value in the Page Register. Then multiply this value by 4.
+      2. Add the number of the Data Register (``000``-``011`` or 0-3 decimal) to step 1.
+      3. Add 1 to the result of step 2. This is the number of the CV being accessed.
+
+   The inverse of this sequence can be used to calculate the Page number and Data Register for a particular CV number.
+
+   For example, to find the Page Register and Data Register for CV 65 - Kick Start:
+
+   .. math::
+
+      \begin{align*}
+      &65 - 1 = 64 \\
+      &64\ \mathrm{divided\ by}\ 4 = 16, 0\ \mathrm{remainder}. \\
+      &16 + 1 = 17 \\
+      &\mathrm{Page\ Register}\ 17; \mathrm{Data\ Register}\ 0
+      \end{align*}
+
+Registers 5, 7 and 8 are unaffected by the contents of the Page Register value (see Service Mode Instruction Packets for Physical Register Addressing for more information).
+
+In Paged CV Addressing Mode two (2) instruction types (``C``) are defined. There are:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ``C``
+     - Description
+   * - ``0``
+     - Verify register/CV contents
+   * - ``1``
+     - Write register/CV contents
+
+Verify Register/CV Contents (``0``)
+   This instruction type causes a Verify operation that compares the eight (8) bit data value ``DDDDDDDD`` with the contents of the specified three (3) bit register address ``RRR``. If these two values are equal, the Digital Decoder shall generate an acknowledgment as defined in section D.
+
+   When the register address is in the Data Register range of (``000``) to (``011``), the stored value of the CV referenced by the Data Register in combination with the Page Register value is verified.
+
+Write Register/CV Contents (``1``)
+   This instruction type causes a Write operation that stores the eight (8) bit data value ``DDDDDDDD`` into one of the eight registers as specified by the three (3) bit register address ``RRR``. Upon completion of all write operations, the Digital Decoder may respond with an acknowledgment as defined in Section D.
+
+   When the register address is in the Data Register range of (``000``) to (``011``), the CV referenced by the Data Register in combination with the Page Register value is written.
+
+If the decoder maintains an internal Page Register copy that is only valid when power is applied, it should not be initialized when a reset packet is received. This ensures a Programmer can load the Page Register in a decoder and follow this with multiple Write and/or Verify operations while power and packets remain on.
+
+To ensure compatibility with earlier Command Station/Programmers, a Command Station/Programmer should set the Page Register (``101``) to Page 1 (a data value of ``1``) at the end of programming. It is also recommended that decoders provide a mechanism to automatically reset their page registers to a value of ``1`` after programming is completed (see section C).
+
+.. _decoder-factory-reset:
+
+Decoder Factory Reset
+~~~~~~~~~~~~~~~~~~~~~
+
+From time to time it may be necessary to request that the decoder reprogram all its CVs to a factory default condition. The following command sequence [#f6]_ shall be used for this purpose. The packet sequence for this command is identical to the packet sequence specified for Service Mode Instruction Packets for Physical Register Addressing. The instruction packets for Decoder Factory Reset are 3 byte packets of the format:
+
+::
+
+   long-preamble 0 01111111 0 00001000 0 01110111 1
+
+This instruction type causes a Write operation that instructs the decoder to return to a factory default condition. Because the packet sequence in service mode provides insufficient time for the decoder to rewrite all its CVs, the actual reprogramming of all the decoder's CVs will normally occur during each subsequent power-on cycle until all CVs have been returned to a factory default condition. A value of ``255`` is placed in CV 8 until the decoder has successfully rewritten all CVs to their factory default condition.
+
+.. _methods-of-programming-required:
+
+F: Methods of Programming Required
+----------------------------------
+
+To conform to this Standard, Command Stations or Programmers must implement one of the following groups of programming methods. The manufacturer must clearly label, using the defined terms below, which form(s) of programming are supported.
+
+.. _command-station-or-programmers:
+
+Command Station or Programmers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Address-Only Programmers
+   Program CV 1 via Address-Only Mode.
+
+Register-Mode CV Programmers
+   Program a selected subset of CVs via Physical Register. The subset must include CV 1 using Address-Only Mode and be clearly defined and documented.
+
+Paged CV Programmers
+   Program a selected subset of CVs via Physical Register and Paged Addressing. The subset must include CV 1 using Address-Only Mode and be clearly defined and documented.
+
+Direct CV Programmers
+   Program a selected subset of CVs via Physical Register and Direct Addressing. The subset must include CV 1 in Address-Only Mode and be clearly defined and documented.
+
+Universal CV Programmers
+   Have the ability to read and write a subset of CVs via Direct, Physical Register and Paged Addressing. The subset must include CV 1 using Address-Only Mode and be clearly defined and documented.
+
+Effective 1-Aug-2002, all Command Stations or Programmers submitted for Conformance must implement Direct Mode.
+
+For complete backward compatibility with decoders that were produced prior to 1-Aug-2002 which do not support Direct Mode, support for Paged Mode is strongly encouraged.
+
+.. _decoders:
+
+Decoders
+~~~~~~~~
+
+All programmable decoders must perform Address-Only mode, and either Physical Register or Paged Addressing as appropriate. Decoders that support Service Mode programming for more CVs than Physical Register mode can support, and are submitted for Conformance after 1-Aug-2002, must support Direct Mode. If the decoder supports Direct CV Addressing, the decoder also needs to support Address-Only programming. The manufacturer must clearly label, using the terms described in this standard, which form(s) of programming are supported.
+
+For complete backward compatibility with Command Stations or Programmers that were produced prior to 1-Aug-2002 which do not support Direct Mode, support for Paged Mode is strongly encouraged.
+
+.. _appendix-a-address-query-instruction:
+
+Appendix A: Address Query Instruction
+-------------------------------------
+
+The Address Query instruction is used in older Digital Decoders to verify a specific decoder address, CV 1. The format of the instruction is:
+
+::
+
+   long-preamble 0 AAAAAAAA 0 11111001 0 EEEEEEEE 1
+
+If the address in the packet matches the address of the Digital Decoder, the Digital Decoder generates an acknowledgment as specified in section D. This instruction is included to allow Programmers to verify addresses of older decoders. It is recommended that a Programmer first attempt to read CV 1 with the Direct or Paged verify mechanism before invoking this method of Address Query. After unsuccessfully attempting to read the value of CV 1, it can be verified to match the address of the Decoder using this Address Query command. This Address Query instruction may only be issued for the address range of ``AAAAAAAA`` from 1 to 111 decimal.
+
+.. _appendix-b-service-mode-decoder-lock-instruction:
+
+Appendix B: Service Mode Decoder Lock Instruction
+-------------------------------------------------
+
+This appendix contains the definition of an additional instruction. A DCC product need not implement the feature described in this appendix, but if it is implemented, it must be implemented completely.
+
+Additional information is available in Technical Note TN-2-05.
+
+The Service Mode Decoder Lock instruction prevents service mode programming of some decoders, while allowing programming of others on a single track. Note: This is not a substitute for a low-current programming track for new decoder instructions. Command stations/programmers must contain clear instructions on how to install and utilize a low-current programming track.
+
+The format of the instruction is:
+
+::
+
+   long-preamble 0 00000000 0 11111001 0 0aaaaaaa 0 EEEEEEEE 1
+
+Where ``aaaaaaa`` is the short address of the decoder that will continue to execute service mode commands.
+
+Upon receiving a ``0xF9`` Service Mode Decoder Lock instruction, a decoder which implements this feature checks its address against the short address contained in the packet (``aaaaaaa``). If its address does not match the address in the packet, the decoder is considered locked and ignores all subsequent service mode instructions (even after a power cycle).
+
+To unlock a decoder that has been locked using the Service Mode Decoder Lock instruction, the decoder must receive a valid NMRA DCC packet other than either a valid service mode packet or a valid Service Mode Decoder Lock instruction (with an ``aaaaaaa`` that does not match its address). Once unlocked, the decoder accepts all subsequent service mode packets.
+
+.. rubric:: Footnotes
+
+.. [#f1] In both the 3-data-byte and 4-data-byte packets, the last data byte of a Service Mode packet is used for error detection purposes (see S-9.2.1 for details).
+.. [#f2] This instruction may not have the desired effect with all older accessory decoders.
+.. [#f3] Some older decoders require a power off/on cycle at this point in order to be programmed. Power cycling at this point is not allowed if you are in the middle of a paged operation.
+.. [#f4] For compatibility with older systems, Register 5 may be used for other programming purposes when the Page Register is not equal to 1. If Register 5 is used in a different manner, Register 5 should be restored after the Page Register is reset to 1.
+.. [#f5] Refer to the section on Physical Register addressing for other compatibility issues with use of this register.
+.. [#f6] Several valid existing alternative means for achieving decoder factory reset are also in use. Manufacturers may continue to use these alternate means, but are required to also support the standard-specified means in new designs.

@@ -1,0 +1,1070 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, the National Model Railroad Association, Inc. and Kazuki Okamoto (岡本和樹)
+# This file is distributed under the same license as the nmra-ja package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nmra-ja 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 1980-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:4
+msgid "S-9.2.3 Service Mode Programming For Digital Command Control"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:6
+msgid "`Original <https://www.nmra.org/sites/default/files/standards/sandrp/DCC/S/S-9.2.3_2012_07.pdf>`_"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:8
+msgid "Original Version: July 2012"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:12
+msgid "This Recommended Practice received approval from the NMRA Board of Trustees in March 1997, July 2002, July 2003 and January 2006. Changes since the last approved version are indicated by change bars on the left or right side of the document. Changed to Standard July 2012."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:17
+msgid "A: Introduction"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:19
+msgid "The NMRA Standards and Recommended Practices for Digital Command Control (DCC) define two modes of Digital Decoder operation: Operations Mode and Service Mode. This Standard describes Service Mode. The purpose of Service Mode is to allow customization and testing of Digital Decoders."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:24
+msgid "B: Service Mode Environment"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:26
+msgid "Given that Service Mode is designed for testing and customization of Digital Decoders, it is recommended that:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:28
+msgid "Service Mode operations should occur on an isolated section of track."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:29
+msgid "External locomotive loads (for example, smoke generator, constant lighting, sound generators) should be switched off during programming operations. Decoders should switch off all external loads connected to the decoder upon entering service mode."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:30
+msgid "Service Mode operations should be performed in an environment with limited energy to prevent damage to decoders during programming. For the purposes of this Standard, limited energy is defined as 250 mA, sustained for more than 100 ms. A programmer may further limit the energy via a current limiting resistor, if it is clearly documented that not all compatible DCC devices may be programmed by this programmer."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:32
+msgid "A Programmer is the device used to create these conditions, and may be incorporated within or separate from the system Digital Command Station."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:37
+msgid "C: Digital Decoder Entry to and Exit from Service Mode"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:39
+msgid "A Digital Decoder will only act on service mode instruction packets while in service mode. A Digital Decoder will enter service mode upon receipt of a valid service mode instruction packet immediately preceded by a reset packet."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:41
+msgid "A Digital Decoder will exit service mode but not enter operations mode when any of the following conditions are true:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:43
+msgid "The Digital Decoder successfully receives a non-service-mode instruction packet."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:44
+msgid "20 milliseconds have occurred since the last valid reset or service mode instruction packet was received."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:46
+msgid "Once a Digital Decoder has exited service mode, it will only re-enter operations mode upon receipt of a valid operations mode packet that is not identical to a service mode packet. This is to ensure that the decoder does not start executing service mode instruction packets as operations mode packets (Service Mode instruction packets have a short address in the range of 112 to 127 decimal.)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:51
+msgid "D: Decoder Acknowledgment Mechanism"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:53
+msgid "Service Mode operations provide for an acknowledgment mechanism from the decoder to the command station/programmer. Acknowledgment refers to the ability of the Digital Decoder to respond to a Service Mode instruction issued by a Programmer. Service Mode instructions can be executed regardless of whether or not the acknowledgment mechanism is detected by the command station/programmer."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:55
+msgid "Two acknowledgment mechanisms are available:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:57
+#: ../../content/S-9.2.3-service-mode-programming.rst:65
+msgid "Basic Acknowledgment"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:58
+#: ../../content/S-9.2.3-service-mode-programming.rst:72
+msgid "Advanced Acknowledgment"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:60
+msgid "Digital Decoders may provide either form of acknowledgment."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:67
+msgid "Basic acknowledgment is defined by the Digital Decoder providing an increased load (positive delta) on the programming track of at least 60 mA for 6 ms +/-1 ms. It is permissible to provide this increased load by applying power to the motor or other similar device controlled by the Digital Decoder."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:74
+msgid "See S-9.3.1 and S-9.3.2."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:79
+msgid "General Acknowledgment Timing"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:81
+msgid "For either type of acknowledgment, if a Service Mode write is being performed, acknowledgment pulse(s) should not occur from the decoder until internal updating of all affected non-volatile data storage is complete in the decoder. During Service Mode, the Programmer should scan for any acknowledgment current pulse(s) in the acknowledgment time window starting at the Packet End bit of the second service mode instruction packet and extending through the required number of instruction packets and, in the case of write operations, through the specified decoder-recovery-time. A Command Station/Programmer may not stop sending packets to the programming track (which turns off power to the decoder) until the end of the Decoder-Recovery-Time."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:86
+msgid "E: Service Mode Instruction Packets"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:88
+msgid "Service Mode supports four different methods for access to Configuration Variables (CVs): Direct Configuration, Address-Only, Physical Register, and Paged Addressing. The Service Mode instruction packet sequences are defined from a Command Station/Programmer perspective. A Digital Decoder must not execute any Verify or Write operations (as specified herein) unless it is in service mode (see section C) and has received two identical Service Mode packets without any intervening valid packets. Digital Decoders must successfully perform the desired programming operation (including performing its acknowledgment function if required) within the time frame defined by this packet sequence."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:93
+msgid "Definitions"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:95
+msgid "Within this Standard, bits are numbered from right to left with bit 0 (the right-most bit) being the least significant bit (LSB) and bit 7 (the left-most bit) being the most significant bit (MSB). Bits are defined using the following abbreviations:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:100
+msgid "Symbol"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:101
+#: ../../content/S-9.2.3-service-mode-programming.rst:190
+#: ../../content/S-9.2.3-service-mode-programming.rst:263
+#: ../../content/S-9.2.3-service-mode-programming.rst:369
+#: ../../content/S-9.2.3-service-mode-programming.rst:482
+msgid "Description"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:102
+#: ../../content/S-9.2.3-service-mode-programming.rst:264
+#: ../../content/S-9.2.3-service-mode-programming.rst:370
+#: ../../content/S-9.2.3-service-mode-programming.rst:483
+msgid "``0``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:103
+msgid "bit with a value of ``0``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:104
+#: ../../content/S-9.2.3-service-mode-programming.rst:266
+#: ../../content/S-9.2.3-service-mode-programming.rst:372
+#: ../../content/S-9.2.3-service-mode-programming.rst:485
+msgid "``1``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:105
+msgid "bit with a value of ``1``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:106
+msgid "``A``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:107
+msgid "the configuration variable address"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:108
+#: ../../content/S-9.2.3-service-mode-programming.rst:262
+#: ../../content/S-9.2.3-service-mode-programming.rst:368
+#: ../../content/S-9.2.3-service-mode-programming.rst:481
+msgid "``C``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:109
+#: ../../content/S-9.2.3-service-mode-programming.rst:111
+msgid "instruction type"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:110
+msgid "``K``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:112
+msgid "``R``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:113
+msgid "register number"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:114
+msgid "``B``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:115
+msgid "position of bit"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:116
+msgid "``D``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:117
+msgid "data value to be read or written"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:118
+msgid "``E``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:119
+msgid "error detection bit [#f1]_"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:120
+msgid "``[]``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:121
+msgid "sequences between braces may be repeated, and nested one or more times as needed"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:123
+msgid "Long Preamble"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:124
+msgid "In Service Mode the Command Station/Programmer increases the preamble of the packet from the minimum (per S-9.2) to at least 20 bits to allow extra time for the Digital Decoder to process the packets. This is designated as “long-preamble” in the packet descriptions."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:126
+msgid "Power-On Cycle"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:127
+msgid "Upon applying power to the track, the Command Station/Programmer must transmit at least 20 valid packets to the Digital Decoder to allow it time to stabilize internal operation before any Service Mode operations are initiated. During the initial decoder power-up sequence, a current load of greater than 250 mA sustained after 100 milliseconds (ms) of initiation of packet transmission should be interpreted as an over-current fault condition for the decoder being programmed. After the power-up sequence, a decoder with all outputs turned off (for example, lamps, amplifiers, etc.) shall not draw more than 100 mA of current except for when processing an acknowledgment."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:129
+msgid "Decoder Recovery Time"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:130
+msgid "Command Station/Programmer shall send the same service mode write packets or reset packets during the Decoder-Recovery-Time until the specified packet time has been met or until the command station/programmer has received a valid acknowledgment."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:132
+msgid "Reset Packet"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:133
+msgid "Herein, a reset packet is defined as a Broadcast Decoder Reset packet, valid for all decoders (see S-9.2)."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:135
+msgid "Hard-Reset-Cycle"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:136
+msgid "A hard reset (see RP-9.2.1), followed by 10 idle or reset packets. This sequence is used when a Command Station/Programmer desires to return the decoder to its initial predefined state."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:138
+msgid "Page-Preset-Instruction"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:139
+msgid "A packet sequence sent to guarantee the contents of the page register. The instruction sequence is [#f2]_:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:148
+msgid "Service Mode Instruction Packets for Direct Mode"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:150
+msgid "Direct Mode service mode instruction packets support accessing Configuration Variables by their configuration variable number (see S-9.2.2). As an example, to determine if a Digital Decoder supports Direct Configuration Variable Addressing, the Universal Command Station/Programmer should perform two bit verifies, one verify for a bit value of ``0`` and one verify for a bit value of ``1`` to the most significant bit within CV 8 (Manufacturer's ID). Acknowledgment of either bit-verify indicates that the decoder fully supports all modes of Direct Configuration Variable Addressing (Verify Byte, Write Byte, and Bit Manipulation). A Command Station, Programmer, or Decoder, which supports Direct Mode, must implement all three instruction types."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:152
+msgid "The following table shows the required packet sequence for direct mode."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:154
+#: ../../content/S-9.2.3-service-mode-programming.rst:224
+#: ../../content/S-9.2.3-service-mode-programming.rst:282
+#: ../../content/S-9.2.3-service-mode-programming.rst:390
+msgid "Optional Power-On-Cycle, if needed"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:155
+#: ../../content/S-9.2.3-service-mode-programming.rst:160
+#: ../../content/S-9.2.3-service-mode-programming.rst:233
+#: ../../content/S-9.2.3-service-mode-programming.rst:238
+#: ../../content/S-9.2.3-service-mode-programming.rst:286
+#: ../../content/S-9.2.3-service-mode-programming.rst:293
+#: ../../content/S-9.2.3-service-mode-programming.rst:298
+#: ../../content/S-9.2.3-service-mode-programming.rst:391
+msgid "one or more times:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:157
+#: ../../content/S-9.2.3-service-mode-programming.rst:225
+#: ../../content/S-9.2.3-service-mode-programming.rst:235
+#: ../../content/S-9.2.3-service-mode-programming.rst:283
+#: ../../content/S-9.2.3-service-mode-programming.rst:295
+#: ../../content/S-9.2.3-service-mode-programming.rst:393
+#: ../../content/S-9.2.3-service-mode-programming.rst:398
+msgid "3 or more Reset Packets"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:158
+#: ../../content/S-9.2.3-service-mode-programming.rst:236
+#: ../../content/S-9.2.3-service-mode-programming.rst:296
+#: ../../content/S-9.2.3-service-mode-programming.rst:399
+msgid "either:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:162
+msgid "if an acknowledgment is detected:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:164
+msgid "5 or more Verify packets to a single CV 1-1023"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:165
+msgid "1 or more Reset Packets"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:169
+msgid "5 or more Writes to a single CV 1-1023"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:170
+msgid "6 or more identical Write or Reset packets (Decoder-Recovery-Time)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:172
+#: ../../content/S-9.2.3-service-mode-programming.rst:247
+#: ../../content/S-9.2.3-service-mode-programming.rst:309
+#: ../../content/S-9.2.3-service-mode-programming.rst:407
+msgid "Optional Power-Off"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:174
+#: ../../content/S-9.2.3-service-mode-programming.rst:249
+#: ../../content/S-9.2.3-service-mode-programming.rst:311
+msgid "Within a verify or write sequence, the Command Station/Programmer may cease sending packets and continue with the next step in the sequence when either a decoder acknowledgment is successfully received or the number of packets specified to be transmitted is completed."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:176
+msgid "Instruction packets using Direct CV Addressing are 4-byte packets of the format:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:182
+msgid "The actual Configuration Variable desired is selected via the 10-bit address, with the two-bit address (``AA``) in the first data byte being the most significant bits of the CV number. The Configuration Variable being addressed is the provided 10-bit address plus 1. CV 1 is defined by the address ``00 00000000``. A Command Station/Programmer must provide full read and write manipulation for all values of 8-bit data."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:184
+msgid "The defined values for instruction types (``CC``) are:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:189
+msgid "``CC``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:191
+msgid "``10``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:192
+msgid "Bit Manipulation"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:193
+msgid "``01``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:194
+msgid "Verify byte"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:195
+msgid "``11``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:196
+msgid "Write byte"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:198
+msgid "Verify CV Byte (``01``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:199
+msgid "The contents of the Configuration Variable as indicated by the 10-bit address are compared with the data byte (``DDDDDDDD``). If the values are identical, the Digital Decoder shall respond with an acknowledgment as defined in Section D."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:201
+msgid "Write CV Byte (``11``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:202
+msgid "The contents of the Configuration Variable as indicated by the 10-bit address are replaced by the data byte (``DDDDDDDD``). Upon completion of all write operations, the Digital Decoder may respond with an acknowledgment as defined in Section D."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:204
+msgid "CV Bit Manipulation (``10``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:205
+msgid "The bit manipulation instructions in Direct Addressing mode use a special format for the data byte ``DDDDDDDD``:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:211
+msgid "Where ``BBB`` represents the bit position within the CV (``000`` being defined as bit 0), and ``D`` contains the value of the bit to be verified or written. ``K`` = ``1`` signifies a “Write Bit” operation and ``K`` = ``0`` signifies a “Bit Verify” operation."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:213
+msgid "Each bit manipulation instruction operates in a manner similar to the Verify CV Byte and Write CV Byte instructions (but operates on a single bit within the CV). Using the same criteria as the Verify CV Byte or Write CV Byte instructions, an acknowledgment is generated in response to a Verify Bit or Write Bit instruction if appropriate."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:218
+msgid "Service Mode Instruction Packets for Address-Only Mode"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:220
+msgid "Address-only service mode instruction packets support access to Configuration Variable #1, the Digital Decoder's short address. When a new short address (CV 1) is written using any method, a decoder must reset the extended addressing bit in the Configuration Register (CV 29) to have a value of ``0``, and clear the consist address (CV 19)."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:222
+msgid "The following table shows the packet sequence."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:226
+#: ../../content/S-9.2.3-service-mode-programming.rst:284
+msgid "5 or more Page-Preset-packets"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:227
+msgid "6 or more Page Preset or Reset packets (Decoder-Recovery-Time from write to Page Register)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:228
+#: ../../content/S-9.2.3-service-mode-programming.rst:288
+msgid "optional"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:230
+#: ../../content/S-9.2.3-service-mode-programming.rst:290
+msgid "Power-Off"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:231
+msgid "Power-On-Cycle"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:240
+msgid "5 or more Verifies to CV 1"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:244
+msgid "5 or more Writes to CV 1"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:245
+msgid "10 or more identical Write or Reset packets (Decoder-Recovery-Time)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:251
+msgid "Instruction packets using Address-Only Mode are 3-byte packets of the format:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:257
+msgid "In Address-Only Mode, two instruction types (``C``) are defined:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:265
+msgid "Verify Address"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:267
+msgid "Write Address"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:269
+msgid "Verify Address Contents (``0``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:270
+msgid "This instruction type causes a Verify operation that compares the eight (8) bit data value ``0DDDDDDD`` with the contents of CV 1, the Address. If these two values are equal, the Digital Decoder shall generate an acknowledgment as defined in Section D."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:272
+msgid "Write Address Contents (``1``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:273
+msgid "This instruction type causes a Write operation that stores the eight (8) bit data value ``0DDDDDDD`` into CV 1, the Address. Upon completion of all write operations, the Digital Decoder may respond with an acknowledgment as defined in Section D."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:278
+msgid "Service Mode Instruction Packets for Physical Register Addressing"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:280
+msgid "Physical Register addressing supports access to a limited number of Configuration Variables by using the internal ”Registers” of a decoder. The following table shows the packet sequence."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:285
+#: ../../content/S-9.2.3-service-mode-programming.rst:395
+msgid "6 or more reset packets (Decoder Recovery Time from write to Page Register)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:291
+msgid "Power-On-Cycle [#f3]_"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:300
+msgid "7 or more Verifies to a specific Register"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:304
+msgid "5 or more Writes to a specific Register"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:305
+msgid "6 or more identical Writes or Reset packets (Decoder Recovery Time from write to Register)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:307
+msgid "**Note: The Decoder Recovery Time is 10 packets long after a write to Register 1 (see Address-Only mode).**"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:313
+msgid "Instruction packets using Physical Register Addressing are 3 byte packets of the format:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:319
+msgid "The value encoded in bits (``RRR``) defines one of 8 possible Physical Registers that may be read or written by a programmer. The following table maps the Physical Registers to Configuration Variables."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:324
+#: ../../content/S-9.2.3-service-mode-programming.rst:424
+msgid "Register"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:325
+#: ../../content/S-9.2.3-service-mode-programming.rst:425
+msgid "``RRR`` Value"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:326
+msgid "CVs for Accessory Decoders"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:327
+msgid "CVs for Mobile Digital Decoders"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:328
+#: ../../content/S-9.2.3-service-mode-programming.rst:427
+msgid "1"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:329
+#: ../../content/S-9.2.3-service-mode-programming.rst:428
+msgid "``000``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:330
+msgid "Lower Address (CV 513)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:331
+msgid "Address (CV 1)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:332
+#: ../../content/S-9.2.3-service-mode-programming.rst:430
+msgid "2"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:333
+#: ../../content/S-9.2.3-service-mode-programming.rst:431
+msgid "``001``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:334
+#: ../../content/S-9.2.3-service-mode-programming.rst:338
+#: ../../content/S-9.2.3-service-mode-programming.rst:342
+#: ../../content/S-9.2.3-service-mode-programming.rst:346
+#: ../../content/S-9.2.3-service-mode-programming.rst:350
+msgid "Undefined, see Manufacturing Documentation"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:335
+msgid "Start Voltage (CV 2)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:336
+#: ../../content/S-9.2.3-service-mode-programming.rst:433
+msgid "3"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:337
+#: ../../content/S-9.2.3-service-mode-programming.rst:434
+msgid "``010``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:339
+msgid "Acceleration (CV 3)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:340
+#: ../../content/S-9.2.3-service-mode-programming.rst:436
+msgid "4"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:341
+#: ../../content/S-9.2.3-service-mode-programming.rst:437
+msgid "``011``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:343
+msgid "Deceleration (CV 4)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:344
+#: ../../content/S-9.2.3-service-mode-programming.rst:439
+msgid "5"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:345
+#: ../../content/S-9.2.3-service-mode-programming.rst:440
+msgid "``100``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:347
+msgid "Basic Configuration Register (CV 29) [#f4]_"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:348
+#: ../../content/S-9.2.3-service-mode-programming.rst:442
+msgid "6"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:349
+#: ../../content/S-9.2.3-service-mode-programming.rst:443
+msgid "``101``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:351
+msgid "(Reserved for Page Register)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:352
+msgid "7"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:353
+msgid "``110``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:354
+#: ../../content/S-9.2.3-service-mode-programming.rst:355
+msgid "Version Number (CV 7)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:356
+msgid "8"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:357
+msgid "``111``"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:358
+msgid "Manufacturer ID (CV 520)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:359
+msgid "Manufacturer ID Number (CV 8)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:361
+msgid "It is recommended that a Command Station/Programmer provide full read and write access to the 8 Physical registers (``000``) to (``111``) for all values of 8-bit data. This allows a user to directly manipulate Physical registers 1 (``000``) to 8 (``111``) and CV data in any manner. The Command Station/Programmer documentation should indicate the numbering or naming scheme in use, and how these correspond to the 8 Physical Registers."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:363
+msgid "In Physical Register Addressing Mode two instruction types (``C``) are defined:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:371
+#: ../../content/S-9.2.3-service-mode-programming.rst:484
+msgid "Verify register/CV contents"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:373
+#: ../../content/S-9.2.3-service-mode-programming.rst:486
+msgid "Write register/CV contents"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:375
+msgid "Verify Register Contents (``0``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:376
+msgid "This instruction type causes a Verify operation that compares the eight (8) bit data value ``DDDDDDDD`` with the contents of the specified three (3) bit register address ``RRR``. If these two values are equal, the Digital Decoder shall generate an acknowledgment as defined in Section D."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:378
+msgid "Write Register Contents (``1``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:379
+#: ../../content/S-9.2.3-service-mode-programming.rst:494
+msgid "This instruction type causes a Write operation that stores the eight (8) bit data value ``DDDDDDDD`` into one of the eight registers as specified by the three (3) bit register address ``RRR``. Upon completion of all write operations, the Digital Decoder may respond with an acknowledgment as defined in Section D."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:384
+msgid "Service Mode Instruction Packets for Paged CV Addressing"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:386
+msgid "Implementations that require access to a larger number of Configuration Variables than possible using just the 8 Physical Registers can use an extended 3-byte programming format called Paged CV Addressing. If a decoder does not implement Paged CV Addressing, it must not respond to Paged CV programming commands when the page register has a value greater than 1."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:388
+msgid "Paged CV Addressing implements access to all 1024 Configuration Variables through advanced usage of the 8 Physical ``registers`` or storage locations. The first four registers are used as Data Registers on a particular page. The sixth register holds the current page number. The following diagram shows the order of packet sequence for paged mode:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:394
+msgid "5 or more Writes to the Page Register"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:396
+msgid "one ore more times:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:401
+msgid "5 or more Verifies to a single Data Register 1-4"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:404
+msgid "5 or more Writes to a single Data Register 1-4"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:405
+msgid "6 or more identical Write or Reset packets (Decoder Recovery Time from write to Data Register)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:409
+msgid "Within a verify or write sequence, the Command Station/Programming may cease sending packets and continue with the next step in the sequence when either a decoder acknowledgment is successfully received or the number of packets specified to be transmitted is completed."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:411
+msgid "Instruction packets using Paged Mode programming are 3-byte packets of the format:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:417
+msgid "It is recommended that a Command Station/Programmer provide full read and write manipulation for all values of 8 bit data."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:419
+msgid "The five (5) additional Physical registers, defined by (``RRR``), in use for Paged CV Addressing are:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:426
+msgid "Meaning"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:429
+msgid "Data Register 0"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:432
+msgid "Data Register 1"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:435
+msgid "Data Register 2"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:438
+msgid "Data Register 3"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:441
+msgid "Basic Configuration Register [#f5]_"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:444
+msgid "Paging Register"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:446
+msgid "Data Registers (1 through 4; ``000``-``011``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:447
+msgid "They point to a set of 4 Configuration Variables as determined by the contents of the Paging Register. Register 0 points to the first CV in the set while Register 3 points to the last CV in the set."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:449
+msgid "Basic Configuration Register (5; ``100``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:450
+msgid "This register defines the basic configuration of the Digital Decoder. See the definition of Configuration Variable 29 (RP-9.2.2) for further information on the contents of this register in a Multi-function Digital Decoder and see Configuration Variable 541 (RP-9.2.2) for further information on the contents of this register in an Accessory Decoder."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:452
+msgid "Paging Register (6; ``101``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:453
+msgid "This register is used as an offset for the Data Registers to allow access to the larger set of 1024 configuration variables. The default value for this register is ``1``."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:455
+msgid "To calculate the CV number referred to by a Data Register and Page Register value:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:457
+msgid "Subtract 1 from the value in the Page Register. Then multiply this value by 4."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:458
+msgid "Add the number of the Data Register (``000``-``011`` or 0-3 decimal) to step 1."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:459
+msgid "Add 1 to the result of step 2. This is the number of the CV being accessed."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:461
+msgid "The inverse of this sequence can be used to calculate the Page number and Data Register for a particular CV number."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:463
+msgid "For example, to find the Page Register and Data Register for CV 65 - Kick Start:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:465
+msgid ""
+"\\begin{align*}\n"
+"&65 - 1 = 64 \\\\\n"
+"&64\\ \\mathrm{divided\\ by}\\ 4 = 16, 0\\ \\mathrm{remainder}. \\\\\n"
+"&16 + 1 = 17 \\\\\n"
+"&\\mathrm{Page\\ Register}\\ 17; \\mathrm{Data\\ Register}\\ 0\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:474
+msgid "Registers 5, 7 and 8 are unaffected by the contents of the Page Register value (see Service Mode Instruction Packets for Physical Register Addressing for more information)."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:476
+msgid "In Paged CV Addressing Mode two (2) instruction types (``C``) are defined. There are:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:488
+msgid "Verify Register/CV Contents (``0``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:489
+msgid "This instruction type causes a Verify operation that compares the eight (8) bit data value ``DDDDDDDD`` with the contents of the specified three (3) bit register address ``RRR``. If these two values are equal, the Digital Decoder shall generate an acknowledgment as defined in section D."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:491
+msgid "When the register address is in the Data Register range of (``000``) to (``011``), the stored value of the CV referenced by the Data Register in combination with the Page Register value is verified."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:493
+msgid "Write Register/CV Contents (``1``)"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:496
+msgid "When the register address is in the Data Register range of (``000``) to (``011``), the CV referenced by the Data Register in combination with the Page Register value is written."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:498
+msgid "If the decoder maintains an internal Page Register copy that is only valid when power is applied, it should not be initialized when a reset packet is received. This ensures a Programmer can load the Page Register in a decoder and follow this with multiple Write and/or Verify operations while power and packets remain on."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:500
+msgid "To ensure compatibility with earlier Command Station/Programmers, a Command Station/Programmer should set the Page Register (``101``) to Page 1 (a data value of ``1``) at the end of programming. It is also recommended that decoders provide a mechanism to automatically reset their page registers to a value of ``1`` after programming is completed (see section C)."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:505
+msgid "Decoder Factory Reset"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:507
+msgid "From time to time it may be necessary to request that the decoder reprogram all its CVs to a factory default condition. The following command sequence [#f6]_ shall be used for this purpose. The packet sequence for this command is identical to the packet sequence specified for Service Mode Instruction Packets for Physical Register Addressing. The instruction packets for Decoder Factory Reset are 3 byte packets of the format:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:513
+msgid "This instruction type causes a Write operation that instructs the decoder to return to a factory default condition. Because the packet sequence in service mode provides insufficient time for the decoder to rewrite all its CVs, the actual reprogramming of all the decoder's CVs will normally occur during each subsequent power-on cycle until all CVs have been returned to a factory default condition. A value of ``255`` is placed in CV 8 until the decoder has successfully rewritten all CVs to their factory default condition."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:518
+msgid "F: Methods of Programming Required"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:520
+msgid "To conform to this Standard, Command Stations or Programmers must implement one of the following groups of programming methods. The manufacturer must clearly label, using the defined terms below, which form(s) of programming are supported."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:525
+msgid "Command Station or Programmers"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:527
+msgid "Address-Only Programmers"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:528
+msgid "Program CV 1 via Address-Only Mode."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:530
+msgid "Register-Mode CV Programmers"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:531
+msgid "Program a selected subset of CVs via Physical Register. The subset must include CV 1 using Address-Only Mode and be clearly defined and documented."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:533
+msgid "Paged CV Programmers"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:534
+msgid "Program a selected subset of CVs via Physical Register and Paged Addressing. The subset must include CV 1 using Address-Only Mode and be clearly defined and documented."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:536
+msgid "Direct CV Programmers"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:537
+msgid "Program a selected subset of CVs via Physical Register and Direct Addressing. The subset must include CV 1 in Address-Only Mode and be clearly defined and documented."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:539
+msgid "Universal CV Programmers"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:540
+msgid "Have the ability to read and write a subset of CVs via Direct, Physical Register and Paged Addressing. The subset must include CV 1 using Address-Only Mode and be clearly defined and documented."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:542
+msgid "Effective 1-Aug-2002, all Command Stations or Programmers submitted for Conformance must implement Direct Mode."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:544
+msgid "For complete backward compatibility with decoders that were produced prior to 1-Aug-2002 which do not support Direct Mode, support for Paged Mode is strongly encouraged."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:549
+msgid "Decoders"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:551
+msgid "All programmable decoders must perform Address-Only mode, and either Physical Register or Paged Addressing as appropriate. Decoders that support Service Mode programming for more CVs than Physical Register mode can support, and are submitted for Conformance after 1-Aug-2002, must support Direct Mode. If the decoder supports Direct CV Addressing, the decoder also needs to support Address-Only programming. The manufacturer must clearly label, using the terms described in this standard, which form(s) of programming are supported."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:553
+msgid "For complete backward compatibility with Command Stations or Programmers that were produced prior to 1-Aug-2002 which do not support Direct Mode, support for Paged Mode is strongly encouraged."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:558
+msgid "Appendix A: Address Query Instruction"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:560
+msgid "The Address Query instruction is used in older Digital Decoders to verify a specific decoder address, CV 1. The format of the instruction is:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:566
+msgid "If the address in the packet matches the address of the Digital Decoder, the Digital Decoder generates an acknowledgment as specified in section D. This instruction is included to allow Programmers to verify addresses of older decoders. It is recommended that a Programmer first attempt to read CV 1 with the Direct or Paged verify mechanism before invoking this method of Address Query. After unsuccessfully attempting to read the value of CV 1, it can be verified to match the address of the Decoder using this Address Query command. This Address Query instruction may only be issued for the address range of ``AAAAAAAA`` from 1 to 111 decimal."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:571
+msgid "Appendix B: Service Mode Decoder Lock Instruction"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:573
+msgid "This appendix contains the definition of an additional instruction. A DCC product need not implement the feature described in this appendix, but if it is implemented, it must be implemented completely."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:575
+msgid "Additional information is available in Technical Note TN-2-05."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:577
+msgid "The Service Mode Decoder Lock instruction prevents service mode programming of some decoders, while allowing programming of others on a single track. Note: This is not a substitute for a low-current programming track for new decoder instructions. Command stations/programmers must contain clear instructions on how to install and utilize a low-current programming track."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:579
+msgid "The format of the instruction is:"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:585
+msgid "Where ``aaaaaaa`` is the short address of the decoder that will continue to execute service mode commands."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:587
+msgid "Upon receiving a ``0xF9`` Service Mode Decoder Lock instruction, a decoder which implements this feature checks its address against the short address contained in the packet (``aaaaaaa``). If its address does not match the address in the packet, the decoder is considered locked and ignores all subsequent service mode instructions (even after a power cycle)."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:589
+msgid "To unlock a decoder that has been locked using the Service Mode Decoder Lock instruction, the decoder must receive a valid NMRA DCC packet other than either a valid service mode packet or a valid Service Mode Decoder Lock instruction (with an ``aaaaaaa`` that does not match its address). Once unlocked, the decoder accepts all subsequent service mode packets."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:592
+msgid "Footnotes"
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:593
+msgid "In both the 3-data-byte and 4-data-byte packets, the last data byte of a Service Mode packet is used for error detection purposes (see S-9.2.1 for details)."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:594
+msgid "This instruction may not have the desired effect with all older accessory decoders."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:595
+msgid "Some older decoders require a power off/on cycle at this point in order to be programmed. Power cycling at this point is not allowed if you are in the middle of a paged operation."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:596
+msgid "For compatibility with older systems, Register 5 may be used for other programming purposes when the Page Register is not equal to 1. If Register 5 is used in a different manner, Register 5 should be restored after the Page Register is reset to 1."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:597
+msgid "Refer to the section on Physical Register addressing for other compatibility issues with use of this register."
+msgstr ""
+
+#: ../../content/S-9.2.3-service-mode-programming.rst:598
+msgid "Several valid existing alternative means for achieving decoder factory reset are also in use. Manufacturers may continue to use these alternate means, but are required to also support the standard-specified means in new designs."
+msgstr ""

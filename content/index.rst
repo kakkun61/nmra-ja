@@ -27,6 +27,7 @@ Please read :doc:`CONTRIBUTING`.
    S-9.2-dcc-communications-standard
    S-9.2.1-extended-packet-formats
    S-9.2.2-configuration-variables-for-dcc
+   S-9.2.3-service-mode-programming
 
    CONTRIBUTING
    GLOSSARY

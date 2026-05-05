@@ -16,19 +16,33 @@ A: General Packet Format
 
 The following sequence of bits defines a valid NMRA packet. Any sequence of bits not meeting the full specifications of this general packet format is not, for the purpose of this standard, a “packet”. Digital decoders should not act on any instructions that are not contained within a valid packet while in the NMRA digital mode of operation [#f1]_.
 
-- **Preamble**
-    - The preamble to a packet consists of a sequence of ``1`` bits. A digital decoder must not accept as a valid, any preamble that has less than 10 complete ``1`` bits, or require for proper reception of a packet with more than 12 complete ``1`` bits. A command station must send a minimum of 14 full preamble bits.
-- **Packet Start Bit**
-    - The packet start bit is the first bit with a value of ``0`` that follows a valid preamble. The Packet Start Bit terminates the preamble and indicates that the next bits are an address data byte.
-- **Address Data Byte**
-    - The first data byte of the packet normally contains eight bits of address information [#f2]_. The first transmitted address bit shall be defined to be the most significant bit of the address data byte. Address Data Bytes with values ``00000000``, ``11111110``, and ``11111111`` are reserved for special operations and must not be transmitted except as provided in this Standard or associated Recommended Practices.
-- These must occur one or more times
-    - **Data Byte Start Bit**
-        - This bit precedes a data byte and has the value of ``0``.
-    - **Data Byte**
-        - Each data byte contains eight bits of information used for address, instruction, data, or error detection purposes. The first transmitted data bit of each data byte shall be defined to be the most significant bit of the data byte.
-- **Packet End Bit**
-    - This bit marks the termination of the packet and has a value of ``1`` [#f3]_.
+* **Preamble**
+* **Packet Start Bit**
+* **Address Data Byte**
+* one or more times:
+
+  * **Data Byte Start Bit**
+  * **Data Byte**
+
+* **Packet End Bit**
+
+Preamble
+    The preamble to a packet consists of a sequence of ``1`` bits. A digital decoder must not accept as a valid, any preamble that has less than 10 complete ``1`` bits, or require for proper reception of a packet with more than 12 complete ``1`` bits. A command station must send a minimum of 14 full preamble bits.
+
+Packet Start Bit
+    The packet start bit is the first bit with a value of ``0`` that follows a valid preamble. The Packet Start Bit terminates the preamble and indicates that the next bits are an address data byte.
+
+Address Data Byte
+    The first data byte of the packet normally contains eight bits of address information [#f2]_. The first transmitted address bit shall be defined to be the most significant bit of the address data byte. Address Data Bytes with values ``00000000``, ``11111110``, and ``11111111`` are reserved for special operations and must not be transmitted except as provided in this Standard or associated Recommended Practices.
+
+Data Byte Start Bit
+    This bit precedes a data byte and has the value of ``0``.
+
+Data Byte
+    Each data byte contains eight bits of information used for address, instruction, data, or error detection purposes. The first transmitted data bit of each data byte shall be defined to be the most significant bit of the data byte.
+
+Packet End Bit
+    This bit marks the termination of the packet and has a value of ``1`` [#f3]_.
 
 Figure 1 provides an example of an acceptable command control packet that uses three data bytes: one address data byte, one instruction data byte and one error detection data byte.
 
@@ -54,12 +68,14 @@ Speed and Direction Packet For Locomotive Decoders
     111111111111 0 0AAAAAAA 0 01DCSSSS 0 EEEEEEEE 1
     Preamble       Byte One   Byte Two   Byte Three (Error Detection Data Byte)
 
-- Byte One: Address Data Byte ``0AAAAAAA``
-    - The address data byte contains the address of the intended recipient of the packet. Every Digital Decoder shall be capable of retaining and recognizing its own address for purposes of responding to Baseline Packets. Locomotive Digital Decoders shall support the full range of baseline addresses in such a manner that this address is easily configurable by the user [#f5]_. It is acceptable for Digital Command Stations to restrict the number of valid addresses supported so long as this restriction is clearly and plainly labeled on the package and in the instructions.
-- Byte Two: Instruction Data Byte ``01DCSSSS``
-    - The instruction data byte is a data byte used to transmit speed and direction information to the locomotive Digital Decoder. Bits 0-3 [#f6]_ provides 4 bits for speed (``S``) with bit 0 being the least significant speed bit. Bit four of byte 2 (``C``) by default shall contain one additional speed bit, which is the least significant speed bit. For backward compatibility, this bit may instead be used to control the headlight. This optional use is defined in RP-9.2.1. Bit 5 provides one bit for direction (``D``). When the direction bit (``D``) has a value of ``1`` the locomotive should move in the forward direction [#f7]_. A direction bit with the value of ``0`` should cause the locomotive to go in the reverse direction. Bits 7 and 6 contain the bit sequence ``01`` [#f8]_ which are used to indicate that this instruction data byte is for speed and direction.
-- Byte Three: Error Detection Data Byte ``EEEEEEEE``
-    - The error detection data byte is a data byte used to detect the presence of transmission errors. The contents of the Error Detection Data Byte shall be the bitwise exclusive OR of the contents of the Address Data Byte and the Instruction Data Byte in the packet concerned. (e.g. the exclusive OR of bit 0 of the address data byte and bit 0 of the instruction data byte will be placed in bit 0 of the error detection data byte...) Digital Decoders receiving a Baseline Packet shall compare the received error detection data byte with the bitwise exclusive OR of the received address and instruction data bytes and ignore the contents of the packet if this comparison is not identical.
+Byte One: Address Data Byte ``0AAAAAAA``
+    The address data byte contains the address of the intended recipient of the packet. Every Digital Decoder shall be capable of retaining and recognizing its own address for purposes of responding to Baseline Packets. Locomotive Digital Decoders shall support the full range of baseline addresses in such a manner that this address is easily configurable by the user [#f5]_. It is acceptable for Digital Command Stations to restrict the number of valid addresses supported so long as this restriction is clearly and plainly labeled on the package and in the instructions.
+
+Byte Two: Instruction Data Byte ``01DCSSSS``
+    The instruction data byte is a data byte used to transmit speed and direction information to the locomotive Digital Decoder. Bits 0-3 [#f6]_ provides 4 bits for speed (``S``) with bit 0 being the least significant speed bit. Bit four of byte 2 (``C``) by default shall contain one additional speed bit, which is the least significant speed bit. For backward compatibility, this bit may instead be used to control the headlight. This optional use is defined in RP-9.2.1. Bit 5 provides one bit for direction (``D``). When the direction bit (``D``) has a value of ``1`` the locomotive should move in the forward direction [#f7]_. A direction bit with the value of ``0`` should cause the locomotive to go in the reverse direction. Bits 7 and 6 contain the bit sequence ``01`` [#f8]_ which are used to indicate that this instruction data byte is for speed and direction.
+
+Byte Three: Error Detection Data Byte ``EEEEEEEE``
+    The error detection data byte is a data byte used to detect the presence of transmission errors. The contents of the Error Detection Data Byte shall be the bitwise exclusive OR of the contents of the Address Data Byte and the Instruction Data Byte in the packet concerned. (e.g. the exclusive OR of bit 0 of the address data byte and bit 0 of the instruction data byte will be placed in bit 0 of the error detection data byte...) Digital Decoders receiving a Baseline Packet shall compare the received error detection data byte with the bitwise exclusive OR of the received address and instruction data bytes and ignore the contents of the packet if this comparison is not identical.
 
 The example packet shown in figure 2 illustrates a baseline packet with the instruction to locomotive 55 to proceed in the forward direction at speed step 6.
 

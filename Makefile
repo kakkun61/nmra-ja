@@ -23,7 +23,7 @@ serve: serve.ja
 
 .PHONY: serve.en
 serve.en:
-	warp -d .build/en
+	warp -d .build/en -p 3001
 
 .PHONY: serve.ja
 serve.ja:

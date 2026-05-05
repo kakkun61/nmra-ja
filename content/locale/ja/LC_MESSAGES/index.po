@@ -45,58 +45,58 @@ msgstr "貢献してくださる方へ"
 msgid "Please read :doc:`CONTRIBUTING`."
 msgstr ":doc:`CONTRIBUTING`\\ をお読みください。"
 
-#: ../../content/index.rst:36
+#: ../../content/index.rst:37
 msgid "`Original <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_"
 msgstr "`原文 <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_"
 
-#: ../../content/index.rst:41
+#: ../../content/index.rst:42
 msgid "The NMRA uses five types of Technical Documents to present information."
 msgstr "NMRA は現行の情報に対して 5 種類の技術文書を使用します。"
 
-#: ../../content/index.rst:43
+#: ../../content/index.rst:44
 msgid "**The NMRA, in its standards and recommended practices, addresses only the specific standards and recommended practices for model railroads. These standards and recommended practices do not address any legal requirements. It is the responsibility of the manufacturer to determine if their product conforms to all applicable governmental laws and regulations.**"
 msgstr "**NMRA は、標準と推奨慣例において、鉄道模型に関する特定の標準と推奨慣例のみを対象とします。これらの標準と推奨慣例は、いかなる法的要件も対象としません。製品がすべての適用される政府の法律および規制に適合しているかどうかを判断するのは製造業者の責任です。**"
 
-#: ../../content/index.rst:45
+#: ../../content/index.rst:46
 msgid "Standard (S)"
 msgstr "標準（Standard; S）"
 
-#: ../../content/index.rst:46
+#: ../../content/index.rst:47
 msgid "NMRA Standards are to establish the broadest correlated set of limiting dimensions, electrical parameters and communications parameters within which interchange may be assured. Standards are reviewed by the membership and approved by the Board of Directors."
 msgstr "NMRA 標準は、相互接続性を保証できる制限寸法・電気パラメーター・通信パラメーターの最も広い相関セットを確立するためのものです。標準は会員によってレビューされ、理事会によって承認されます。"
 
-#: ../../content/index.rst:48
+#: ../../content/index.rst:49
 msgid "Recommended Practice (RP)"
 msgstr "推奨慣例（Recommended Practice; RP）"
 
-#: ../../content/index.rst:49
+#: ../../content/index.rst:50
 msgid "NMRA Recommended Practices do not rise to the level of being a Standard, however, they provide details of various topics that have been found to be the best for interchangeability or operation of products. Recommended Practices are not used in determining the qualification of a product when compliance certification is being judged. Comments are generally made if the product is found outside the recommended practice. Recommended Practices are reviewed by the membership and approved by the Board of Directors."
 msgstr "NMRA 推奨慣例は標準のレベルには達しませんが、製品の相互接続性または動作にとって最良であると判断されたさまざまなトピックの詳細を提供します。推奨慣例は、適合証明書が審査される際に製品の資格を判断するために使用されません。製品が推奨慣例から外れていると判明した場合、一般的にコメントがなされます。推奨慣例は会員によってレビューされ、理事会によって承認されます。"
 
-#: ../../content/index.rst:51
+#: ../../content/index.rst:52
 msgid "Technical Note (TN)"
 msgstr "技術的注釈（Technical Note; TN）"
 
-#: ../../content/index.rst:52
+#: ../../content/index.rst:53
 msgid "NMRA Technical Notes supplement the Standards to provide additional guidance on a given subject. Technical Notes are reviewed by the appropriate technical working group and approved by the Manager, Standards & Conformance."
 msgstr "NMRA 技術的注釈は、特定のテーマについての追加的な指針を提供するために標準を補足します。技術的注釈は適切な技術作業グループによってレビューされ、標準・適合管理者によって承認されます。"
 
-#: ../../content/index.rst:54
+#: ../../content/index.rst:55
 msgid "Technical Information (TI)"
 msgstr "技術的情報（Technical Information; TI）"
 
-#: ../../content/index.rst:55
+#: ../../content/index.rst:56
 msgid "NMRA Technical Information are documents that are used to provide information associated with a Standard or Recommended Practice. Technical Information is reviewed by the appropriate technical working group and approved by the Manager, Standards & Conformance."
 msgstr "NMRA 技術的情報は、標準または推奨慣例に関連する情報を提供するために使用される文書です。技術的情報は適切な技術作業グループによってレビューされ、標準・適合管理者によって承認されます。"
 
-#: ../../content/index.rst:57
+#: ../../content/index.rst:58
 msgid "Technical References (TR)"
 msgstr "技術的参考文献（Technical References; TR）"
 
-#: ../../content/index.rst:58
+#: ../../content/index.rst:59
 msgid "NMRA Technical References are, for the most part, internal documents that provide a history of action taken in the Standards and Conformance Department. Occasionally a Technical Reference is made public for reference and use by individuals involved with the Standards and Conformance Department. Technical References are reviewed by the appropriate technical working group and approved by the Manager, Standards & Conformance."
 msgstr "NMRA 技術的参考文献は、ほとんどの場合、標準・適合部門で実施された行動の履歴を提供する内部文書です。場合によっては、標準・適合部門に関わる個人の参考および使用のために技術的参考文献が公開されることがあります。技術的参考文献は適切な技術作業グループによってレビューされ、標準・適合管理者によって承認されます。"
 
-#: ../../content/index.rst:60
+#: ../../content/index.rst:61
 msgid "TODO"
 msgstr ""
