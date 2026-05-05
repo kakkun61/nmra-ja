@@ -646,7 +646,7 @@ The format for the broadcast instruction is
 
    preamble 0 10111111 0 1000CDDD 0 EEEEEEEE 1
 
-This packet shall be executed by all accessory decoders. CDDD is defined as specified in the paragraph on Basic Accessory Decoder Packet Format.
+This packet shall be executed by all accessory decoders. ``CDDD`` is defined as specified in the paragraph on Basic Accessory Decoder Packet Format.
 
 .. _broadcast-command-for-extended-accessory-decoders:
 
@@ -659,7 +659,7 @@ The format for the broadcast instruction is:
 
    preamble 0 10111111 0 00000111 0 000XXXXX 0 EEEEEEEE 1
 
-All extended accessory decoders must execute this packet. XXXXX is defined as specified in the paragraph on Extended Accessory Decoder Packet Format.
+All extended accessory decoders must execute this packet. ``XXXXX`` is defined as specified in the paragraph on Extended Accessory Decoder Packet Format.
 
 .. _accessory-decoder-configuration-variable-access-instruction:
 

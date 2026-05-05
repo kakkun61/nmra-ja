@@ -23,7 +23,7 @@ msgstr "貢献"
 
 #: ../../content/CONTRIBUTING.rst:4
 msgid "Source code https://github.com/kakkun61/nmra-ja"
-msgstr ""
+msgstr "ソースコード https://github.com/kakkun61/nmra-ja"
 
 #: ../../content/CONTRIBUTING.rst:5
 msgid ":doc:`GLOSSARY`"
@@ -34,5 +34,5 @@ msgid "Regarding the conversion policy, the text will not be modified from the o
 msgstr "変換の方針について、文章に関しては原文 PDF を改変しない。表や図に関しては HTML 表現に適するように適宜改変します。数式は LaTeX 形式で記述します。"
 
 #: ../../content/CONTRIBUTING.rst:9
-msgid "Regarding the translation policy, the original text is basically translated word for word. For terminology, Japanese words are used as much as possible rather than transliterations, but for words that are widely used in their transliterated form, transliterations are used. During the translation process, passages that are difficult to understand or that appear to contain errors may be supplemented with footnotes. A half-width space is inserted between Latin characters and kanji, and between Latin characters and kana characters."
-msgstr "翻訳の方針について、基本的に原文を逐語訳します。また、単語についてはなるべく音写せずに日本語の単語を使用するが、一般に広く使われる単語に関しては音写をします。翻訳の過程で意味のとりにくい箇所や誤りと考えられる箇所があれば、脚注で補足することがあります。ラテン文字と漢字、ラテン文字と仮名文字の間に半角空白を挿入します。"
+msgid "Regarding the translation policy, the original text is basically translated word for word. For terminology, Japanese words are used as much as possible rather than transliterations, but for words that are widely used in their transliterated form, transliterations are used. During the translation process, passages that are difficult to understand or that appear to contain errors may be supplemented with footnotes. A half-width space is inserted between Latin characters and kanji, and between Latin characters and kana characters. When translating capitalized words in the paragraph, it may be necessary to enclose them in Japanese quotation marks (e.g.: Basic Accessory Decoder Packet Format → 「基本アクセサリーデコーダーパケット形式」)."
+msgstr "翻訳の方針について、基本的に原文を逐語訳します。また、単語についてはなるべく音写せずに日本語の単語を使用するが、一般に広く使われる単語に関しては音写をします。翻訳の過程で意味のとりにくい箇所や誤りと考えられる箇所があれば、脚注で補足することがあります。ラテン文字と漢字、ラテン文字と仮名文字の間に半角空白を挿入します。文中でキャピタライズされた単語を翻訳する場合は、かぎ括弧でくくる必要があるかもしれません（例：Basic Accessory Decoder Packet Format → 「基本アクセサリーデコーダーパケット形式」）。"

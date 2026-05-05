@@ -295,7 +295,7 @@ msgstr "特殊な場合には、最初のバイトを命令の指示にも使用
 
 #: ../../content/S-9.2-dcc-communications-standard.rst:138
 msgid "The Packet End Bit may count as one of the preamble bits of the subsequent packet if there are no inter-packet bits from an alternative command control protocol. The DCC bit stream must continue for an additional 26 µS (minimum) after the packet end bit."
-msgstr "代替コマンド制御プロトコルによるパケット間ビットが存在しない場合、パケット終了ビットは後続パケットの前文ビットの 1 つとして数えてもかまいません。DCC ビットストリームはパケット終了ビットの後も追加で 26µS（最小）継続しなければいけません。"
+msgstr "代替コマンド制御プロトコルによるパケット間ビットが存在しない場合、パケット終了ビットは後続パケットの前文ビットの 1 つとして数えてもかまいません。DCC ビットストリームはパケット終了ビットの後も追加で 26μ 秒（最小）継続しなければいけません。"
 
 #: ../../content/S-9.2-dcc-communications-standard.rst:140
 #: ../../content/S-9.2-dcc-communications-standard.rst:152

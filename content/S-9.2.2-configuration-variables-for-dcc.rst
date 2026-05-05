@@ -47,7 +47,7 @@ Additional Comments
    V\ :sub:`start`                                      2        R
    Acceleration Rate                                    3        R
    Deceleration Rate                                    4        R
-   V\ :sub:`hight`                                      5        O
+   V\ :sub:`high`                                       5        O
    V\ :sub:`mid`                                        6        O
    Manufacturer Version No.                             7        M                      Y                                         Manufacturer defined version info
    Manufacturer ID                                      8        M                      Y         Y                               Values assigned by NMRA
@@ -444,7 +444,7 @@ Configuration Variable 107-111: NMRA Reserved
 
 CVs 107, 108: with CV 8 = ``0xEE``, a 16-bit manufacturer ID is stored in these two CVs
 
-CVs 109-111: with CV7= _________, these three CVs expand the version number feature.
+CVs 109-111: with CV 7 = _________, these three CVs expand the version number feature.
 
 .. _cv-112-256-manufacturer-unique:
 

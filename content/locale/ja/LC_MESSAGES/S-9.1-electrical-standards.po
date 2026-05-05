@@ -196,7 +196,7 @@ msgstr ""
 #: ../../content/S-9.1-electrical-standards.rst:120
 #: ../../content/S-9.1-electrical-standards.rst:127
 msgid "μsec"
-msgstr "μ秒"
+msgstr "μ 秒"
 
 #: ../../content/S-9.1-electrical-standards.rst:86
 msgid "Duration of a transmitted ``1`` half bit"
@@ -421,7 +421,7 @@ msgstr ""
 #: ../../content/S-9.1-electrical-standards.rst:170
 #: ../../content/S-9.1-electrical-standards.rst:184
 msgid "Volt/μsec"
-msgstr "ボルト/μ秒"
+msgstr "ボルト/μ 秒"
 
 #: ../../content/S-9.1-electrical-standards.rst:171
 msgid "Transmitted bit voltage transition rate"
